@@ -7,7 +7,8 @@ public interface IVariables:
     IKeyNavigation
 {}
 
-public interface IVariablesShortSyntax
+public interface IVariablesShortSyntax:
+    IWorkFlowNavigation
 {}
 
 public interface IVariablesNavigation{
