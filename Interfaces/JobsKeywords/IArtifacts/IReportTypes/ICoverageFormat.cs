@@ -1,5 +1,10 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts.IRepostTypes;
 
-public interface ICoverageFormat{
-    public IPath Path(string path);
+public interface ICoverageFormat:
+    //going down 1 level(s)
+    IPathNavigation
+{}
+
+public interface ICoverageFormatNavigation{
+    public ICoverageFormat CoverageFormat(string format);
 }
