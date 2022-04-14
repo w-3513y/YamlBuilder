@@ -1,7 +1,6 @@
 using YamlBuilder.Enums;
-using YamlBuilder.Interfaces.Keywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords;
+namespace YamlBuilder.Interfaces.JobsKeywords.ICaches;
 
 public interface ICache{
     public IKey Key(string name);

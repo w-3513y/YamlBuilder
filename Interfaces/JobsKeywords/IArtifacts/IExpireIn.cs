@@ -1,6 +1,10 @@
-namespace YamlBuilder.Interfaces.Keywords;
+using YamlBuilder.Enums;
+using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords;
 
-public interface IExpireIn{
+namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
+
+public interface IExpireIn: IArtifact, INavigateGlobal{
 
 }
 

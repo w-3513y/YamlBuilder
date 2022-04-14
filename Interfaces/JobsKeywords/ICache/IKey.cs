@@ -1,4 +1,4 @@
-namespace YamlBuilder.Interfaces.Keywords;
+namespace YamlBuilder.Interfaces.JobsKeywords.ICaches;
 
 public interface IKey{
     public IFiles Files(string[] files);

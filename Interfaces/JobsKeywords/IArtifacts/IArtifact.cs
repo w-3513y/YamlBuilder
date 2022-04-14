@@ -1,18 +1,17 @@
 using YamlBuilder.Enums;
-using YamlBuilder.Interfaces.Keywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords;
+namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 
-public interface IArtifacts{
-      public IName Name(string name);
-      public IPaths Paths(string[] paths);
-      public IExpireIn Expire_in(string time);
-      public IExclude Exclude(string files);
-      public IExposeAs Expose_as(string name);
-      public IPublic Public(bool publ);
-      public IReport Report();  //see junit implementation
-      public IUntracked Untracked(bool untracked);
-      public IWhen When(JobEnum onlyWhen);
+public interface IArtifact{
+  public IName Name(string name);
+  public IPaths Paths(string[] paths);
+  public IExpireIn Expire_in(string time);
+  public IExclude Exclude(string files);
+  public IExposeAs Expose_as(string name);
+  public IPublic Public(bool publ);
+  public IReport Report();
+  public IUntracked Untracked(bool untracked);
+  public IWhen When(JobEnum onlyWhen);
 }
 
 

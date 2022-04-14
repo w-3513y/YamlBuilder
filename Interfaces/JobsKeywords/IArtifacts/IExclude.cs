@@ -1,6 +1,8 @@
-namespace YamlBuilder.Interfaces.Keywords;
+using YamlBuilder.Interfaces.GlobalKeywords;
 
-public interface IExclude{
+namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
+
+public interface IExclude: IArtifact, INavigateGlobal{
 
 }
 /*
