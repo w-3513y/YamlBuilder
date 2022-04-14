@@ -6,9 +6,10 @@ using YamlBuilder.Interfaces.JobsKeywords.IServices;
 namespace YamlBuilder.Interfaces.JobsKeywords;
 
 public interface ICoverage:
-    //navigation 3 level(s) abouve
+    //going up 3 level(s) abouve
     IIncludeNavigation, 
-    IStagesNavigation
+    IStagesNavigation,
+    IVariablesNavigation
 {}
 
 public interface ICoverageNavigation{

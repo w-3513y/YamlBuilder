@@ -3,14 +3,15 @@ using YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 using YamlBuilder.Interfaces.JobsKeywords.ICaches;
 using YamlBuilder.Interfaces.JobsKeywords.IServices;
 
-namespace YamlBuilder.Interfaces.JobsKeywords;
+namespace YamlBuilder.Interfaces.JobsKeywords.IImage;
 
-public interface IAfter_Script: 
+public interface IEntryPoint:
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
     //going up 1 level(s)
+    IAfter_ScriptNavigation,
     IArtifactsNavigation,
     IBefore_ScriptNavigation,
     ICacheNavigation,
@@ -21,15 +22,6 @@ public interface IAfter_Script:
     ITimeOutNavigation
 {}
 
-public interface IAfter_ScriptNavigation{
-    public IAfter_Script After_Script(string[] commands);
+public interface IEntryPointNavigation{
+    public IEntryPoint Entrypoint();   
 }
-
-
-    /*Use after_script to define an array of commands that run after each job, including failed jobs.
-     Keyword type: Job keyword. You can use it only as part of a job or in the default section.
-     Possible inputs: An array including:
-     
-     Single line commands.
-     Long commands split over multiple lines.
-     YAML anchors.*/

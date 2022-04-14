@@ -3,9 +3,9 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.IIncludes;
 
 public interface IRemote:
-    //navigation 3 level(s) abouve
-    IIncludeNavigation, 
-    IStagesNavigation
+    //going up 3 level(s) abouve
+    IStagesNavigation,
+    IVariablesNavigation
 {}
 
 public interface IRemoteNavigation{

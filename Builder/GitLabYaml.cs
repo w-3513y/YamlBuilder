@@ -1,7 +1,7 @@
 using YamlBuilder.Interfaces.File;
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Implementations;
+namespace YamlBuilder.Builder;
 
 public class GitLabYaml : IGitLabYaml
 {
@@ -27,5 +27,10 @@ public class GitLabYaml : IGitLabYaml
     public IStages Stages()
     {
         return this.Stages();
+    }
+
+    public IVariables Variables(Dictionary<string, string> keyValues)
+    {
+        return this.Variables(keyValues);
     }
 }

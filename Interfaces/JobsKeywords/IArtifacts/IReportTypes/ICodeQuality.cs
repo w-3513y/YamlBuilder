@@ -5,7 +5,7 @@ using YamlBuilder.Interfaces.JobsKeywords.IServices;
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts.IRepostTypes;
 
 public interface ICodeQuality:
-    //navigation 5 level(s) abouve
+    //going up 5 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
     //going up 3 level(s)

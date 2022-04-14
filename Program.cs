@@ -1,15 +1,16 @@
-using YamlBuilder.Implementations;
+using YamlBuilder.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
-var job  = GitLabYaml
+GitLabYaml
     .Builder() 
     .Default()
-        .Image("ruby:3.0")
-        .After_Script(new string[] {"run a script"})
+        .Image()
+        .Name("")
+        .After_Script(new string[] {"echo 'something'"})
         .Artifacts()
             .Report()
                 .Acessibility("report")
@@ -18,8 +19,14 @@ var job  = GitLabYaml
                 .Path("./bin")
                 .Terraform("file")
         .Before_Script(new string[] {"do something"})
+        .Services()
+        .Name("teste")
+        .Alias("teste")
+        .Name("teste2")
+        .Alias("teste2")
     .Include()
         .Local("./WORKDIR")
-    .Stages();
+    .Stages(new string[] {"build", "test", "deploy"})
+    .Variables(new Dictionary<string, string>(){{"JOB_NAME", "TEST"}, {"ALIAS", "NEW_NAME"}});
 app.Run();
 

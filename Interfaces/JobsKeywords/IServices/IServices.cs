@@ -1,15 +1,25 @@
+using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.Keywords.IServices;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.IServices;
 
-public interface IServices{
-    public IName Name(string name);
-    public IAlias Alias(string name);
-    public IEntryPoint Entrypoint(string entrypoint);
-    public ICommand Command(string command);
-    public IVariables Variables(string[] variables);
-}
+public interface IServices:
+  //going down 1 level(s)
+  INameNavigation
+{}
+
+public interface IServicesShortSyntax:
+    //going up 4 level(s) abouve
+    IIncludeNavigation, 
+    IStagesNavigation,
+    IVariablesNavigation,
+    //going up 2 level(s)
+    ITagsNavigation,
+    ITimeOutNavigation
+{}
+
 
 public interface IServicesNavigation{
-    public IServices Services(string[] commands);   
+    public IServices Services();   
+    public IServicesShortSyntax Services(string[] commands);
 }

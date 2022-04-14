@@ -1,25 +1,30 @@
-using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 using YamlBuilder.Interfaces.JobsKeywords.ICaches;
 using YamlBuilder.Interfaces.JobsKeywords.IServices;
 
-namespace YamlBuilder.Interfaces.JobsKeywords;
+namespace YamlBuilder.Interfaces.JobsKeywords.IImage;
 
-public interface IRetry:
+public interface IName:
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
     //going up 1 level(s)
+    IAfter_ScriptNavigation,
+    IArtifactsNavigation,
+    IBefore_ScriptNavigation,
+    ICacheNavigation,
+    IInterruptibleNavigation,
+    IRetryNavigation,
     IServicesNavigation,
     ITagsNavigation,
-    ITimeOutNavigation
+    ITimeOutNavigation,
+    //going down 1 level(s)
+    IEntryPointNavigation
 {}
 
-
-public interface IRetryNavigation{
-
-    public IRetry Retry(RetryEnum retry);
+public interface INameNavigation{
+    public IName Name(string name);
     
 }

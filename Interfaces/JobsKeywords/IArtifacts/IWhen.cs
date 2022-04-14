@@ -6,9 +6,10 @@ using YamlBuilder.Interfaces.JobsKeywords.IServices;
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 
 public interface IWhen:
-    //navigation 4 level(s) abouve
+    //going up 4 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
+    IVariablesNavigation,
     //going up 2 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

@@ -6,9 +6,10 @@ using YamlBuilder.Interfaces.JobsKeywords.IServices;
 namespace YamlBuilder.Interfaces.JobsKeywords;
 
 public interface IBefore_Script: 
-    //navigation 3 level(s) abouve
+    //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
+    IVariablesNavigation,
     //going up 1 level(s)
     ICacheNavigation,
     IInterruptibleNavigation,

@@ -8,9 +8,16 @@ using YamlBuilder.Interfaces.JobsKeywords.IServices;
 namespace YamlBuilder.Interfaces.JobsKeywords.IImage;
 
 public interface IImage:
-    //navigation 3 level(s) abouve
+    //going down 1 level(s)
+    INameNavigation,
+    IEntryPointNavigation
+{}
+
+public interface IImageShortSintax:
+    //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
+    IVariablesNavigation,
     //going up 1 level(s)
     IAfter_ScriptNavigation,
     IArtifactsNavigation,
@@ -25,6 +32,7 @@ public interface IImage:
 
 public interface IImageNavigation{
 
-    public IImage Image(string image);
+    public IImage Image();
+    public IImageShortSintax Image(string image);
     
 }

@@ -6,4 +6,5 @@ public interface IGitLabYaml{
     public IDefault Default();
     public IInclude Include(string? shorterSintax);
     public IStages Stages();
+    public IVariables Variables(Dictionary<string, string> keyValues);
 }
