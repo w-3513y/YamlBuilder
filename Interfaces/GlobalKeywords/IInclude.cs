@@ -1,10 +1,10 @@
-using YamlBuilder.Interfaces.JobsKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.IInclude;
+using YamlBuilder.Interfaces.JobsKeywords.IIncludes;
 
 namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IInclude{
     public ILocal Local(string file);
-    public IFile File(string file);
-    
+    public IProject Project(string file); 
+    public IRemote Remote(string url);
+    public ITemplate Template(string[] templates);
 }

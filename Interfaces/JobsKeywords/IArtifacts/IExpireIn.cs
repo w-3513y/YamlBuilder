@@ -1,10 +1,11 @@
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords;
+using YamlBuilder.Interfaces.Navigations;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 
-public interface IExpireIn: IArtifact, INavigateGlobal{
+public interface IExpireIn: IArtifact, IDefault, IIncludeNavigation{
 
 }
 

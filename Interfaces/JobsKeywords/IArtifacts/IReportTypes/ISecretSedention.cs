@@ -1,7 +1,8 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.Navigations;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts.IRepostTypes;
 
-public interface ISecretSedention: IReport, INavigateGlobal{
+public interface ISecretSedention: IReport, IDefault, IIncludeNavigation{
 
 }

@@ -1,8 +1,9 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.Navigations;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 
-public interface IExposeAs: IArtifact, INavigateGlobal{
+public interface IExposeAs: IArtifact, IDefault, IIncludeNavigation{
 
 }
 

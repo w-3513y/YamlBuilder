@@ -1,8 +1,9 @@
 using YamlBuilder.Enums;
+using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
 
-public interface IArtifact{
+public interface IArtifact: IDefault{
   public IName Name(string name);
   public IPaths Paths(string[] paths);
   public IExpireIn Expire_in(string time);
