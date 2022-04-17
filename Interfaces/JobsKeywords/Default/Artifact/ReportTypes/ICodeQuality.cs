@@ -12,7 +12,7 @@ public interface ICodeQuality:
     IWorkFlowNavigation,
     IJobsNavigation,
     //going up 3 level(s)
-    IBefore_ScriptNavigation,
+    IBeforeScriptNavigation,
     ICacheNavigation,
     IInterruptibleNavigation,
     IRetryNavigation,

@@ -1,7 +1,7 @@
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.ICaches;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface IPolicy:    
     //going up 4 level(s) abouve

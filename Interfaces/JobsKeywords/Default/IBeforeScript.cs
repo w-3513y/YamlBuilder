@@ -4,7 +4,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
-public interface IBefore_Script: 
+public interface IBeforeScript: 
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
@@ -20,6 +20,6 @@ public interface IBefore_Script:
     ITimeOutNavigation
 {}
 
-public interface IBefore_ScriptNavigation{
-    public IBefore_Script Before_Script(string[] commands);
+public interface IBeforeScriptNavigation{
+    public IBeforeScript BeforeScript(string[] commands);
 }

@@ -1,6 +1,6 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface ICodeQuality:
     //going up 5 level(s) abouve

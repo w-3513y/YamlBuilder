@@ -13,7 +13,7 @@ public interface IPaths:
     IWorkFlowNavigation,
     IJobsNavigation,
     //going up 2 level(s)
-    IBefore_ScriptNavigation,
+    IBeforeScriptNavigation,
     ICacheNavigation,
     IInterruptibleNavigation,
     IRetryNavigation,

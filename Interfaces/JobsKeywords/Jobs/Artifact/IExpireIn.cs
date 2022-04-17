@@ -1,6 +1,6 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IExpireIn:
     //going up 4 level(s) abouve

@@ -19,9 +19,9 @@ public interface IImageShortSintax:
     IVariablesNavigation,
     IJobsNavigation,
     //going up 1 level(s)
-    IAfter_ScriptNavigation,
+    IAfterScriptNavigation,
     IArtifactsNavigation,
-    IBefore_ScriptNavigation,
+    IBeforeScriptNavigation,
     ICacheNavigation,
     IInterruptibleNavigation,
     IRetryNavigation,

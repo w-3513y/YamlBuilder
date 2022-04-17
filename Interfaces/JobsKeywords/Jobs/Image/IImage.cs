@@ -1,6 +1,6 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IImage;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Image;
 
 public interface IImage:
     //going down 1 level(s)

@@ -8,9 +8,9 @@ namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IDefault:
     //going down 1 level(s)
-    IAfter_ScriptNavigation,
+    IAfterScriptNavigation,
     IArtifactsNavigation,
-    IBefore_ScriptNavigation,
+    IBeforeScriptNavigation,
     ICacheNavigation,
     IImageNavigation,
     IInterruptibleNavigation,

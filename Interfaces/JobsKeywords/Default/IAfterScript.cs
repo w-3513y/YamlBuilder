@@ -5,7 +5,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
-public interface IAfter_Script: 
+public interface IAfterScript: 
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
@@ -14,7 +14,7 @@ public interface IAfter_Script:
     IJobsNavigation,
     //going up 1 level(s)
     IArtifactsNavigation,
-    IBefore_ScriptNavigation,
+    IBeforeScriptNavigation,
     ICacheNavigation,
     IInterruptibleNavigation,
     IRetryNavigation,
@@ -23,8 +23,8 @@ public interface IAfter_Script:
     ITimeOutNavigation
 {}
 
-public interface IAfter_ScriptNavigation{
-    public IAfter_Script After_Script(string[] commands);
+public interface IAfterScriptNavigation{
+    public IAfterScript AfterScript(string[] commands);
 }
 
 

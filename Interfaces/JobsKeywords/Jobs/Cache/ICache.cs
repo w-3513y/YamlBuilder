@@ -1,4 +1,4 @@
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.ICaches;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface ICache:
     //going down 1 level(s)

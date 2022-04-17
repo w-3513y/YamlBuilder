@@ -1,6 +1,6 @@
-using YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IArtifacts:
   //going down 1 level(s)

@@ -1,4 +1,4 @@
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface IReport:
     //going down 1 level(s)
