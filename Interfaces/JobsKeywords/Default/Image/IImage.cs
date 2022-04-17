@@ -1,6 +1,6 @@
 
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 

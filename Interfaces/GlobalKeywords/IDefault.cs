@@ -1,5 +1,5 @@
 using YamlBuilder.Interfaces.JobsKeywords.Default;
-using YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;

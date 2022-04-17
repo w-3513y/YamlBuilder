@@ -2,7 +2,7 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts.RepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
 public interface ISecretSedention:
     //going up 5 level(s) abouve

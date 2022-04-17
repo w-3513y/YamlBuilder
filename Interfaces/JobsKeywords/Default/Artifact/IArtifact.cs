@@ -1,6 +1,6 @@
-using YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts.RepostTypes;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts;
+namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 
 //https://docs.gitlab.com/ee/ci/yaml/#artifacts
 public interface IArtifacts:

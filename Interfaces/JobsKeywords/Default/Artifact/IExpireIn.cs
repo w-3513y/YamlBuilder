@@ -2,7 +2,7 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts;
+namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 
 public interface IExpireIn:
     //going up 4 level(s) abouve

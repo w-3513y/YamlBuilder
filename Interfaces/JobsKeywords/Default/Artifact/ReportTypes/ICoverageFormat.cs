@@ -1,4 +1,4 @@
-namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts.RepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
 public interface ICoverageFormat:
     //going down 1 level(s)
