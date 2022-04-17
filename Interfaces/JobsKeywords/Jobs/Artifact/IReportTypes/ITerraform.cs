@@ -1,6 +1,6 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts.IRepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
 
 public interface ITerraform:
     //going up 5 level(s) abouve

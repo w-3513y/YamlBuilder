@@ -1,4 +1,4 @@
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts.IRepostTypes;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
 
 public interface ICoverageReport:
     //going down 1 level(s)

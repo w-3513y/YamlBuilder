@@ -1,14 +1,13 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts.IRepostTypes;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact;
 
-public interface IWhen:
+public interface IName:
     //going up 4 level(s) abouve
     IJobsNavigation,
     //going up 2 level(s)
     //going up 1 level(s)
-    INameNavigation,
     IPathsNavigation,
     IExpireInNavigation,
     IExcludeNavigation,
@@ -16,6 +15,8 @@ public interface IWhen:
     IReportNavigation
 {}
 
-public interface IWhenNavigation{
-    public IWhen When(Enums.Job when);
+public interface INameNavigation{
+
+    public IName Name(string name);
+    
 }

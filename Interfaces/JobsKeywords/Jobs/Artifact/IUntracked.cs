@@ -1,7 +1,7 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts.IRepostTypes;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact.IRepostTypes;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifacts;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IArtifact;
 
 public interface IUntracked:
     //going up 4 level(s) abouve
