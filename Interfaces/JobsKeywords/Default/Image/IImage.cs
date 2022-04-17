@@ -1,17 +1,27 @@
+
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Artifacts;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Default;
+namespace YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
-public interface IBefore_Script: 
+public interface IImage:
+    //going down 1 level(s)
+    INameNavigation,
+    IEntryPointNavigation
+{}
+
+public interface IImageShortSintax:
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
-    IWorkFlowNavigation,
     IJobsNavigation,
     //going up 1 level(s)
+    IAfter_ScriptNavigation,
+    IArtifactsNavigation,
+    IBefore_ScriptNavigation,
     ICacheNavigation,
     IInterruptibleNavigation,
     IRetryNavigation,
@@ -20,6 +30,9 @@ public interface IBefore_Script:
     ITimeOutNavigation
 {}
 
-public interface IBefore_ScriptNavigation{
-    public IBefore_Script Before_Script(string[] commands);
+public interface IImageNavigation{
+
+    public IImage Image();
+    public IImageShortSintax Image(string image);
+    
 }

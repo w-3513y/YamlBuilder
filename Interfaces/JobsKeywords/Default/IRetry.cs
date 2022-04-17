@@ -1,6 +1,6 @@
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.Default.IServices;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
