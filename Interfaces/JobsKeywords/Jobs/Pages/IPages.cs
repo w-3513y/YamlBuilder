@@ -1,10 +1,13 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IPages:
     //going up 3 level(s) abouve
-    IJobsNavigation
+    IStageNavigation,
+    IScriptNavigation,
+    IArtifactNavigation,
+    IRulesNavigation
 {}
 
 public interface IPagesNavigation{

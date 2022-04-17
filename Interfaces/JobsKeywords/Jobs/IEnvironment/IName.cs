@@ -10,7 +10,8 @@ public interface IName:
     IURLNavigation,
     IActionNavigation,
     IAutoStopInNavigation,
-    IKubernetesNavigation
+    IKubernetesNavigation,
+    IDeploymentTier
 {}
 
 public interface INameNavigation{

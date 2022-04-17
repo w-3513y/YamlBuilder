@@ -8,5 +8,5 @@ public interface IParallel:
 {}
 
 public interface IParallelNavigation{
-    public IParallel Parallel();
+    public IParallel Parallel(int multipleTimes);
 }

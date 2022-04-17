@@ -8,5 +8,5 @@ public interface IExtends:
 {}
 
 public interface IExtendsNavigation{
-    public IExtends Extends();
+    public IExtends Extends(string job);
 }
