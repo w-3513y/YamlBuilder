@@ -24,6 +24,11 @@ public class GitLabYaml : IGitLabYaml
         return this.Include(shorterSintax);
     }
 
+    public IJobs Job(string jobName)
+    {
+        throw new NotImplementedException();
+    }
+
     public IStages Stages()
     {
         return this.Stages();
