@@ -1,7 +1,4 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.IArtifacts;
-using YamlBuilder.Interfaces.JobsKeywords.ICaches;
-using YamlBuilder.Interfaces.JobsKeywords.IServices;
 
 namespace YamlBuilder.Interfaces.JobsKeywords;
 

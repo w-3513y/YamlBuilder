@@ -1,4 +1,4 @@
-using YamlBuilder.Interfaces.JobsKeywords.IWorkFlow;
+using YamlBuilder.Interfaces.JobsKeywords.WorkFlow;
 
 namespace YamlBuilder.Interfaces.GlobalKeywords;
 

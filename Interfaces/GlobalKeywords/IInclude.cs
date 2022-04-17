@@ -1,4 +1,4 @@
-using YamlBuilder.Interfaces.JobsKeywords.IIncludes;
+using YamlBuilder.Interfaces.JobsKeywords.Include;
 
 namespace YamlBuilder.Interfaces.GlobalKeywords;
 
