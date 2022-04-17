@@ -9,7 +9,7 @@ public class GitLabYaml : IGitLabYaml
     {
     }
 
-    public static IGitLabYaml Builder()
+    public static IGitLabYaml Builder(string filename)
     {
         return new GitLabYaml();
     }
