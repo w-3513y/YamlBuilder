@@ -11,6 +11,7 @@ public interface IRetry:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 1 level(s)
     IServicesNavigation,
     ITagsNavigation,
@@ -20,6 +21,6 @@ public interface IRetry:
 
 public interface IRetryNavigation{
 
-    public IRetry Retry(RetryEnum retry);
+    public IRetry Retry(Retry retry);
     
 }

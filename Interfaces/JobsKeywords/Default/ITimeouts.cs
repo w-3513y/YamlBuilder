@@ -6,7 +6,8 @@ public interface ITimeouts:
     //going up 3 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
-    IVariablesNavigation
+    IVariablesNavigation,
+    IWorkFlowNavigation
 {}
 
 public interface ITimeOutNavigation{

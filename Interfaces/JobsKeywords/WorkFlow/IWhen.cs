@@ -5,5 +5,5 @@ public interface IWhen
  {}
 
 public interface IWhenNavigation{
-    public IWhen When(string when);
+    public IWhen When(Enums.When when);
 }

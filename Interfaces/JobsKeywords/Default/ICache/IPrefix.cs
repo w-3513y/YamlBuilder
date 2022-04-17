@@ -8,6 +8,7 @@ public interface IPrefix:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     IInterruptibleNavigation,
     IRetryNavigation,

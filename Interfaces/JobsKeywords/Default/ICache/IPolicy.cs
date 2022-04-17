@@ -1,6 +1,5 @@
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
-using YamlBuilder.Interfaces.JobsKeywords.Default.IArtifacts;
 using YamlBuilder.Interfaces.JobsKeywords.Default.IServices;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.ICaches;
@@ -10,6 +9,7 @@ public interface IPolicy:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     IInterruptibleNavigation,
     IRetryNavigation,

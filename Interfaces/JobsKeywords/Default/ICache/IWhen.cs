@@ -1,4 +1,3 @@
-using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default.IServices;
 
@@ -9,6 +8,7 @@ public interface IWhen:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     IInterruptibleNavigation,
     IRetryNavigation,
@@ -18,5 +18,5 @@ public interface IWhen:
 {}
 
 public interface IWhenNavigation{
-    public IWhen When(JobEnum when);   
+    public IWhen When(Enums.Job when);   
 }

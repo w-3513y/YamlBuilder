@@ -8,6 +8,7 @@ public interface IInterruptible:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 1 level(s)
     IRetryNavigation,
     IServicesNavigation,

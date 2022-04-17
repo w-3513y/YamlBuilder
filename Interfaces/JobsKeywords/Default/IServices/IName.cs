@@ -8,11 +8,13 @@ public interface IName:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     ITagsNavigation,
     ITimeOutNavigation,
-    //going up 1 level(s)
-    IAliasNavigation
+    //going down 1 level(s)
+    IAliasNavigation,
+    IEntryPointNavigation
 {}
 
 public interface INameAfterAlias:

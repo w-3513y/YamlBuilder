@@ -5,7 +5,8 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Include;
 public interface ITemplate:
     //going up 3 level(s) abouve
     IStagesNavigation,
-    IVariablesNavigation
+    IVariablesNavigation,
+    IWorkFlowNavigation
 {}
 
 public interface ITemplateNavigation{

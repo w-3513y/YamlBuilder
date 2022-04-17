@@ -7,6 +7,7 @@ public interface ITags:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 1 level(s)
     ITimeOutNavigation
  {}

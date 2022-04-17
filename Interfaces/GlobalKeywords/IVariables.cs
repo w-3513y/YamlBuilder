@@ -8,7 +8,9 @@ public interface IVariables:
 {}
 
 public interface IVariablesShortSyntax:
-    IWorkFlowNavigation
+    //going up 1 level(s)
+    IWorkFlowNavigation,
+    IJobsNavigation
 {}
 
 public interface IVariablesNavigation{

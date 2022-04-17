@@ -5,7 +5,8 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Include;
 public interface IRemote:
     //going up 3 level(s) abouve
     IStagesNavigation,
-    IVariablesNavigation
+    IVariablesNavigation,
+    IWorkFlowNavigation
 {}
 
 public interface IRemoteNavigation{

@@ -8,10 +8,11 @@ public interface IAlias:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     ITagsNavigation,
     ITimeOutNavigation,
-    //going up 1 level(s)
+    //going down 1 level(s)
     IEntryPointNavigation,
     //recursive to run more than one service without short syntax
     INameAfterAliasNavigation

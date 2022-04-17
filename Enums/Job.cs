@@ -1,6 +1,6 @@
 namespace YamlBuilder.Enums;
 
-public enum JobEnum
+public enum Job
 {
     on_success,
     on_failure,

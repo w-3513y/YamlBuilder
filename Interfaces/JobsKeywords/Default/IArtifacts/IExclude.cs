@@ -9,6 +9,7 @@ public interface IExclude:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 2 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

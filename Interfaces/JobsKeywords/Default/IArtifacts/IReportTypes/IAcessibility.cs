@@ -10,6 +10,8 @@ public interface IAcessibility:
     //going up 5 level(s) abouve
     IIncludeNavigation, 
     IStagesNavigation,
+    IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 3 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

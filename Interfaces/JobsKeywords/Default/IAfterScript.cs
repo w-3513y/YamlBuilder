@@ -10,6 +10,7 @@ public interface IAfter_Script:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
+    IWorkFlowNavigation,
     //going up 1 level(s)
     IArtifactsNavigation,
     IBefore_ScriptNavigation,

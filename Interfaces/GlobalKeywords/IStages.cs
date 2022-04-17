@@ -2,7 +2,9 @@ namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IStages:
     //going up 1 level(s)
-    IVariablesNavigation
+    IVariablesNavigation,
+    IWorkFlowNavigation,
+    IJobsNavigation
 {}
 
 public interface IStagesNavigation{

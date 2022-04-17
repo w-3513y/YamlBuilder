@@ -1,7 +1,7 @@
 namespace YamlBuilder.Interfaces.Keywords.Default.IServices;
 
 public interface IEntryPoint:
-    //going down 0 level(s)
+    //going down 1 level(s)
     ICommandNavigation
 {}
 

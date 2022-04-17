@@ -1,6 +1,6 @@
 namespace YamlBuilder.Enums;
 
-public enum RetryEnum
+public enum Retry
 {
     Zero,
     One,
