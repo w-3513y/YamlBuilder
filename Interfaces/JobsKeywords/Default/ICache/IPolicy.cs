@@ -10,6 +10,7 @@ public interface IPolicy:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 2 level(s)
     IInterruptibleNavigation,
     IRetryNavigation,

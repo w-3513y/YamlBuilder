@@ -11,6 +11,7 @@ public interface IEntryPoint:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 1 level(s)
     IAfter_ScriptNavigation,
     IArtifactsNavigation,

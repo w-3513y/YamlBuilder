@@ -6,7 +6,8 @@ public interface ITemplate:
     //going up 3 level(s) abouve
     IStagesNavigation,
     IVariablesNavigation,
-    IWorkFlowNavigation
+    IWorkFlowNavigation,
+    IJobsNavigation
 {}
 
 public interface ITemplateNavigation{

@@ -11,6 +11,7 @@ public interface IBefore_Script:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 1 level(s)
     ICacheNavigation,
     IInterruptibleNavigation,

@@ -9,6 +9,7 @@ public interface IName:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 2 level(s)
     ITagsNavigation,
     ITimeOutNavigation,

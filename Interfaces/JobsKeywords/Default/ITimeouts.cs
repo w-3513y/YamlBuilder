@@ -7,7 +7,8 @@ public interface ITimeouts:
     IIncludeNavigation, 
     IStagesNavigation,
     IVariablesNavigation,
-    IWorkFlowNavigation
+    IWorkFlowNavigation,
+    IJobsNavigation
 {}
 
 public interface ITimeOutNavigation{

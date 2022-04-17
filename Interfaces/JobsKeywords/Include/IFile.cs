@@ -7,6 +7,7 @@ public interface IFile:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 1 level(s)
     //recursive mode that make possible to have more than one project included
     IProjectNavigation

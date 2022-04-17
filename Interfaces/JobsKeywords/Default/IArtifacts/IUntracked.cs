@@ -10,6 +10,7 @@ public interface IUntracked:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 2 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

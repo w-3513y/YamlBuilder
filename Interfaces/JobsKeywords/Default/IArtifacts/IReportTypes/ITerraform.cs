@@ -12,6 +12,7 @@ public interface ITerraform:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 3 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

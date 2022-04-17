@@ -10,6 +10,7 @@ public interface IPublic:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 2 level(s)
     IBefore_ScriptNavigation,
     ICacheNavigation,

@@ -14,6 +14,7 @@ public interface IServicesShortSyntax:
     IStagesNavigation,
     IVariablesNavigation,
     IWorkFlowNavigation,
+    IJobsNavigation,
     //going up 2 level(s)
     ITagsNavigation,
     ITimeOutNavigation
