@@ -8,5 +8,5 @@ public interface ICoverage:
 {}
 
 public interface ICoverageNavigation{
-    public ICoverage Coverage();
+    public ICoverage Coverage(string expression);
 }

@@ -9,5 +9,5 @@ public interface IAllowFailure:
 {}
 
 public interface IAllowFailureNavigation{
-    public IAllowFailure AllowFailure(bool yes);
+    public IAllowFailure AllowFailure(bool allow);
 }

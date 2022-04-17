@@ -8,5 +8,5 @@ public interface IDependencies:
 {}
 
 public interface IDependenciesNavigation{
-    public IDependencies Dependencies();
+    public IDependencies Dependencies(string[] dependencies);
 }

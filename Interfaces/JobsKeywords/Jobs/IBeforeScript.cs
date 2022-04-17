@@ -9,5 +9,5 @@ public interface IBeforeScript:
 {}
 
 public interface IBeforeScriptNavigation{
-    public IBeforeScript BeforeScript(string[] commands);
+    public IBeforeScript BeforeScript(string commands);
 }

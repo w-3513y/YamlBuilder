@@ -9,5 +9,5 @@ public interface IAfterScript:
 {}
 
 public interface IAfterScriptNavigation{
-    public IAfterScript AfterScript(string[] commands);
+    public IAfterScript AfterScript(string commands);
 }
