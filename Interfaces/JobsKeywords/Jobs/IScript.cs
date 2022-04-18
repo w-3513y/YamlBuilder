@@ -8,5 +8,5 @@ public interface IScript:
 {}
 
 public interface IScriptNavigation{
-    public IScript Script();
+    public IScript Script(string[] commands);
 }

@@ -8,5 +8,5 @@ public interface IResourceGroup:
 {}
 
 public interface IResourceGroupNavigation{
-    public IResourceGroup ResourceGroup();
+    public IResourceGroup ResourceGroup(string resource);
 }
