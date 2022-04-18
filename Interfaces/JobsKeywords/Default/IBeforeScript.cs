@@ -6,20 +6,20 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
 public interface IBeforeScript: 
     //going up 3 level(s) abouve
-    IIncludeNavigation, 
-    IStagesNavigation,
-    IVariablesNavigation,
-    IWorkFlowNavigation,
-    IJobsNavigation,
+    IIncludeNavigation_lvl_0, 
+    IStagesNavigation_lvl_0,
+    IVariablesNavigation_lvl_0,
+    IWorkFlowNavigation_lvl_0,
+    IJobsNavigation_lvl_0,
     //going up 1 level(s)
-    ICacheNavigation,
-    IInterruptibleNavigation,
-    IRetryNavigation,
-    IServicesNavigation,
-    ITagsNavigation,
-    ITimeOutNavigation
+    ICacheNavigation_lvl_1,
+    IInterruptibleNavigation_lvl_1,
+    IRetryNavigation_lvl_1,
+    IServicesNavigation_lvl_1,
+    ITagsNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1
 {}
 
-public interface IBeforeScriptNavigation{
+public interface IBeforeScriptNavigation_lvl_1{
     public IBeforeScript BeforeScript(string commands);
 }

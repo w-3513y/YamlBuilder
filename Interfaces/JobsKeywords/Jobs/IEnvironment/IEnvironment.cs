@@ -17,35 +17,35 @@ public interface IEnvironment:
 {}
 public interface IEnvironmentShortSintax:
     //going up 3 level(s) abouve
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 1 level(s)
-    IExtendsNavigation,
-    IInheritNavigation,
-    INeedsNavigation,
-    Variables.IVariablesNavigation,
+    IExtendsNavigation_lvl_1,
+    IInheritNavigation_lvl_1,
+    INeedsNavigation_lvl_1,
+    Variables.IVariablesNavigation_lvl_1,
     IRulesNavigation,
-    ITagsNavigation,
-    IRetryNavigation,
-    IAllowFailureNavigation,
-    IArtifactsNavigation,
-    ICacheNavigation,
-    ICoverageNavigation,
-    ISecretsNavigation,
-    IDependenciesNavigation,
-    IInterruptibleNavigation,
-    IParallelNavigation,
-    IReleaseNavigation,
-    IResourceGroupNavigation,
-    IBeforeScriptNavigation,
-    IScriptNavigation,
-    IAfterScriptNavigation,
-    ITimeOutNavigation,
-    ITriggerNavigation,
-    IPagesNavigation,
-    IWhenNavigation
+    ITagsNavigation_lvl_1,
+    IRetryNavigation_lvl_1,
+    IAllowFailureNavigation_lvl_1,
+    IArtifactsNavigation_lvl_1,
+    ICacheNavigation_lvl_1,
+    ICoverageNavigation_lvl_1,
+    ISecretsNavigation_lvl_1,
+    IDependenciesNavigation_lvl_1,
+    IInterruptibleNavigation_lvl_1,
+    IParallelNavigation_lvl_1,
+    IReleaseNavigation_lvl_1,
+    IResourceGroupNavigation_lvl_1,
+    IBeforeScriptNavigation_lvl_1,
+    IScriptNavigation_lvl_1,
+    IAfterScriptNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1,
+    ITriggerNavigation_lvl_1,
+    IPagesNavigation_lvl_1,
+    IWhenNavigation_lvl_1
 {}
 
-public interface IEnvironmentNavigation{
+public interface IEnvironmentNavigation_lvl_1{
     public IEnvironment Environment();
     public IEnvironmentShortSintax Environment(string environment);
 }

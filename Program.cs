@@ -1,12 +1,19 @@
 using YamlBuilder.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Configuration
+       .SetBasePath(builder.Environment.ContentRootPath)
+       .AddJsonFile(path: "appsettings.json", optional: true, reloadOnChange: true)
+       .AddEnvironmentVariables();
+
 var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
 GitLabYaml
-    .Builder(filename: "gitlab.yml") 
+    .Builder(filename: "gitlab") 
     .Default()
         .Image()
             .Name("ruby:3.0")

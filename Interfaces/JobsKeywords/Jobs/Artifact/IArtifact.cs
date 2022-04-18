@@ -15,6 +15,6 @@ public interface IArtifacts:
   IWhenNavigation
 {}
 
-public interface IArtifactsNavigation{
+public interface IArtifactsNavigation_lvl_1{
     public IArtifacts Artifacts();   
 }

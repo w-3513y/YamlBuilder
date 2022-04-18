@@ -10,12 +10,12 @@ public interface ITrigger:
 
 public interface ITriggerShortSyntax:
     //going up 3 level(s) abouve
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IPagesNavigation,
-    IWhenNavigation
+    IPagesNavigation_lvl_1,
+    IWhenNavigation_lvl_1
 {}
 
-public interface ITriggerNavigation{
+public interface ITriggerNavigation_lvl_1{
     public ITrigger Trigger();
 }

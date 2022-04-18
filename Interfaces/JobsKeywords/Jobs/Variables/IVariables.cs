@@ -9,10 +9,10 @@ public interface IVariables:
 
 public interface IVariablesShortSyntax:
     //going up 1 level(s)
-    IJobsNavigation
+    IJobsNavigation_lvl_0
 {}
 
-public interface IVariablesNavigation{
+public interface IVariablesNavigation_lvl_1{
     public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues);
     public IVariables Variables();
 }

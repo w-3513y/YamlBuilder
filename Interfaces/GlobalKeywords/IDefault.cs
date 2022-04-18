@@ -8,18 +8,18 @@ namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IDefault:
     //going down 1 level(s)
-    IAfterScriptNavigation,
-    IArtifactsNavigation,
-    IBeforeScriptNavigation,
-    ICacheNavigation,
-    IImageNavigation,
-    IInterruptibleNavigation,
-    IRetryNavigation,
-    IServicesNavigation,
-    ITagsNavigation,
-    ITimeOutNavigation
+    IAfterScriptNavigation_lvl_1,
+    IArtifactsNavigation_lvl_1,
+    IBeforeScriptNavigation_lvl_1,
+    ICacheNavigation_lvl_1,
+    IImageNavigation_lvl_1,
+    IInterruptibleNavigation_lvl_1,
+    IRetryNavigation_lvl_1,
+    IServicesNavigation_lvl_1,
+    ITagsNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1
  {}
 
-public interface IDefaultNavigation{
+public interface IDefaultNavigation_lvl_0{
     public IDefault Default();
 }

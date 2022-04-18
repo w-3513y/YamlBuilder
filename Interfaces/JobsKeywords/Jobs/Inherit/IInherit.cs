@@ -7,6 +7,6 @@ public interface IInherit:
     IVariablesNavigation
 {}
 
-public interface IInheritNavigation{
+public interface IInheritNavigation_lvl_1{
     public IInherit IInherit();
 }

@@ -4,11 +4,11 @@ namespace YamlBuilder.Interfaces.JobsKeywords.WorkFlow;
 
 public interface IAllowFailure:
     //going up 1 level(s)
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 1 level(s)
-    IIfsNavigation
+    IIfsNavigation_lvl_2
 {}
 
-public interface IAllowFailureNavigation{
+public interface IAllowFailureNavigation_lvl_3{
     public IAllowFailure AllowFailure(bool yes);
 }

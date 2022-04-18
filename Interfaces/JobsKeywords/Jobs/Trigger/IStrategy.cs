@@ -5,10 +5,10 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 public interface IStrategy: 
     //going up 3 level(s) abouve
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IPagesNavigation,
-    IWhenNavigation
+    IPagesNavigation_lvl_1,
+    IWhenNavigation_lvl_1
 {}
 
 public interface IStrategyNavigation{

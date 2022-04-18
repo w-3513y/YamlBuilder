@@ -7,6 +7,6 @@ public interface IRules:
     //going down 1 level(s)
  {}
 
-public interface IRulesNavigation{
+public interface IRulesNavigation_lvl_1{
     public IRules Rules(string condition);
 }

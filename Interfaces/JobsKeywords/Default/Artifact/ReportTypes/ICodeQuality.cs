@@ -6,32 +6,32 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
 public interface ICodeQuality:
     //going up 5 level(s) abouve
-    IIncludeNavigation, 
-    IStagesNavigation,
-    IVariablesNavigation,
-    IWorkFlowNavigation,
-    IJobsNavigation,
+    IIncludeNavigation_lvl_0, 
+    IStagesNavigation_lvl_0,
+    IVariablesNavigation_lvl_0,
+    IWorkFlowNavigation_lvl_0,
+    IJobsNavigation_lvl_0,
     //going up 3 level(s)
-    IBeforeScriptNavigation,
-    ICacheNavigation,
-    IInterruptibleNavigation,
-    IRetryNavigation,
-    IServicesNavigation,
-    ITagsNavigation,
-    ITimeOutNavigation,
+    IBeforeScriptNavigation_lvl_1,
+    ICacheNavigation_lvl_1,
+    IInterruptibleNavigation_lvl_1,
+    IRetryNavigation_lvl_1,
+    IServicesNavigation_lvl_1,
+    ITagsNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1,
     //going up 2 level(s)
-    IExpireInNavigation,
-    IReportNavigation,
+    IExpireInNavigation_lvl_2,
+    IReportNavigation_lvl_2,
     //going up 1 level(s)
-    ICoverageReportNavigation,
-    IDotEnvNavigation,
-    IJUnitNavigation,
-    ISastNavigation,
-    ISecretSedentionNavigation,
-    ITerraformNavigation
+    ICoverageReportNavigation_lvl_3,
+    IDotEnvNavigation_lvl_3,
+    IJUnitNavigation_lvl_3,
+    ISastNavigation_lvl_3,
+    ISecretSedentionNavigation_lvl_3,
+    ITerraformNavigation_lvl_3
 {}
 
-public interface ICodeQualityNavigation{
+public interface ICodeQualityNavigation_lvl_3{
     public ICodeQuality CodeQuality(string report);
     
 }

@@ -9,6 +9,6 @@ public interface ICache:
     IPolicyNavigation
 {}
 
-public interface ICacheNavigation{
+public interface ICacheNavigation_lvl_1{
     public ICache Cache();
 }

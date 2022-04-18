@@ -3,9 +3,9 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IIfs:
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IWhenNavigation
+    IWhenNavigation_lvl_1
 {}
 
 public interface IIfsNavigation{

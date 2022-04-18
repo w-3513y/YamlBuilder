@@ -10,6 +10,6 @@ public interface IPages:
     IRulesNavigation
 {}
 
-public interface IPagesNavigation{
+public interface IPagesNavigation_lvl_1{
     public IPages Pages();
 }

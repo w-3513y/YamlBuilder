@@ -7,28 +7,28 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 
 public interface IName:
     //going up 4 level(s) abouve
-    IIncludeNavigation, 
-    IStagesNavigation,
-    IVariablesNavigation,
-    IWorkFlowNavigation,
-    IJobsNavigation,
+    IIncludeNavigation_lvl_0, 
+    IStagesNavigation_lvl_0,
+    IVariablesNavigation_lvl_0,
+    IWorkFlowNavigation_lvl_0,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IBeforeScriptNavigation,
-    ICacheNavigation,
-    IInterruptibleNavigation,
-    IRetryNavigation,
-    IServicesNavigation,
-    ITagsNavigation,
-    ITimeOutNavigation,
+    IBeforeScriptNavigation_lvl_1,
+    ICacheNavigation_lvl_1,
+    IInterruptibleNavigation_lvl_1,
+    IRetryNavigation_lvl_1,
+    IServicesNavigation_lvl_1,
+    ITagsNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1,
     //going up 1 level(s)
-    IPathsNavigation,
-    IExpireInNavigation,
-    IExcludeNavigation,
-    IExposeAsNavigation,
-    IReportNavigation
+    IPathsNavigation_lvl_2,
+    IExpireInNavigation_lvl_2,
+    IExcludeNavigation_lvl_2,
+    IExposeAsNavigation_lvl_2,
+    IReportNavigation_lvl_2
 {}
 
-public interface INameNavigation{
+public interface INameNavigation_lvl_2{
 
     public IName Name(string name);
     

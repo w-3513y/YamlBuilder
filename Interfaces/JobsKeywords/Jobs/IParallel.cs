@@ -7,19 +7,19 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface IParallel:
     //going up 3 level(s) abouve
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IReleaseNavigation,
-    IResourceGroupNavigation,
-    IBeforeScriptNavigation,
-    IScriptNavigation,
-    IAfterScriptNavigation,
-    ITimeOutNavigation,
-    ITriggerNavigation,
-    IPagesNavigation,
-    IWhenNavigation
+    IReleaseNavigation_lvl_1,
+    IResourceGroupNavigation_lvl_1,
+    IBeforeScriptNavigation_lvl_1,
+    IScriptNavigation_lvl_1,
+    IAfterScriptNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1,
+    ITriggerNavigation_lvl_1,
+    IPagesNavigation_lvl_1,
+    IWhenNavigation_lvl_1
 {}
 
-public interface IParallelNavigation{
+public interface IParallelNavigation_lvl_1{
     public IParallel Parallel(int multipleTimes);
 }

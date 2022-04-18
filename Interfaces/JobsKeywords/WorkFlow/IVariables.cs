@@ -4,15 +4,15 @@ namespace YamlBuilder.Interfaces.JobsKeywords.WorkFlow;
 
 public interface IVariables:
     //going up 2 level(s)
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 1 level(s)
-    IIfsNavigation,
+    IIfsNavigation_lvl_2,
     //going down 1 level(s)
-    IWhenNavigation,
-    IAllowFailureNavigation    
+    IWhenNavigation_lvl_3,
+    IAllowFailureNavigation_lvl_3    
    
  {}
 
-public interface IVariablesNavigation{
+public interface IVariablesNavigation_lvl_3{
     public IVariables Variables(string condition);
 }

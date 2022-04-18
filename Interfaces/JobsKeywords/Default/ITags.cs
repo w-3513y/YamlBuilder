@@ -4,15 +4,15 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
 public interface ITags:
     //going up 3 level(s) abouve
-    IIncludeNavigation, 
-    IStagesNavigation,
-    IVariablesNavigation,
-    IWorkFlowNavigation,
-    IJobsNavigation,
+    IIncludeNavigation_lvl_0, 
+    IStagesNavigation_lvl_0,
+    IVariablesNavigation_lvl_0,
+    IWorkFlowNavigation_lvl_0,
+    IJobsNavigation_lvl_0,
     //going up 1 level(s)
-    ITimeOutNavigation
+    ITimeOutNavigation_lvl_1
  {}
 
-public interface ITagsNavigation{
+public interface ITagsNavigation_lvl_1{
     public ITags Tags(string[] tags);
 }

@@ -7,6 +7,6 @@ public interface ISecrets:
     ISecretNavigation
 {}
 
-public interface ISecretsNavigation{
+public interface ISecretsNavigation_lvl_1{
     public ISecrets Secrets();
 }

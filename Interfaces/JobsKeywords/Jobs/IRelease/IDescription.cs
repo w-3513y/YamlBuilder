@@ -6,16 +6,16 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 
 public interface IDescription:
     //going up 3 level(s) abouve
-    IJobsNavigation,
+    IJobsNavigation_lvl_0,
     //going up 2 level(s)
-    IResourceGroupNavigation,
-    IBeforeScriptNavigation,
-    IScriptNavigation,
-    IAfterScriptNavigation,
-    ITimeOutNavigation,
-    ITriggerNavigation,
-    IPagesNavigation,
-    IWhenNavigation
+    IResourceGroupNavigation_lvl_1,
+    IBeforeScriptNavigation_lvl_1,
+    IScriptNavigation_lvl_1,
+    IAfterScriptNavigation_lvl_1,
+    ITimeOutNavigation_lvl_1,
+    ITriggerNavigation_lvl_1,
+    IPagesNavigation_lvl_1,
+    IWhenNavigation_lvl_1
 {}
 
 public interface IDescriptionNavigation{

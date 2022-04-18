@@ -11,6 +11,6 @@ public interface IRelease:
     IReleasedAt
 {}
 
-public interface IReleaseNavigation{
+public interface IReleaseNavigation_lvl_1{
     public IRelease Release();
 }

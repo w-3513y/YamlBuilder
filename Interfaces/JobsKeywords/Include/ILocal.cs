@@ -4,12 +4,12 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Include;
 
 public interface ILocal:
     //going up 3 level(s) abouve
-    IStagesNavigation,
-    IVariablesNavigation,
-    IWorkFlowNavigation,
-    IJobsNavigation
+    IStagesNavigation_lvl_0,
+    IVariablesNavigation_lvl_0,
+    IWorkFlowNavigation_lvl_0,
+    IJobsNavigation_lvl_0
 {}
 
-public interface ILocalNavigation{
+public interface ILocalNavigation_lvl_1{
     public ILocal Local(string file);   
 }
