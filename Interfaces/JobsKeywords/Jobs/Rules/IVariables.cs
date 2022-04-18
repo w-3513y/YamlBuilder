@@ -10,9 +10,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 
 public interface IVariables:
-    //going up 3 level(s)
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     Jobs.IAllowFailureNavigation_lvl_1,
@@ -32,13 +30,11 @@ public interface IVariables:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IIfsNavigation,
-    //going down 1 level(s)
-    Rules.IWhenNavigation,
-    Rules.IAllowFailureNavigation    
+    IIfsNavigation_lvl_2,
+    Rules.IWhenNavigation_lvl_3,
+    Rules.IAllowFailureNavigation_lvl_3    
  {}
 
-public interface IVariablesNavigation{
+public interface IVariablesNavigation_lvl_3{
     public IVariables Variables(string condition);
 }

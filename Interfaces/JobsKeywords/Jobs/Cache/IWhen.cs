@@ -7,9 +7,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface IWhen:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
     IDependenciesNavigation_lvl_1,
@@ -26,6 +24,6 @@ public interface IWhen:
     Jobs.IWhenNavigation_lvl_1
 {}
 
-public interface IWhenNavigation{
+public interface IWhenNavigation_lvl_2{
     public IWhen When(Enums.JobGlobal when);   
 }

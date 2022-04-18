@@ -11,12 +11,10 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Inherit;
 
 public interface IDefault: 
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     INeedsNavigation_lvl_1,
-    IVariablesNavigation,
-    IRulesNavigation,
+    IVariablesNavigation_lvl_2,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -38,7 +36,7 @@ public interface IDefault:
     IWhenNavigation_lvl_1
 {}
 
-public interface IDefaultNavigation{
+public interface IDefaultNavigation_lvl_2{
     public IDefault Default(string[] commands);
     public IDefault Default(bool yes);
 }

@@ -3,15 +3,11 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface ISecretSedention:
-    //going up 5 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 3 level(s)
-    //going up 2 level(s)
-    IExpireInNavigation,
-    //going up 1 level(s)
-    ITerraformNavigation
+    IExpireInNavigation_lvl_2,
+    ITerraformNavigation_lvl_3
 {}
 
-public interface ISecretSedentionNavigation{
+public interface ISecretSedentionNavigation_lvl_3{
     public ISecretSedention SecretSedention(string report);
 }

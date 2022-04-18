@@ -4,13 +4,11 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 public interface IStrategy: 
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1
 {}
 
-public interface IStrategyNavigation{
+public interface IStrategyNavigation_lvl_2{
     public IStrategy Strategy(string file);
 }

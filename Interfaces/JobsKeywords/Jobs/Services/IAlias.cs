@@ -13,16 +13,13 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Services;
 
 public interface IAlias:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
-    //going up 1 level(s)
     IEnvironmentNavigation_lvl_1,
     IExtendsNavigation_lvl_1,
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -42,12 +39,10 @@ public interface IAlias:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //going down 1 level(s)
-    IEntryPointNavigation,
-    //recursive to run more than one service without short syntax
-    INameAfterAliasNavigation
+    IEntryPointNavigation_lvl_3,
+    INameAfterAliasNavigation_lvl_2
 {}
 
-public interface IAliasNavigation{
+public interface IAliasNavigation_lvl_3{
     public IAlias Alias(string alias);   
 }

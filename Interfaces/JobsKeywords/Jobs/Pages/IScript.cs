@@ -4,13 +4,11 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IScript:
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IWhenNavigation_lvl_1,
-    //going up 3 level(s) abouve
-    IArtifactNavigation,
-    IRulesNavigation
+    IArtifactNavigation_lvl_2,
+    IRulesNavigation_lvl_2
 {}
 
-public interface IScriptNavigation{
+public interface IScriptNavigation_lvl_2{
     public IScript Script(string[] commands);
 }

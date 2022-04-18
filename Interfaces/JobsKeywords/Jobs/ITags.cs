@@ -10,9 +10,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface ITags:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
     IArtifactsNavigation_lvl_1,

@@ -9,13 +9,11 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 
 public interface IRetry:
-    IMaxNavigation
+    IMaxNavigation_lvl_2
 {}
 
 public interface IRetryShortSyntax:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IAllowFailureNavigation_lvl_1,
     IArtifactsNavigation_lvl_1,
     ICacheNavigation_lvl_1,
@@ -31,8 +29,7 @@ public interface IRetryShortSyntax:
     IAfterScriptNavigation_lvl_1,
     ITimeOutNavigation_lvl_1,
     ITriggerNavigation_lvl_1,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation
+    IPagesNavigation_lvl_1
 {}
 
 public interface IRetryNavigation_lvl_1{

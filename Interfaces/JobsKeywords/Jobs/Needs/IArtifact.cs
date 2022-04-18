@@ -10,11 +10,9 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Needs;
 
 public interface IArtifact:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IVariablesNavigation_lvl_0,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -34,10 +32,9 @@ public interface IArtifact:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //recursion
-    IJobNavigation
+    IJobNavigation_lvl_2
 {}
 
-public interface IArtifactNavigation{
+public interface IArtifactNavigation_lvl_3{
     public IArtifact Artifact(bool yes);
 }

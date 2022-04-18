@@ -13,20 +13,17 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Services;
 
 public interface IServices:
-  //going down 1 level(s)
-  INameNavigation
+  INameNavigation_lvl_2
 {}
 
 public interface IServicesShortSyntax:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IEnvironmentNavigation_lvl_1,
     IExtendsNavigation_lvl_1,
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,

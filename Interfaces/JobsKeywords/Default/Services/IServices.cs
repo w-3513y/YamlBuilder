@@ -3,18 +3,15 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 public interface IServices:
-  //going down 1 level(s)
-  INameNavigation
+    INameNavigation_lvl_2
 {}
 
 public interface IServicesShortSyntax:
-    //going up 4 level(s) abouve
     IIncludeNavigation_lvl_0, 
     IStagesNavigation_lvl_0,
     IVariablesNavigation_lvl_0,
     IWorkFlowNavigation_lvl_0,
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ITagsNavigation_lvl_1,
     ITimeOutNavigation_lvl_1
 {}

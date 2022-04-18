@@ -7,9 +7,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface IKey:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
     IDependenciesNavigation_lvl_1,
@@ -24,15 +22,13 @@ public interface IKey:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IPathsNavigation,
-    IWhenNavigation,
-    IPolicyNavigation,
-    IUntracked,
-    //going down 1 level(s)
-    IFilesNavigation
+    IPathsNavigation_lvl_2,
+    IWhenNavigation_lvl_2,
+    IPolicyNavigation_lvl_2,
+    IUntrackedNavigation_lvl_2,
+    IFilesNavigation_lvl_3
 {}
 
-public interface IKeyNavigation{
+public interface IKeyNavigation_lvl_2{
     public IKey Key(string name);
 }

@@ -9,9 +9,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface IAllowFailure:
-    //going up 2 level(s)
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IArtifactsNavigation_lvl_1,
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,

@@ -6,9 +6,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 
 public interface IFile:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IDependenciesNavigation_lvl_1,
     IInterruptibleNavigation_lvl_1,
     IParallelNavigation_lvl_1,
@@ -21,10 +19,9 @@ public interface IFile:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //
-    ISecretNavigation
+    ISecretNavigation_lvl_2
 {}
 
-public interface IFileNavigation{
+public interface IFileNavigation_lvl_4{
     public IFile File(bool yes);
 }

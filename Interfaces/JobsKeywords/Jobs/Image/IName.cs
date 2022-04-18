@@ -14,16 +14,14 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Image;
 
 public interface IName:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IServicesNavigation_lvl_1,
     IEnvironmentNavigation_lvl_1,
     IExtendsNavigation_lvl_1,
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -43,10 +41,9 @@ public interface IName:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //going down 1 level(s)
-    IEntryPointNavigation
+    IEntryPointNavigation_lvl_2
 {}
 
-public interface INameNavigation{
+public interface INameNavigation_lvl_2{
     public IName Name(string name);   
 }

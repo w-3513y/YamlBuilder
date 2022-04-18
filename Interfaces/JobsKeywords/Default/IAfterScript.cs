@@ -6,13 +6,11 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
 public interface IAfterScript: 
-    //going up 3 level(s) abouve
     IIncludeNavigation_lvl_0, 
     IStagesNavigation_lvl_0,
     IVariablesNavigation_lvl_0,
     IWorkFlowNavigation_lvl_0,
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IArtifactsNavigation_lvl_1,
     IBeforeScriptNavigation_lvl_1,
     ICacheNavigation_lvl_1,

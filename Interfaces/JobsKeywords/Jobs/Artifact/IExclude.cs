@@ -9,9 +9,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IExclude:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
@@ -27,12 +25,11 @@ public interface IExclude:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IExpireInNavigation,
-    IReportNavigation
+    IExpireInNavigation_lvl_2,
+    IReportNavigation_lvl_2
 {}
 
-public interface IExcludeNavigation{
+public interface IExcludeNavigation_lvl_2{
     public IExclude Exclude(string file);
     
 }

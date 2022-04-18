@@ -17,7 +17,6 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface IStage:
-    //going up 1 level(s)
     IOnlyNavigation_lvl_1,
     IExceptNavigation_lvl_1,
     IImageNavigation_lvl_1,
@@ -27,7 +26,7 @@ public interface IStage:
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,

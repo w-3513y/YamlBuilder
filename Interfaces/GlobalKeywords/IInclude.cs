@@ -3,7 +3,6 @@ using YamlBuilder.Interfaces.JobsKeywords.Include;
 namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IInclude:
-    //going down 1 level(s)
     ILocalNavigation_lvl_1,
     IProjectNavigation_lvl_1,
     IRemoteNavigation_lvl_1,

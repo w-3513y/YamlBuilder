@@ -10,9 +10,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 
 public interface IWhen:
-    //going up 3 level(s)
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     Jobs.IAllowFailureNavigation_lvl_1,
@@ -31,13 +29,11 @@ public interface IWhen:
     ITimeOutNavigation_lvl_1,
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
-    IWhenNavigation,
-    //going up 1 level(s)
-    IIfsNavigation,
-    //going down 1 level(s)
-    Rules.IAllowFailureNavigation
+    IIfsNavigation_lvl_2,
+    IWhenNavigation_lvl_3,
+    Rules.IAllowFailureNavigation_lvl_3
 {}
 
-public interface IWhenNavigation{
+public interface IWhenNavigation_lvl_3{
     public IWhen When(Enums.When when);
 }

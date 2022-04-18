@@ -6,9 +6,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface IBeforeScript: 
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IScriptNavigation_lvl_1,
     IAfterScriptNavigation_lvl_1,
     ITimeOutNavigation_lvl_1,

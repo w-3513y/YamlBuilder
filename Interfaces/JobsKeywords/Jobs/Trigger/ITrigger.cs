@@ -4,14 +4,13 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 public interface ITrigger:
-    IIncludeNavigation,
-    IStrategyNavigation
+    IIncludeNavigation_lvl_2,
+    IStrategyNavigation_lvl_2,
+    IFowardNavigation_lvl_2
 {}
 
 public interface ITriggerShortSyntax:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1
 {}

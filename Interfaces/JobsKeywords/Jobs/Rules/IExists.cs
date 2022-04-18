@@ -10,12 +10,10 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 
 public interface IExists:
-    //going up 3 level(s)
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
-    IAllowFailureNavigation,
+    IAllowFailureNavigation_lvl_3,
     IArtifactsNavigation_lvl_1,
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,
@@ -31,9 +29,9 @@ public interface IExists:
     ITimeOutNavigation_lvl_1,
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
-    IWhenNavigation
+    IWhenNavigation_lvl_3
 {}
 
-public interface IExistsNavigation{
+public interface IExistsNavigation_lvl_2{
     public IExists Exists(string condition);
 }

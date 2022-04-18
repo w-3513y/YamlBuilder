@@ -16,14 +16,11 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Only;
 
 public interface IOnly:
-    //going up 3 level(s) abouve
-    IRefNavigation
+    IRefNavigation_lvl_2
 {}
 
 public interface IOnlyShortSyntax:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IExceptNavigation_lvl_1,
     IImageNavigation_lvl_1,
     IServicesNavigation_lvl_1,
@@ -32,7 +29,7 @@ public interface IOnlyShortSyntax:
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,

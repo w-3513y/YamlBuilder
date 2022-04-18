@@ -5,9 +5,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 
 public interface IDescription:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IResourceGroupNavigation_lvl_1,
     IBeforeScriptNavigation_lvl_1,
     IScriptNavigation_lvl_1,
@@ -18,6 +16,6 @@ public interface IDescription:
     IWhenNavigation_lvl_1
 {}
 
-public interface IDescriptionNavigation{
+public interface IDescriptionNavigation_lvl_3{
     public IDescription Description(string description);
 }

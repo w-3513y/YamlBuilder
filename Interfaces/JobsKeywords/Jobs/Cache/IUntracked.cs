@@ -7,9 +7,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface IUntracked:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
     IDependenciesNavigation_lvl_1,
@@ -24,13 +22,12 @@ public interface IUntracked:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IPathsNavigation,
-    IWhenNavigation,
-    IPolicyNavigation,
-    IKeyNavigation
+    IPathsNavigation_lvl_2,
+    IWhenNavigation_lvl_2,
+    IPolicyNavigation_lvl_2,
+    IKeyNavigation_lvl_2
 {}
 
-public interface IUntrackedNavigation{
+public interface IUntrackedNavigation_lvl_2{
     public IUntracked Untracked(bool publc);   
 }

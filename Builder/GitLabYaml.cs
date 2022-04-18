@@ -157,7 +157,7 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml,
     {
         Utils.WriteFile(_fullPath, "    exclude:");
         Utils.WriteFile(_fullPath, $"      - {file}");
-        return this;
+        return this.Exclude(file);
     }
 
     public Interfaces.JobsKeywords.Default.Artifact.IExpireIn ExpireIn(string date)

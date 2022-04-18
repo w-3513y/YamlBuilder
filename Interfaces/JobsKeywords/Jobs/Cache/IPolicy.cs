@@ -8,9 +8,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 
 public interface IPolicy:    
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
     IDependenciesNavigation_lvl_1,
@@ -25,14 +23,13 @@ public interface IPolicy:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IPathsNavigation,
-    IWhenNavigation,
-    IUntracked,
-    IKeyNavigation
+    IPathsNavigation_lvl_2,
+    IWhenNavigation_lvl_2,
+    IUntrackedNavigation_lvl_2,
+    IKeyNavigation_lvl_2
 {}
 
 
-public interface IPolicyNavigation{
+public interface IPolicyNavigation_lvl_2{
     public IPolicy Policy(GitCommand command);   
 }

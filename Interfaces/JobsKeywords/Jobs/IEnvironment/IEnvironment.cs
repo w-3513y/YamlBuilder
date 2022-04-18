@@ -12,18 +12,15 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IEnvironment;
 
 public interface IEnvironment:
-    //going down 1 level(s)
-    INameNavigation
+    INameNavigation_lvl_2
 {}
 public interface IEnvironmentShortSintax:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     IExtendsNavigation_lvl_1,
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,

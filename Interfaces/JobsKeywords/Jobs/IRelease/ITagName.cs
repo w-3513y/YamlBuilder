@@ -5,9 +5,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 
 public interface ITagName:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IResourceGroupNavigation_lvl_1,
     IBeforeScriptNavigation_lvl_1,
     IScriptNavigation_lvl_1,
@@ -16,11 +14,10 @@ public interface ITagName:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //
-    IDescriptionNavigation,
-    IMilestonesNavigation
+    IMilestonesNavigation_lvl_2,
+    IDescriptionNavigation_lvl_3
 {}
 
-public interface ITagNameNavigation{
+public interface ITagNameNavigation_lvl_2{
     public ITagName TagName(string tagName);
 }

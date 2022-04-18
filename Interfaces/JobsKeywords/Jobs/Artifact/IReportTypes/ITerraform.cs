@@ -3,13 +3,10 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface ITerraform:
-    //going up 5 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 3 level(s)
-    //going up 2 level(s)
-    IExpireInNavigation
+    IExpireInNavigation_lvl_2
 {}
 
-public interface ITerraformNavigation{
+public interface ITerraformNavigation_lvl_3{
     public ITerraform Terraform(string report);
 }

@@ -1,10 +1,8 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Inherit;
 
 public interface IInherit: 
-    //going up 3 level(s) abouve
-    //going down 1 level(s)
-    IDefaultNavigation,
-    IVariablesNavigation
+    IDefaultNavigation_lvl_2,
+    IVariablesNavigation_lvl_2
 {}
 
 public interface IInheritNavigation_lvl_1{

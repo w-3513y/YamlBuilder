@@ -1,7 +1,6 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
 public interface IReport:
-    //going down 1 level(s)
     IAcessibilityNavigation_lvl_3,
     ICodeQualityNavigation_lvl_3,
     ICoverageReportNavigation_lvl_3,

@@ -1,10 +1,9 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IArtifact:
-  //going down 1 level(s)
-  IPathNavigation
+  IPathNavigation_lvl_3
 {}
 
-public interface IArtifactNavigation{
+public interface IArtifactNavigation_lvl_2{
     public IArtifact Artifacts();   
 }

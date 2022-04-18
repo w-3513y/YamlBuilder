@@ -5,11 +5,10 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 public interface IPipelineVariables:
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1
 {}
 
-public interface IPipelineVariablesNavigation{
+public interface IPipelineVariablesNavigation_lvl_3{
     public IPipelineVariables PipelineVariables(bool isPipeline);
 }

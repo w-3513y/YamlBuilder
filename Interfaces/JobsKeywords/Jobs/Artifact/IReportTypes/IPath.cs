@@ -3,19 +3,15 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface IPath:
-    //going up 5 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 3 level(s)
-    //going up 2 level(s)
-    IExpireInNavigation,
-    //going up 1 level(s)
-    IDotEnvNavigation,
-    IJUnitNavigation,
-    ISastNavigation,
-    ISecretSedentionNavigation,
-    ITerraformNavigation
+    IExpireInNavigation_lvl_2,
+    IDotEnvNavigation_lvl_3,
+    IJUnitNavigation_lvl_3,
+    ISastNavigation_lvl_3,
+    ISecretSedentionNavigation_lvl_3,
+    ITerraformNavigation_lvl_3
 {}
 
-public interface IPathNavigation{
+public interface IPathNavigation_lvl_5{
     public IPath Path(string path);
 }

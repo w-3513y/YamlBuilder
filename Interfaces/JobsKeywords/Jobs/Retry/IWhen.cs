@@ -10,7 +10,6 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 
 public interface IWhen:
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IAllowFailureNavigation_lvl_1,
     IArtifactsNavigation_lvl_1,
     ICacheNavigation_lvl_1,
@@ -27,9 +26,9 @@ public interface IWhen:
     ITimeOutNavigation_lvl_1,
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
-    IWhenNavigation
+    IWhenNavigation_lvl_1
 {}
 
-public interface IWhenNavigation{
+public interface IWhenNavigation_lvl_3{
     public IWhen IWhen(string[] options);
 }

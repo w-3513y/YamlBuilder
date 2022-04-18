@@ -1,10 +1,9 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Services;
 
 public interface IEntryPoint:
-    //going down 1 level(s)
-    ICommandNavigation
+    ICommandNavigation_lvl_4
 {}
 
-public interface IEntryPointNavigation{
+public interface IEntryPointNavigation_lvl_3{
     public IEntryPoint Entrypoint(string entrypoint);
 }

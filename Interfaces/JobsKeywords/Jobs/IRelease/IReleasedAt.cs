@@ -4,10 +4,8 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 
-public interface IReleasedAt:
-    //going up 3 level(s) abouve
+public interface IReleasedAt_lvl_2:
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IResourceGroupNavigation_lvl_1,
     IBeforeScriptNavigation_lvl_1,
     IScriptNavigation_lvl_1,
@@ -19,5 +17,5 @@ public interface IReleasedAt:
 {}
 
 public interface IReleasedAtNavigation{
-    public IReleasedAt ReleasedAt(string releaseAt);
+    public IReleasedAt_lvl_2 ReleasedAt(string releaseAt);
 }

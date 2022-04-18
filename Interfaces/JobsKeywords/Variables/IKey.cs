@@ -1,7 +1,6 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Variables;
 
 public interface IKey:
-    //going down 1 level(s)
     IValueNavigation_lvl_2
  {}
 

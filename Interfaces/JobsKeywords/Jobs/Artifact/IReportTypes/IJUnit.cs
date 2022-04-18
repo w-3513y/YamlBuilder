@@ -3,17 +3,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface IJUnit:
-    //going up 5 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 3 level(s)
-    //going up 2 level(s)
-    IExpireInNavigation,
-    //going up 1 level(s)
-    ISastNavigation,
-    ISecretSedentionNavigation,
-    ITerraformNavigation
+    IExpireInNavigation_lvl_2,
+    ISastNavigation_lvl_3,
+    ISecretSedentionNavigation_lvl_3,
+    ITerraformNavigation_lvl_3
 {}
 
-public interface IJUnitNavigation{
+public interface IJUnitNavigation_lvl_3{
     public IJUnit JUnit(string report);
 }

@@ -10,10 +10,8 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Variables;
 
 public interface IValue:
-    //going up 1 level(s)
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -33,12 +31,10 @@ public interface IValue:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //going down 1 level(s)
-    IDescriptionNavigation,
-    //recursive mode that make possible to have more than one project included
-    IKeyNavigation
+    IDescriptionNavigation_lvl_4,
+    IKeyNavigation_lvl_2
  {}
 
-public interface IValueNavigation{
+public interface IValueNavigation_lvl_3{
     public IValue Value(string value);
 }

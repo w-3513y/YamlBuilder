@@ -6,9 +6,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 
 public interface IVault:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IDependenciesNavigation_lvl_1,
     IInterruptibleNavigation_lvl_1,
     IParallelNavigation_lvl_1,
@@ -21,11 +19,10 @@ public interface IVault:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //
-    IFileNavigation,
-    ISecretNavigation
+    IFileNavigation_lvl_4,
+    ISecretNavigation_lvl_2
 {}
 
-public interface IVaultNavigation{
+public interface IVaultNavigation_lvl_3{
     public IVault Vault(string vault);
 }

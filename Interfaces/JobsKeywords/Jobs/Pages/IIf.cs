@@ -4,10 +4,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IIfs:
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IWhenNavigation_lvl_1
 {}
 
-public interface IIfsNavigation{
+public interface IIfsNavigation_lvl_3{
     public IIfs Ifs(string condition);
 }

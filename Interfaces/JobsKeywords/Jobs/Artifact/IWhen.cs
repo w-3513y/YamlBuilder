@@ -9,9 +9,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IWhen:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
@@ -27,15 +25,14 @@ public interface IWhen:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    INameNavigation,
-    IPathsNavigation,
-    IExpireInNavigation,
-    IExcludeNavigation,
-    IExposeAsNavigation,
-    IReportNavigation
+    INameNavigation_lvl_2,
+    IPathsNavigation_lvl_2,
+    IExpireInNavigation_lvl_2,
+    IExcludeNavigation_lvl_2,
+    IExposeAsNavigation_lvl_2,
+    IReportNavigation_lvl_2
 {}
 
-public interface IWhenNavigation{
+public interface IWhenNavigation_lvl_2{
     public IWhen When(Enums.JobGlobal when);
 }

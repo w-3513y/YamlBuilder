@@ -1,7 +1,6 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 
 public interface ICache:
-    //going down 1 level(s)
     IKeyNavigation_lvl_2,
     IPathsNavigation_lvl_2,
     IUntrackedNavigation_lvl_2,

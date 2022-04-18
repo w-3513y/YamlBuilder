@@ -4,15 +4,12 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 public interface IInclude: 
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IStrategyNavigation
+    IStrategyNavigation_lvl_2
 {}
 
-public interface IIncludeNavigation{
+public interface IIncludeNavigation_lvl_2{
     public IInclude Include(string file);
 }

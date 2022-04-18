@@ -1,10 +1,9 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IEnvironment;
 
 public interface IKubernetes:
-    //going down 1 level(s)
-    INameSpaceNavigation
+    INameSpaceNavigation_lvl_4
 {}
 
-public interface IKubernetesNavigation{
+public interface IKubernetesNavigation_lvl_3{
     public IKubernetes Kubernetes();   
 }

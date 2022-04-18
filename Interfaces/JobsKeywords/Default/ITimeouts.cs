@@ -3,7 +3,6 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
 public interface ITimeouts:
-    //going up 3 level(s) abouve
     IIncludeNavigation_lvl_0, 
     IStagesNavigation_lvl_0,
     IVariablesNavigation_lvl_0,

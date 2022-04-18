@@ -9,9 +9,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IExposeAs:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
@@ -27,17 +25,14 @@ public interface IExposeAs:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     Jobs.IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    IPathsNavigation,
-    IExpireInNavigation,
-    IExcludeNavigation,
-    IExposeAsNavigation,
-    IReportNavigation
+    IPathsNavigation_lvl_2,
+    IExpireInNavigation_lvl_2,
+    IExcludeNavigation_lvl_2,
+    IExposeAsNavigation_lvl_2,
+    IReportNavigation_lvl_2
 {}
 
-public interface IExposeAsNavigation{
+public interface IExposeAsNavigation_lvl_2{
     public IExposeAs ExposeAs(string name);
     
 }
-
-//Use the artifacts:expose_as keyword to expose job artifacts in the merge request UI.

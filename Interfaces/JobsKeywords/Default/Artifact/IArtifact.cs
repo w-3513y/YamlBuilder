@@ -2,9 +2,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 
-//https://docs.gitlab.com/ee/ci/yaml/#artifacts
 public interface IArtifacts:
-  //going down 1 level(s)
   INameNavigation_lvl_2,
   IPathsNavigation_lvl_2,
   IExpireInNavigation_lvl_2,

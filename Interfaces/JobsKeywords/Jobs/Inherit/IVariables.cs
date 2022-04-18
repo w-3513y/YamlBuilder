@@ -11,12 +11,10 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Inherit;
 
 public interface IVariables: 
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 1 level(s)
     INeedsNavigation_lvl_1,
-    IVariablesNavigation,
-    IRulesNavigation,
+    IVariablesNavigation_lvl_2,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -38,7 +36,7 @@ public interface IVariables:
     IWhenNavigation_lvl_1
 {}
 
-public interface IVariablesNavigation{
+public interface IVariablesNavigation_lvl_2{
     public IVariables Variables(string[] variables);
     public IVariables Variables(bool yes);
 }

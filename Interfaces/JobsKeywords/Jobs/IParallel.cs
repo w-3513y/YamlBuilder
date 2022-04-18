@@ -6,9 +6,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
 public interface IParallel:
-    //going up 3 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     IReleaseNavigation_lvl_1,
     IResourceGroupNavigation_lvl_1,
     IBeforeScriptNavigation_lvl_1,

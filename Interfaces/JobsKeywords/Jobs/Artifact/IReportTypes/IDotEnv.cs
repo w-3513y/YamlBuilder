@@ -3,18 +3,14 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact.RepostTypes;
 
 public interface IDotEnv:
-    //going up 5 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 3 level(s)
-    //going up 2 level(s)
-    IExpireInNavigation,
-    //going up 1 level(s)
-    IJUnitNavigation,
-    ISastNavigation,
-    ISecretSedentionNavigation,
-    ITerraformNavigation
+    IExpireInNavigation_lvl_2,
+    IJUnitNavigation_lvl_3,
+    ISastNavigation_lvl_3,
+    ISecretSedentionNavigation_lvl_3,
+    ITerraformNavigation_lvl_3
 {}
 
-public interface IDotEnvNavigation{
+public interface IDotEnvNavigation_lvl_3{
     public IDotEnv DotEnv(string report);
 }

@@ -13,16 +13,13 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Services;
 
 public interface ICommand:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
-    //going up 1 level(s)
     IEnvironmentNavigation_lvl_1,
     IExtendsNavigation_lvl_1,
     IInheritNavigation_lvl_1,
     INeedsNavigation_lvl_1,
     Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation,
+    IRulesNavigation_lvl_2,
     ITagsNavigation_lvl_1,
     IRetryNavigation_lvl_1,
     IAllowFailureNavigation_lvl_1,
@@ -42,11 +39,10 @@ public interface ICommand:
     ITriggerNavigation_lvl_1,
     IPagesNavigation_lvl_1,
     IWhenNavigation_lvl_1,
-    //going up 1 level(s)
-    INameNavigation
+    INameNavigation_lvl_2
 
 {}
 
-public interface ICommandNavigation{
+public interface ICommandNavigation_lvl_4{
     public ICommand Command(string command);
 }

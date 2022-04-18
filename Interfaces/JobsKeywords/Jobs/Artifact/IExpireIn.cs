@@ -8,9 +8,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
 
 public interface IExpireIn:
-    //going up 4 level(s) abouve
     IJobsNavigation_lvl_0,
-    //going up 2 level(s)
     ICacheNavigation_lvl_1,
     ICoverageNavigation_lvl_1,
     ISecretsNavigation_lvl_1,
@@ -28,6 +26,6 @@ public interface IExpireIn:
     Jobs.IWhenNavigation_lvl_1
 {}
 
-public interface IExpireInNavigation{
+public interface IExpireInNavigation_lvl_2{
     public IExpireIn ExpireIn(string date);
 }

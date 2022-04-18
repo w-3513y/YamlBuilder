@@ -8,7 +8,10 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Builder;
 
-public abstract class DefaultKeyWords : BaseBuilder, IArtifacts, Interfaces.JobsKeywords.Default.Artifact.IExpireIn
+public abstract class DefaultKeyWords : BaseBuilder, 
+    IArtifacts, Interfaces.JobsKeywords.Default.Artifact.IExpireIn,
+                Interfaces.JobsKeywords.Default.Artifact.IExclude,
+                Interfaces.JobsKeywords.Default.Artifact.IExposeAs
 {
     protected DefaultKeyWords(string fullPath) : base(fullPath) {}
 
@@ -19,12 +22,12 @@ public abstract class DefaultKeyWords : BaseBuilder, IArtifacts, Interfaces.Jobs
 
     public ICache Cache()
     {
-        return this;
+        return this.Cache();
     }
 
     public IExclude Exclude(string file)
     {
-        throw new NotImplementedException();
+        return this;
     }
 
     public IExpireIn ExpireIn(string date)
@@ -34,7 +37,7 @@ public abstract class DefaultKeyWords : BaseBuilder, IArtifacts, Interfaces.Jobs
 
     public IExposeAs ExposeAs(string name)
     {
-        throw new NotImplementedException();
+        return this;
     }
 
     public IInclude Include()
