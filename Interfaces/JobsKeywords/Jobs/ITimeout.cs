@@ -8,5 +8,5 @@ public interface ITimeOut:
 {}
 
 public interface ITimeOutNavigation{
-    public ITimeOut TimeOut();
+    public ITimeOut TimeOut(string timeout);
 }

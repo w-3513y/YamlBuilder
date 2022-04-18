@@ -2,11 +2,14 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 
-public interface ISecrets:
+public interface IVault:
     //going up 3 level(s) abouve
+    IJobsNavigation,
+    //
+    IFileNavigation,
     ISecretNavigation
 {}
 
-public interface ISecretsNavigation{
-    public ISecrets Secrets();
+public interface IVaultNavigation{
+    public IVault Vault(string vault);
 }

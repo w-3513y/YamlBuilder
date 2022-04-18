@@ -8,5 +8,5 @@ public interface ITags:
 {}
 
 public interface ITagsNavigation{
-    public ITags Tags();
+    public ITags Tags(string[] tags);
 }

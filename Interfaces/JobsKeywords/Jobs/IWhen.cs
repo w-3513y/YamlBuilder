@@ -10,5 +10,5 @@ public interface IWhen:
 {}
 
 public interface IWhenNavigation{
-    public IWhen When(Enums.JobGlobal when);
+    public IWhen When(Enums.Job when);
 }

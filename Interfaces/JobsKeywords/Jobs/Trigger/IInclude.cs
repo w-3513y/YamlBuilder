@@ -2,12 +2,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
-public interface IAfterScript: 
+public interface IInclude: 
     //going up 3 level(s) abouve
-    IJobsNavigation
+    IJobsNavigation,
     //going up 1 level(s)
+    IStrategyNavigation
 {}
 
-public interface IAfterScriptNavigation{
-    public IAfterScript AfterScript(string commands);
+public interface IIncludeNavigation{
+    public IInclude Include(string file);
 }
