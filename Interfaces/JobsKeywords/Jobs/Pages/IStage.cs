@@ -3,7 +3,7 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 public interface IStage:
-    //going up 1 level(s)
+    //going down 1 level(s)
     IScriptNavigation,
     IArtifactNavigation,
     IRulesNavigation

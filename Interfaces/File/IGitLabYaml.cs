@@ -7,6 +7,5 @@ public interface IGitLabYaml{
     public IInclude Include(string? shorterSintax);
     public IStages Stages();
     public IVariables Variables(Dictionary<string, string> keyValues);
-
     public IJobs Job(string jobName);
 }

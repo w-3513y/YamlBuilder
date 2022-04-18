@@ -1,4 +1,5 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
@@ -9,7 +10,10 @@ public interface ITrigger:
 
 public interface ITriggerShortSyntax:
     //going up 3 level(s) abouve
-    IJobsNavigation
+    IJobsNavigation,
+    //going up 2 level(s)
+    IPagesNavigation,
+    IWhenNavigation
 {}
 
 public interface ITriggerNavigation{

@@ -1,15 +1,25 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Artifact;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
-namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
+namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Needs;
 
-public interface IUntracked:
-    //going up 4 level(s) abouve
+public interface IArtifact:
+    //going up 3 level(s) abouve
     IJobsNavigation,
-    //going up 2 level(s)
+    //going up 1 level(s)
+    IVariablesNavigation,
+    IRulesNavigation,
+    ITagsNavigation,
+    IRetryNavigation,
+    IAllowFailureNavigation,
+    IArtifactsNavigation,
+    ICacheNavigation,
     ICoverageNavigation,
     ISecretsNavigation,
     IDependenciesNavigation,
@@ -23,14 +33,11 @@ public interface IUntracked:
     ITimeOutNavigation,
     ITriggerNavigation,
     IPagesNavigation,
-    Jobs.IWhenNavigation,
-    //going up 1 level(s)
-    IPathsNavigation,
     IWhenNavigation,
-    IPolicyNavigation,
-    IKeyNavigation
+    //recursion
+    IJobNavigation
 {}
 
-public interface IUntrackedNavigation{
-    public IUntracked Untracked(bool publc);   
+public interface IArtifactNavigation{
+    public IArtifact Artifact(bool yes);
 }

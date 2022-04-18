@@ -1,5 +1,6 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 
+
 public interface IRules:
     IExistsNavigation,
     IIfsNavigation
