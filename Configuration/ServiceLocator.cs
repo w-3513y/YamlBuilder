@@ -49,9 +49,20 @@ class ServiceLocator : BaseBuilder, IServiceLocator
                     this.services.Add(typeof(IDefault_Artifacts_Report_Terraform), new Builder.Default.Artifact.Reports.Terraform(_fullPath));
             this.services.Add(typeof(IDefault_BeforeScript), new Builder.Default.BeforeScript(_fullPath));
             this.services.Add(typeof(IDefault_Cache), new Builder.Default.Cache.Cache(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Files), new Builder.Default.Cache.Files(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Key), new Builder.Default.Cache.Key(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Paths), new Builder.Default.Cache.Paths(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Policy), new Builder.Default.Cache.Policy(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Prefix), new Builder.Default.Cache.Prefix(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_Untracked), new Builder.Default.Cache.Untracked(_fullPath));
+                this.services.Add(typeof(IDefault_Cache_When), new Builder.Default.Cache.When(_fullPath));
             this.services.Add(typeof(IDefault_Retry), new Builder.Default.Retry(_fullPath));
             this.services.Add(typeof(IDefault_ServicesShortSyntax), new Builder.Default.Services.ServicesShortSyntax(_fullPath));
             this.services.Add(typeof(IDefault_Services), new Builder.Default.Services.Services(_fullPath));
+                this.services.Add(typeof(IDefault_Services_Name), new Builder.Default.Services.Name(_fullPath));
+                this.services.Add(typeof(IDefault_Services_Alias), new Builder.Default.Services.Alias(_fullPath));
+                this.services.Add(typeof(IDefault_Services_EntryPoint), new Builder.Default.Services.Entrypoint(_fullPath));
+                this.services.Add(typeof(IDefault_Services_Command), new Builder.Default.Services.Command(_fullPath));
             this.services.Add(typeof(IDefault_Tags), new Builder.Default.Tags(_fullPath));
             this.services.Add(typeof(IDefault_Timeouts), new Builder.Default.TimeOut(_fullPath));
     }

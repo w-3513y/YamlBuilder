@@ -28,7 +28,9 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_BeforeScript BeforeScript(string commands)
     {
-        Utils.WriteFile(_fullPath, $"  before_script: {commands}");
+        Utils.WriteFile(_fullPath, $"  before_script:");
+        Utils.WriteFile(_fullPath, $"    - {commands}");
+
         return Utils.InvokeObject<IDefault_BeforeScript>(_fullPath);
     }
 

@@ -14,14 +14,6 @@ public interface IDefault_Services_Name:
     IDefault_Services_EntryPoint_Navigation_lvl_3
 {}
 
-public interface IDefault_Services_NameAfterAlias:
-    IDefault_Services_Alias_Navigation_lvl_3
-{}
-
 public interface IDefault_Services_Name_Navigation_lvl_2{
     public IDefault_Services_Name Name(string serviceName);   
-}
-
-public interface IDefault_Services_NameAfterAlias_Navigation_lvl_2{
-    public IDefault_Services_NameAfterAlias Name(string serviceName);   
 }

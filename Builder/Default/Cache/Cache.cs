@@ -9,26 +9,35 @@ public class Cache : Default, IDefault_Cache
 
     public IDefault_Cache_Key Key(string name)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    key: {name}");
+        return Utils.InvokeObject<IDefault_Cache_Key>(_fullPath);
     }
 
     public IDefault_Cache_Paths Paths(string[] directories)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    paths:");
+        foreach(var directory in directories)
+        {
+            Utils.WriteFile(_fullPath, $"      - {directory}");
+        }
+        return Utils.InvokeObject<IDefault_Cache_Paths>(_fullPath);
     }
 
     public IDefault_Cache_Policy Policy(GitCommand command)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    policy: {command}");
+        return Utils.InvokeObject<IDefault_Cache_Policy>(_fullPath);
     }
 
-    public IDefault_Cache_Untracked Untracked(bool publc)
+    public IDefault_Cache_Untracked Untracked(bool untracked)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    untracked: {(untracked ? "true" : "false")}");
+        return Utils.InvokeObject<IDefault_Cache_Untracked>(_fullPath);
     }
 
     public IDefault_Cache_When When(JobGlobal when)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    when: {when}");
+        return Utils.InvokeObject<IDefault_Cache_When>(_fullPath);
     }
 }
