@@ -2,26 +2,26 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
-public interface IName:
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    ITagsNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    IAliasNavigation_lvl_3,
-    IEntryPointNavigation_lvl_3
+public interface IDefault_Services_Name:
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IDefault_Tags_Navigation_lvl_1,
+    IDefault_TimeOut_Navigation_lvl_1,
+    IDefault_Services_Alias_Navigation_lvl_3,
+    IDefault_Services_EntryPoint_Navigation_lvl_3
 {}
 
-public interface INameAfterAlias:
-    IAliasNavigation_lvl_3
+public interface IDefault_Services_NameAfterAlias:
+    IDefault_Services_Alias_Navigation_lvl_3
 {}
 
-public interface INameNavigation_lvl_2{
-    public IName Name(string serviceName);   
+public interface IDefault_Services_Name_Navigation_lvl_2{
+    public IDefault_Services_Name Name(string serviceName);   
 }
 
-public interface INameAfterAliasNavigation_lvl_2{
-    public INameAfterAlias Name(string serviceName);   
+public interface IDefault_Services_NameAfterAlias_Navigation_lvl_2{
+    public IDefault_Services_NameAfterAlias Name(string serviceName);   
 }

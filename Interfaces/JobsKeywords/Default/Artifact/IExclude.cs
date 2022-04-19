@@ -5,28 +5,24 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 
-public interface IExclude:
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    IBeforeScriptNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IRetryNavigation_lvl_1,
-    IServicesNavigation_lvl_1,
-    ITagsNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    IExpireInNavigation_lvl_2,
-    IReportNavigation_lvl_2
+public interface IDefault_Artifacts_Exclude:
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IDefault_BeforeScript_Navigation_lvl_1,
+    IDefault_Cache_Navigation_lvl_1,
+    IDefault_Interruptible_Navigation_lvl_1,
+    IDefault_Retry_Navigation_lvl_1,
+    IDefault_Services_Navigation_lvl_1,
+    IDefault_Tags_Navigation_lvl_1,
+    IDefault_TimeOut_Navigation_lvl_1,
+    IDefault_Artifacts_ExpireIn_Navigation_lvl_2,
+    IDefault_Artifacts_Report_Navigation_lvl_2
 {}
 
-public interface IExcludeNavigation_lvl_2{
-    public IExclude Exclude(string file);
+public interface IDefault_Artifacts_Exclude_Navigation_lvl_2{
+    public IDefault_Artifacts_Exclude Exclude(string file);
     
 }
-/*
-    Use artifacts:exclude to prevent files from being added to an artifacts archive.
-    Keyword type: Job keyword. You can use it only as part of a job or in the default section.
-*/

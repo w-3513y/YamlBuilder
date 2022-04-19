@@ -2,13 +2,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
-public interface IScript:
-    IJobsNavigation_lvl_0,
-    IWhenNavigation_lvl_1,
-    IArtifactNavigation_lvl_2,
-    IRulesNavigation_lvl_2
+public interface IJobs_Pages_Script:
+    IJobs_Navigation_lvl_0,
+    IJobs_When_Navigation_lvl_1,
+    IJobs_Pages_Artifact_Navigation_lvl_2,
+    IJobs_Pages_Rules_Navigation_lvl_2
 {}
 
-public interface IScriptNavigation_lvl_2{
-    public IScript Script(string[] commands);
+public interface IJobs_Pages_Script_Navigation_lvl_2{
+    public IJobs_Pages_Script Script(string[] commands);
 }

@@ -2,14 +2,14 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
-public interface ITimeouts:
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0
+public interface IDefault_Timeouts:
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0
 {}
 
-public interface ITimeOutNavigation_lvl_1{
-    public ITimeouts Timeouts(string time);
+public interface IDefault_TimeOut_Navigation_lvl_1{
+    public IDefault_Timeouts Timeouts(string time);
 }

@@ -1,12 +1,12 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.WorkFlow;
 
-public interface IIfs:
-    IChangesNavigation_lvl_3,
-    IVariablesNavigation_lvl_3,
-    IWhenNavigation_lvl_3,
-    IAllowFailureNavigation_lvl_3
+public interface IWorkFlow_Ifs:
+    IWorkFlow_Changes_Navigation_lvl_3,
+    IWorkFlow_Variables_Navigation_lvl_3,
+    IWorkFlow_When_Navigation_lvl_3,
+    IWorkFlow_AllowFailure_Navigation_lvl_3
  {}
 
-public interface IIfsNavigation_lvl_2{
-    public IIfs Ifs(string condition);
+public interface IWorkFlow_Ifs_Navigation_lvl_2{
+    public IWorkFlow_Ifs Ifs(string condition);
 }

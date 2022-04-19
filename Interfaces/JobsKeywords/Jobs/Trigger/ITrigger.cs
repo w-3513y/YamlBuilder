@@ -3,18 +3,18 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
-public interface ITrigger:
-    IIncludeNavigation_lvl_2,
-    IStrategyNavigation_lvl_2,
-    IFowardNavigation_lvl_2
+public interface IJobs_Trigger:
+    IJobs_Trigger_Include_Navigation_lvl_2,
+    IJobs_Trigger_Strategy_Navigation_lvl_2,
+    IJobs_Trigger_Foward_Navigation_lvl_2
 {}
 
 public interface ITriggerShortSyntax:
-    IJobsNavigation_lvl_0,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation_lvl_1
+    IJobs_Navigation_lvl_0,
+    IJobs_Pages_Navigation_lvl_1,
+    IJobs_When_Navigation_lvl_1
 {}
 
-public interface ITriggerNavigation_lvl_1{
-    public ITrigger Trigger();
+public interface IJobs_Trigger_Navigation_lvl_1{
+    public IJobs_Trigger Trigger();
 }

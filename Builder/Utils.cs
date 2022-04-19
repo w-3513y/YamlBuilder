@@ -1,7 +1,17 @@
+using YamlBuilder.Interfaces.GitLab;
+
 namespace YamlBuilder.Builder;
 
 public static class Utils
 {
+
+    public static T InvokeObject<T>(string path)
+    {
+        IServiceLocator locator = new ServiceLocator(path);
+        T _object = locator.GetService<T>();
+        return _object;
+    }
+
      public static void WriteFile(string path, string content)
     {
         if (!File.Exists(path))

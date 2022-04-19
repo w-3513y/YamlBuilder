@@ -2,17 +2,17 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
-public interface ICommand:
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    ITagsNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    INameNavigation_lvl_2
+public interface IDefault_Services_Command:
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IDefault_Tags_Navigation_lvl_1,
+    IDefault_TimeOut_Navigation_lvl_1,
+    IDefault_Services_Name_Navigation_lvl_2
 {}
 
-public interface ICommandNavigation_lvl_4{
-    public ICommand Command(string command);
+public interface IDefault_Services_Command_Navigation_lvl_4{
+    public IDefault_Services_Command Command(string command);
 }

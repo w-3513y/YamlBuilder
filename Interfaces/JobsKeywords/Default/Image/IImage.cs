@@ -1,4 +1,5 @@
 
+using YamlBuilder.Interfaces.GitLab;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
@@ -6,30 +7,28 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
-public interface IImage:
-    INameNavigation_lvl_2,
-    IEntryPointNavigation_lvl_2
+public interface IDefault_Image:
+    IDefault_Image_Name_Navigation_lvl_2,
+    IDefault_Image_EntryPoint_Navigation_lvl_2
 {}
 
-public interface IImageShortSintax:
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    IAfterScriptNavigation_lvl_1,
-    IArtifactsNavigation_lvl_1,
-    IBeforeScriptNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IRetryNavigation_lvl_1,
-    IServicesNavigation_lvl_1,
-    ITagsNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1
+public interface IDefault_ImageShortSintax:
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IDefault_AfterScript_Navigation_lvl_1,
+    IIDefault_Artifacts_Artifacts_Navigation_lvl_1,
+    IDefault_BeforeScript_Navigation_lvl_1,
+    IDefault_Cache_Navigation_lvl_1,
+    IDefault_Interruptible_Navigation_lvl_1,
+    IDefault_Retry_Navigation_lvl_1,
+    IDefault_Services_Navigation_lvl_1,
+    IDefault_Tags_Navigation_lvl_1,
+    IDefault_TimeOut_Navigation_lvl_1
 {}
 
 public interface IImageNavigation_lvl_1{
-
-    public IImage Image();
-    public IImageShortSintax Image(string image);
-    
+    public IDefault_Image Image();
+    public IDefault_ImageShortSintax Image(string image);    
 }

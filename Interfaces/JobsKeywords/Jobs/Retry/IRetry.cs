@@ -8,30 +8,31 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 
-public interface IRetry:
-    IMaxNavigation_lvl_2
+public interface IJobs_Retry:
+    IJobs_Retry_Max_Navigation_lvl_2
 {}
 
-public interface IRetryShortSyntax:
-    IJobsNavigation_lvl_0,
-    IAllowFailureNavigation_lvl_1,
-    IArtifactsNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    ICoverageNavigation_lvl_1,
-    ISecretsNavigation_lvl_1,
-    IDependenciesNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IParallelNavigation_lvl_1,
-    IReleaseNavigation_lvl_1,
-    IResourceGroupNavigation_lvl_1,
-    IBeforeScriptNavigation_lvl_1,
-    IScriptNavigation_lvl_1,
-    IAfterScriptNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    ITriggerNavigation_lvl_1,
-    IPagesNavigation_lvl_1
+public interface IJobs_RetryShortSyntax:
+    IJobs_Navigation_lvl_0,
+    IJobs_AllowFailure_Navigation_lvl_1,
+    IJobs_Artifacts_Navigation_lvl_1,
+    IJobs_Cache_Navigation_lvl_1,
+    IJobs_Coverage_Navigation_lvl_1,
+    IJobs_Secrets_Navigation_lvl_1,
+    IJobs_Dependencies_Navigation_lvl_1,
+    IJobs_Interruptible_Navigation_lvl_1,
+    IJobs_Parallel_Navigation_lvl_1,
+    IJobs_Release_Navigation_lvl_1,
+    IJobs_ResourceGroup_Navigation_lvl_1,
+    IJobs_BeforeScript_Navigation_lvl_1,
+    IJobs_Script_Navigation_lvl_1,
+    IJobs_AfterScript_Navigation_lvl_1,
+    IJobs_TimeOut_Navigation_lvl_1,
+    IJobs_Trigger_Navigation_lvl_1,
+    IJobs_Pages_Navigation_lvl_1
 {}
 
-public interface IRetryNavigation_lvl_1{
-    public IRetry Retry(Enums.Retry retries);
+public interface IJobs_Retry_Navigation_lvl_1{
+    public IJobs_Retry Retry();
+    public IJobs_RetryShortSyntax Retry(Enums.Retry retries);
 }

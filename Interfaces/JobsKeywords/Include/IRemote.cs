@@ -2,13 +2,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Include;
 
-public interface IRemote:
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0
+public interface IInclude_Remote:
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0
 {}
 
-public interface IRemoteNavigation_lvl_1{
-    public IRemote Remote(string url);   
+public interface IInclude_Remote_Navigation_lvl_1{
+    public IInclude_Remote Remote(string url);   
 }

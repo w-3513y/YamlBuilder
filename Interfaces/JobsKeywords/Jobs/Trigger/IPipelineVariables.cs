@@ -3,12 +3,12 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
-public interface IPipelineVariables:
-    IJobsNavigation_lvl_0,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation_lvl_1
+public interface IJobs_Trigger_PipelineVariables:
+    IJobs_Navigation_lvl_0,
+    IJobs_Pages_Navigation_lvl_1,
+    IJobs_When_Navigation_lvl_1
 {}
 
-public interface IPipelineVariablesNavigation_lvl_3{
-    public IPipelineVariables PipelineVariables(bool isPipeline);
+public interface IJobs_Trigger_PipelineVariables_Navigation_lvl_3{
+    public IJobs_Trigger_PipelineVariables PipelineVariables(bool isPipeline);
 }

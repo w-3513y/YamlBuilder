@@ -1,9 +1,9 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 
-public interface IMax:
-    IWhenNavigation_lvl_3
+public interface IJobs_Retry_Max:
+    IJobs_Retry_When_Navigation_lvl_3
 {}
 
-public interface IMaxNavigation_lvl_2{
-    public IMax Max(Enums.Retry retries);
+public interface IJobs_Retry_Max_Navigation_lvl_2{
+    public IJobs_Retry_Max Max(Enums.Retry retries);
 }

@@ -2,10 +2,10 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 
-public interface ISecret:
-    IVaultNavigation_lvl_3
+public interface IJobs_Secrets_Secret:
+    IJobs_Secrets_Vault_Navigation_lvl_3
 {}
 
-public interface ISecretNavigation_lvl_2{
-    public ISecret Secret();
+public interface IJobs_Secrets_Secret_Navigation_lvl_2{
+    public IJobs_Secrets_Secret Secret();
 }

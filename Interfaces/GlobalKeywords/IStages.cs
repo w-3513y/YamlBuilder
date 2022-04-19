@@ -1,11 +1,11 @@
 namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IStages:
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0
 {}
 
-public interface IStagesNavigation_lvl_0{
+public interface IStages_Navigation_lvl_0{
     public IStages Stages(string[] stages);
 }

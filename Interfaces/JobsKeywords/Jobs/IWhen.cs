@@ -2,10 +2,10 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
-public interface IWhen:
-    IJobsNavigation_lvl_0
+public interface IJobs_When:
+    IJobs_Navigation_lvl_0
 {}
 
-public interface IWhenNavigation_lvl_1{
-    public IWhen When(Enums.Job when);
+public interface IJobs_When_Navigation_lvl_1{
+    public IJobs_When When(Enums.Job when);
 }

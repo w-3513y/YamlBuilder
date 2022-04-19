@@ -2,13 +2,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Include;
 
-public interface ILocal:
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0
+public interface IIInclude_Local:
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0
 {}
 
-public interface ILocalNavigation_lvl_1{
-    public ILocal Local(string file);   
+public interface IInclude_Local_Navigation_lvl_1{
+    public IIInclude_Local Local(string file);   
 }

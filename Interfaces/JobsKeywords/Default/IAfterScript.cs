@@ -5,31 +5,22 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Default;
 
-public interface IAfterScript: 
-    IIncludeNavigation_lvl_0, 
-    IStagesNavigation_lvl_0,
-    IVariablesNavigation_lvl_0,
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    IArtifactsNavigation_lvl_1,
-    IBeforeScriptNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IRetryNavigation_lvl_1,
-    IServicesNavigation_lvl_1,
-    ITagsNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1
+public interface IDefault_AfterScript: 
+    IInclude_Navigation_lvl_0, 
+    IStages_Navigation_lvl_0,
+    IVariables_Navigation_lvl_0,
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IIDefault_Artifacts_Artifacts_Navigation_lvl_1,
+    IDefault_BeforeScript_Navigation_lvl_1,
+    IDefault_Cache_Navigation_lvl_1,
+    IDefault_Interruptible_Navigation_lvl_1,
+    IDefault_Retry_Navigation_lvl_1,
+    IDefault_Services_Navigation_lvl_1,
+    IDefault_Tags_Navigation_lvl_1,
+    IDefault_TimeOut_Navigation_lvl_1
 {}
 
-public interface IAfterScriptNavigation_lvl_1{
-    public IAfterScript AfterScript(string commands);
+public interface IDefault_AfterScript_Navigation_lvl_1{
+    public IDefault_AfterScript AfterScript(string commands);
 }
-
-
-    /*Use after_script to define an array of commands that run after each job, including failed jobs.
-     Keyword type: Job keyword. You can use it only as part of a job or in the default section.
-     Possible inputs: An array including:
-     
-     Single line commands.
-     Long commands split over multiple lines.
-     YAML anchors.*/

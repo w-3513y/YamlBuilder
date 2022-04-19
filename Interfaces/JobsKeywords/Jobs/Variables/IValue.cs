@@ -4,37 +4,38 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Variables;
 
-public interface IValue:
-    IJobsNavigation_lvl_0,
-    IRulesNavigation_lvl_2,
-    ITagsNavigation_lvl_1,
-    IRetryNavigation_lvl_1,
-    IAllowFailureNavigation_lvl_1,
-    IArtifactsNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    ICoverageNavigation_lvl_1,
-    ISecretsNavigation_lvl_1,
-    IDependenciesNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IParallelNavigation_lvl_1,
-    IReleaseNavigation_lvl_1,
-    IResourceGroupNavigation_lvl_1,
-    IBeforeScriptNavigation_lvl_1,
-    IScriptNavigation_lvl_1,
-    IAfterScriptNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    ITriggerNavigation_lvl_1,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation_lvl_1,
-    IDescriptionNavigation_lvl_4,
-    IKeyNavigation_lvl_2
+public interface IJobs_Variables_Value:
+    IJobs_Navigation_lvl_0,
+    IJobs_Rules_Navigation_lvl_1,
+    IJobs_Tags_Navigation_lvl_1,
+    IJobs_Retry_Navigation_lvl_1,
+    IJobs_AllowFailure_Navigation_lvl_1,
+    IJobs_Artifacts_Navigation_lvl_1,
+    IJobs_Cache_Navigation_lvl_1,
+    IJobs_Coverage_Navigation_lvl_1,
+    IJobs_Secrets_Navigation_lvl_1,
+    IJobs_Dependencies_Navigation_lvl_1,
+    IJobs_Interruptible_Navigation_lvl_1,
+    IJobs_Parallel_Navigation_lvl_1,
+    IJobs_Release_Navigation_lvl_1,
+    IJobs_ResourceGroup_Navigation_lvl_1,
+    IJobs_BeforeScript_Navigation_lvl_1,
+    IJobs_Script_Navigation_lvl_1,
+    IJobs_AfterScript_Navigation_lvl_1,
+    IJobs_TimeOut_Navigation_lvl_1,
+    IJobs_Trigger_Navigation_lvl_1,
+    IJobs_Pages_Navigation_lvl_1,
+    IJobs_When_Navigation_lvl_1,
+    IJobs_Variables_Description_Navigation_lvl_4,
+    IJobs_Variables_Key_Navigation_lvl_2
  {}
 
-public interface IValueNavigation_lvl_3{
-    public IValue Value(string value);
+public interface IJobs_Variables_Value_Navigation_lvl_3{
+    public IJobs_Variables_Value Value(string value);
 }

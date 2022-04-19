@@ -2,11 +2,11 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
-public interface IIfs:
-    IJobsNavigation_lvl_0,
-    IWhenNavigation_lvl_1
+public interface IJobs_Pages_Ifs:
+    IJobs_Navigation_lvl_0,
+    IJobs_When_Navigation_lvl_1
 {}
 
-public interface IIfsNavigation_lvl_3{
-    public IIfs Ifs(string condition);
+public interface IJobs_Pages_Ifs_Navigation_lvl_3{
+    public IJobs_Pages_Ifs Ifs(string condition);
 }

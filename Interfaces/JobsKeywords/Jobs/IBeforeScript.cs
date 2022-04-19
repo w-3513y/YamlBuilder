@@ -5,16 +5,16 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs;
 
-public interface IBeforeScript: 
-    IJobsNavigation_lvl_0,
-    IScriptNavigation_lvl_1,
-    IAfterScriptNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    ITriggerNavigation_lvl_1,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation_lvl_1
+public interface IJobs_BeforeScript: 
+    IJobs_Navigation_lvl_0,
+    IJobs_Script_Navigation_lvl_1,
+    IJobs_AfterScript_Navigation_lvl_1,
+    IJobs_TimeOut_Navigation_lvl_1,
+    IJobs_Trigger_Navigation_lvl_1,
+    IJobs_Pages_Navigation_lvl_1,
+    IJobs_When_Navigation_lvl_1
 {}
 
-public interface IBeforeScriptNavigation_lvl_1{
-    public IBeforeScript BeforeScript(string commands);
+public interface IJobs_BeforeScript_Navigation_lvl_1{
+    public IJobs_BeforeScript BeforeScript(string commands);
 }

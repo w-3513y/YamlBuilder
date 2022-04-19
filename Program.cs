@@ -1,12 +1,7 @@
 using YamlBuilder.Builder;
+using YamlBuilder.Interfaces.GlobalKeywords;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-builder.Configuration
-       .SetBasePath(builder.Environment.ContentRootPath)
-       .AddJsonFile(path: "appsettings.json", optional: true, reloadOnChange: true)
-       .AddEnvironmentVariables();
 
 var app = builder.Build();
 
@@ -19,6 +14,7 @@ GitLabYaml
             .Name("ruby:3.0")
         .AfterScript(commands: "echo 'something'")
         .Artifacts()
+            .Exclude("\bin")
             .Report()
                 .Acessibility(report: "report")
                 .CoverageReport()
@@ -37,4 +33,3 @@ GitLabYaml
     .Variables(new Dictionary<string, string>(){{"JOB_NAME", "TEST"}, {"ALIAS", "NEW_NAME"}});
 
 app.Run();
-

@@ -2,13 +2,13 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Variables;
 
-public interface IValue:
-    IWorkFlowNavigation_lvl_0,
-    IJobsNavigation_lvl_0,
-    IDescriptionNavigation_lvl_3,
-    IKeyNavigation_lvl_1
+public interface IVariables_Value:
+    IWorkFlow_Navigation_lvl_0,
+    IJobs_Navigation_lvl_0,
+    IVariables_Description_Navigation_lvl_3,
+    IVariables_Key_Navigation_lvl_1
  {}
 
-public interface IValueNavigation_lvl_2{
-    public IValue Value(string value);
+public interface IVariables_Value_Navigation_lvl_2{
+    public IVariables_Value Value(string value);
 }

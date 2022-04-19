@@ -1,11 +1,11 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 
 
-public interface IRules:
-    IExistsNavigation_lvl_2,
-    IIfsNavigation_lvl_2
+public interface IJobs_Rules:
+    IJobs_Rules_Exists_Navigation_lvl_2,
+    IJobs_Rules_Ifs_Navigation_lvl_2
  {}
 
-public interface IRulesNavigation_lvl_1{
-    public IRules Rules(string condition);
+public interface IJobs_Rules_Navigation_lvl_1{
+    public IJobs_Rules Rules(string condition);
 }

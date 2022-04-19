@@ -1,15 +1,15 @@
 namespace YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 
-public interface ICache:
-    IKeyNavigation_lvl_2,
-    IPathsNavigation_lvl_2,
-    IUntrackedNavigation_lvl_2,
-    IWhenNavigation_lvl_2,
-    IPolicyNavigation_lvl_2
+public interface IDefault_Cache:
+    IDefault_Cache_Key_Navigation_lvl_2,
+    IDefault_Cache_Paths_Navigation_lvl_2,
+    IDefault_Cache_Untracked_Navigation_lvl_2,
+    IDefault_Cache_When_Navigation_lvl_2,
+    IDefault_Cache_Policy_Navigation_lvl_2
 {}
 
-public interface ICacheNavigation_lvl_1{
+public interface IDefault_Cache_Navigation_lvl_1{
 
-    public ICache Cache();
+    public IDefault_Cache Cache();
     
 }

@@ -2,10 +2,10 @@ using YamlBuilder.Interfaces.GlobalKeywords;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 
-public interface IRules:
-    IIfsNavigation_lvl_3
+public interface IJobs_Pages_Rules:
+    IJobs_Pages_Ifs_Navigation_lvl_3
 {}
 
-public interface IRulesNavigation_lvl_2{
-    public IRules Rules();
+public interface IJobs_Pages_Rules_Navigation_lvl_2{
+    public IJobs_Pages_Rules Rules();
 }

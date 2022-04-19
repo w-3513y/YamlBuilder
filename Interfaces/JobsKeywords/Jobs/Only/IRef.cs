@@ -9,44 +9,46 @@ using YamlBuilder.Interfaces.JobsKeywords.Jobs.Needs;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Pages;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Release;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Rules;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Secrets;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Services;
 using YamlBuilder.Interfaces.JobsKeywords.Jobs.Trigger;
+using YamlBuilder.Interfaces.JobsKeywords.Jobs.Variables;
 
 namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Only;
 
-public interface IRef:
-    IJobsNavigation_lvl_0,
-    IExceptNavigation_lvl_1,
-    IImageNavigation_lvl_1,
-    IServicesNavigation_lvl_1,
-    IEnvironmentNavigation_lvl_1,
-    IExtendsNavigation_lvl_1,
-    IInheritNavigation_lvl_1,
-    INeedsNavigation_lvl_1,
-    Variables.IVariablesNavigation_lvl_1,
-    IRulesNavigation_lvl_2,
-    ITagsNavigation_lvl_1,
-    IRetryNavigation_lvl_1,
-    IAllowFailureNavigation_lvl_1,
-    IArtifactsNavigation_lvl_1,
-    ICacheNavigation_lvl_1,
-    ICoverageNavigation_lvl_1,
-    ISecretsNavigation_lvl_1,
-    IDependenciesNavigation_lvl_1,
-    IInterruptibleNavigation_lvl_1,
-    IParallelNavigation_lvl_1,
-    IReleaseNavigation_lvl_1,
-    IResourceGroupNavigation_lvl_1,
-    IBeforeScriptNavigation_lvl_1,
-    IScriptNavigation_lvl_1,
-    IAfterScriptNavigation_lvl_1,
-    ITimeOutNavigation_lvl_1,
-    ITriggerNavigation_lvl_1,
-    IPagesNavigation_lvl_1,
-    IWhenNavigation_lvl_1
+public interface IJobs_Only_Ref:
+    IJobs_Navigation_lvl_0,
+    IJobs_Except_Navigation_lvl_1,
+    IJobs_Image_Navigation_lvl_1,
+    IJobs_Services_Navigation_lvl_1,
+    IJobs_Environment_Navigation_lvl_1,
+    IJobs_Extends_Navigation_lvl_1,
+    IJobs_Inherit_Navigation_lvl_1,
+    IJobs_Needs_Navigation_lvl_1,
+    IJobs_Variables_Navigation_lvl_1,
+    IJobs_Rules_Navigation_lvl_1,
+    IJobs_Tags_Navigation_lvl_1,
+    IJobs_Retry_Navigation_lvl_1,
+    IJobs_AllowFailure_Navigation_lvl_1,
+    IJobs_Artifacts_Navigation_lvl_1,
+    IJobs_Cache_Navigation_lvl_1,
+    IJobs_Coverage_Navigation_lvl_1,
+    IJobs_Secrets_Navigation_lvl_1,
+    IJobs_Dependencies_Navigation_lvl_1,
+    IJobs_Interruptible_Navigation_lvl_1,
+    IJobs_Parallel_Navigation_lvl_1,
+    IJobs_Release_Navigation_lvl_1,
+    IJobs_ResourceGroup_Navigation_lvl_1,
+    IJobs_BeforeScript_Navigation_lvl_1,
+    IJobs_Script_Navigation_lvl_1,
+    IJobs_AfterScript_Navigation_lvl_1,
+    IJobs_TimeOut_Navigation_lvl_1,
+    IJobs_Trigger_Navigation_lvl_1,
+    IJobs_Pages_Navigation_lvl_1,
+    IJobs_When_Navigation_lvl_1
 {}
 
-public interface IRefNavigation_lvl_2{
-    public IRef Ref(string[] branch);
+public interface IJobs_Only_Ref_Navigation_lvl_2{
+    public IJobs_Only_Ref Ref(string[] branch);
 }
