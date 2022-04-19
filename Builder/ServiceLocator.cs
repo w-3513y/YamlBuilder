@@ -1,4 +1,5 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords.Default;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
 namespace YamlBuilder.Builder;
@@ -21,6 +22,9 @@ class ServiceLocator : BaseBuilder, IServiceLocator
             this.services.Add(typeof(IDefault_Image), new Default.Image.Image(_fullPath));
                 this.services.Add(typeof(IDefault_Image_EntryPoint), new Default.Image.Entrypoint(_fullPath));
                 this.services.Add(typeof(IDefault_Image_Name), new Default.Image.Name(_fullPath));
+            this.services.Add(typeof(IDefault_AfterScript), new Default.AfterScript(_fullPath));
+            this.services.Add(typeof(IDefault_AfterScript), new Default.Artifacts(_fullPath));
+            this.services.Add(typeof(IDefault_BeforeScript), new Default.BeforeScript(_fullPath));
     }
 
     public T GetService<T>()
@@ -31,7 +35,7 @@ class ServiceLocator : BaseBuilder, IServiceLocator
         }
         catch (KeyNotFoundException)
         {
-            throw new ApplicationException("O serviço solicitado não esta registrado.");
+            throw new ApplicationException("the requested service wasn't implemented.");
         }
     }
 }

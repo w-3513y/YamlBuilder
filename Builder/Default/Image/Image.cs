@@ -2,16 +2,16 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
 namespace YamlBuilder.Builder.Default.Image;
 
-public class Image : BaseBuilder, IDefault_Image
+public class Image : Default, IDefault_Image
 {
 
     public Image(string path)
         : base(path)
         {}
 
-    public IDefault_Image_EntryPoint Entrypoint()
+    public IDefault_Image_EntryPoint Entrypoint(string entrypoint)
     {
-        Utils.WriteFile(_fullPath, $"    entrypoint:");
+        Utils.WriteFile(_fullPath, $"    entrypoint: [{entrypoint}]");
         return Utils.InvokeObject<IDefault_Image_EntryPoint>(_fullPath);
     }
 

@@ -52,5 +52,5 @@ public interface IJobs:
 {}
 
 public interface IJobs_Navigation_lvl_0{
-    public IJobs Jobs(string[] stages);
+    public IJobs Job(string jobName);
 }

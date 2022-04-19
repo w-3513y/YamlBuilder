@@ -8,7 +8,7 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 namespace YamlBuilder.Builder.Default;
 
-public class Default : BaseBuilder, IDefault
+public class Default : GitLabYaml, IDefault
 {
 
     public Default(string path)
@@ -17,17 +17,20 @@ public class Default : BaseBuilder, IDefault
 
     public IDefault_AfterScript AfterScript(string commands)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"  after_script: {commands}");
+        return Utils.InvokeObject<IDefault_AfterScript>(_fullPath);
     }
 
     public IDefault_Artifacts Artifacts()
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, "  artifacts:");
+        return Utils.InvokeObject<IDefault_Artifacts>(_fullPath);
     }
 
     public IDefault_BeforeScript BeforeScript(string commands)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"  before_script: {commands}");
+        return Utils.InvokeObject<IDefault_BeforeScript>(_fullPath);
     }
 
     public IDefault_Cache Cache()

@@ -16,32 +16,37 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 
     #endregion
 
-    #region Build methods
     public IDefault Default()
     {
         Utils.WriteFile(_fullPath, "default:");
         return Utils.InvokeObject<IDefault>(_fullPath);
     }
 
-    public IInclude Include(string? shorterSintax)
+    public IIncludeShortSintax Include(string? shorterSintax)
     {
         Utils.WriteFile(_fullPath, $"include: {shorterSintax}");
         throw new NotImplementedException();
     }
 
-    public Interfaces.GlobalKeywords.IJobs Job(string jobName)
+    public IInclude Include()
+    {
+        Utils.WriteFile(_fullPath, $"include:");
+        throw new NotImplementedException();
+    }
+
+    public IJobs Job(string jobName)
     {
         Utils.WriteFile(_fullPath, $"{jobName}:");
         throw new NotImplementedException();
     }
 
-    public Interfaces.GlobalKeywords.IStages Stages()
+    public IStages Stages(string[] stages)
     {
         Utils.WriteFile(_fullPath, "stages:");
         throw new NotImplementedException();
     }
 
-    public Interfaces.GlobalKeywords.IVariables Variables(Dictionary<string, string> keyValues)
+    public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues)
     {
         Utils.WriteFile(_fullPath, "variables:");
         if (keyValues is not null)
@@ -54,11 +59,15 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
         throw new NotImplementedException();
     }
 
-    public Interfaces.GlobalKeywords.IWorkFlow WorkFlow()
+    public IVariables Variables()
+    {
+        Utils.WriteFile(_fullPath, "variables:");
+        throw new NotImplementedException();
+    }
+
+    public IWorkFlow WorkFlow()
     {
         Utils.WriteFile(_fullPath, "workflow:");
         throw new NotImplementedException();
     }
-
-    #endregion
 }

@@ -23,5 +23,5 @@ public interface IDefault_Image_EntryPoint:
 {}
 
 public interface IDefault_Image_EntryPoint_Navigation_lvl_2{
-    public IDefault_Image_EntryPoint Entrypoint();   
+    public IDefault_Image_EntryPoint Entrypoint(string entrypoint);   
 }
