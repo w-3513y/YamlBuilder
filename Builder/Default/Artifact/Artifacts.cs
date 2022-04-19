@@ -10,46 +10,60 @@ public class Artifacts : Default, IDefault_Artifacts
 
     public IDefault_Artifacts_Exclude Exclude(string file)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    exclude:");
+        Utils.WriteFile(_fullPath, $"      - {file}");
+        return Utils.InvokeObject<IDefault_Artifacts_Exclude>(_fullPath);
     }
 
     public IDefault_Artifacts_ExpireIn ExpireIn(string date)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    expire_in: {date}");
+        return Utils.InvokeObject<IDefault_Artifacts_ExpireIn>(_fullPath);
     }
 
     public IDefault_Artifacts_ExposeAs ExposeAs(string name)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    expose_as: {name}");
+        return Utils.InvokeObject<IDefault_Artifacts_ExposeAs>(_fullPath);
     }
 
     public IDefault_Artifacts_Name Name(string name)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    name: {name}");
+        return Utils.InvokeObject<IDefault_Artifacts_Name>(_fullPath);
     }
 
     public IDefault_Artifacts_Paths Paths(string[] paths)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    paths:");
+        foreach(var path in paths)
+        {
+            Utils.WriteFile(_fullPath, $"      - {path}");
+        }
+        return Utils.InvokeObject<IDefault_Artifacts_Paths>(_fullPath);
     }
 
     public IDefault_Artifacts_Public Public(bool publ)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    public: {(publ ? "true" : "false")}");
+        return Utils.InvokeObject<IDefault_Artifacts_Public>(_fullPath);
     }
 
-    public IDefault_Artifacts_Report_Report Report()
+    public IDefault_Artifacts_Report Report()
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    reports:");
+        return Utils.InvokeObject<IDefault_Artifacts_Report>(_fullPath);
     }
 
     public IDefault_Artifacts_Untracked Untracked(bool untracked)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    untracked: {(untracked ? "true" : "false")}");
+        return Utils.InvokeObject<IDefault_Artifacts_Untracked>(_fullPath);
     }
 
     public IDefault_Artifacts_When When(JobGlobal when)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"    when: {when}");
+        return Utils.InvokeObject<IDefault_Artifacts_When>(_fullPath);
     }
 }

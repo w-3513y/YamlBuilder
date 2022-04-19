@@ -1,5 +1,4 @@
 using YamlBuilder.Builder;
-using YamlBuilder.Interfaces.GlobalKeywords;
 
 var builder = WebApplication.CreateBuilder(args);
 
