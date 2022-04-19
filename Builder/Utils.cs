@@ -1,4 +1,4 @@
-using YamlBuilder.Interfaces.GitLab;
+using YamlBuilder.Configuration;
 
 namespace YamlBuilder.Builder;
 

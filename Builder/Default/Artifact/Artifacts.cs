@@ -2,7 +2,7 @@ using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
 
-namespace YamlBuilder.Builder.Default;
+namespace YamlBuilder.Builder.Default.Artifact;
 
 public class Artifacts : Default, IDefault_Artifacts
 {

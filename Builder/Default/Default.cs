@@ -71,23 +71,26 @@ public class Default : GitLabYaml, IDefault
     public IDefault_ServicesShortSyntax Services(string[] commands)
     {
         Utils.WriteFile(_fullPath, "  services:");
-        if (commands is not null)
+        foreach(var command in commands)
         {
-            foreach(var command in commands)
-            {
-                Utils.WriteFile(_fullPath, $"    - {command}");
-            }
+            Utils.WriteFile(_fullPath, $"    - {command}");
         }
         return Utils.InvokeObject<IDefault_ServicesShortSyntax>(_fullPath);
     }
 
     public IDefault_Tags Tags(string[] tags)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, "  tags:");
+        foreach(var tag in tags)
+        {
+            Utils.WriteFile(_fullPath, $"    - {tag}");
+        }
+        return Utils.InvokeObject<IDefault_Tags>(_fullPath);
     }
 
     public IDefault_Timeouts Timeouts(string time)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"  timeouts: {time}");
+        return Utils.InvokeObject<IDefault_Timeouts>(_fullPath);
     }
 }
