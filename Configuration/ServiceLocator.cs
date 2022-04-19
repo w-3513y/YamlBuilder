@@ -69,7 +69,7 @@ class ServiceLocator : BaseBuilder, IServiceLocator
         this.services.Add(typeof(IIncludeShortSyntax), new Builder.Include.IncludeShortSyntax(_fullPath));
         this.services.Add(typeof(IInclude), new Builder.Include.Include(_fullPath));
             this.services.Add(typeof(IInclude_File), new Builder.Include.File(_fullPath));
-            this.services.Add(typeof(IIInclude_Local), new Builder.Include.Local(_fullPath));
+            this.services.Add(typeof(IInclude_Local), new Builder.Include.Local(_fullPath));
             this.services.Add(typeof(IInclude_Project), new Builder.Include.Project(_fullPath));
             this.services.Add(typeof(IInclude_Ref), new Builder.Include.Ref(_fullPath));
             this.services.Add(typeof(IInclude_Remote), new Builder.Include.Remote(_fullPath));
