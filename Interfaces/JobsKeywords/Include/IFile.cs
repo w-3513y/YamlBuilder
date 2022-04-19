@@ -10,6 +10,6 @@ public interface IInclude_File:
     IInclude_Project_Navigation_lvl_1
 {}
 
-public interface IIInclude_File_Navigation_lvl_2{
+public interface IInclude_File_Navigation_lvl_2{
     public IInclude_File File(string[] files);   
 }

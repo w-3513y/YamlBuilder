@@ -7,9 +7,7 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 {
 
     #region class methods
-    public GitLabYaml(string filePath)
-        : base(filePath)
-        {}
+    public GitLabYaml(string filePath) : base(filePath) {}
 
     public static IGitLabYaml Builder(string filePath) 
         => new GitLabYaml(filePath);
@@ -25,13 +23,13 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
     public IIncludeShortSyntax Include(string? shorterSyntax)
     {
         Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
-        throw new NotImplementedException();
+        return Utils.InvokeObject<IIncludeShortSyntax>(_fullPath);
     }
 
     public IInclude Include()
     {
         Utils.WriteFile(_fullPath, $"include:");
-        throw new NotImplementedException();
+        return Utils.InvokeObject<IInclude>(_fullPath);
     }
 
     public IJobs Job(string jobName)
