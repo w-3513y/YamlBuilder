@@ -40,8 +40,12 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 
     public IStages Stages(string[] stages)
     {
-        Utils.WriteFile(_fullPath, "stages:");
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"stages:");
+        foreach (var stage in stages)
+        {
+            Utils.WriteFile(_fullPath, $"  - {stage}");
+        }
+        return Utils.InvokeObject<IStages>(_fullPath);
     }
 
     public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues)
@@ -54,13 +58,13 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
                 Utils.WriteFile(_fullPath, $"  {values.Key}: {values.Value}");
             }
         }
-        throw new NotImplementedException();
+        return Utils.InvokeObject<IVariablesShortSyntax>(_fullPath);
     }
 
     public IVariables Variables()
     {
         Utils.WriteFile(_fullPath, "variables:");
-        throw new NotImplementedException();
+        return Utils.InvokeObject<IVariables>(_fullPath);
     }
 
     public IWorkFlow WorkFlow()
