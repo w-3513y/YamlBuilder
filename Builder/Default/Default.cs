@@ -1,3 +1,4 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
@@ -10,20 +11,19 @@ namespace YamlBuilder.Builder.Default;
 public class Default : GitLabYaml, IDefault
 {
 
-    public Default(string path)
-        : base(path)
-        {}
+    public Default(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
     public IDefault_AfterScript AfterScript(string commands)
     {
         Utils.WriteFile(_fullPath, $"  after_script: {commands}");
-        return Utils.InvokeObject<IDefault_AfterScript>(_fullPath);
+        return Utils.InvokeObject<IDefault_AfterScript>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts Artifacts()
     {
         Utils.WriteFile(_fullPath, "  artifacts:");
-        return Utils.InvokeObject<IDefault_Artifacts>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts>(_fullPath, _serviceLocator);
     }
 
     public IDefault_BeforeScript BeforeScript(string commands)
@@ -31,43 +31,43 @@ public class Default : GitLabYaml, IDefault
         Utils.WriteFile(_fullPath, $"  before_script:");
         Utils.WriteFile(_fullPath, $"    - {commands}");
 
-        return Utils.InvokeObject<IDefault_BeforeScript>(_fullPath);
+        return Utils.InvokeObject<IDefault_BeforeScript>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Cache Cache()
     {
         Utils.WriteFile(_fullPath, "  cache:");
-        return Utils.InvokeObject<IDefault_Cache>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Image Image()
     {
         Utils.WriteFile(_fullPath, "  image:");
-        return Utils.InvokeObject<IDefault_Image>(_fullPath);
+        return Utils.InvokeObject<IDefault_Image>(_fullPath, _serviceLocator);
     }
 
     public IDefault_ImageShortSyntax Image(string image)
     {
         Utils.WriteFile(_fullPath, $"  image: {image}");
-        return Utils.InvokeObject<IDefault_ImageShortSyntax>(_fullPath);
+        return Utils.InvokeObject<IDefault_ImageShortSyntax>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Interruptible Interruptible(bool interruptible)
     {
         Utils.WriteFile(_fullPath, $"  interruptible: {interruptible}");
-        return Utils.InvokeObject<IDefault_Interruptible>(_fullPath);
+        return Utils.InvokeObject<IDefault_Interruptible>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Retry Retry(Enums.Retry retry)
     {
         Utils.WriteFile(_fullPath, $"  retry: {retry}");
-        return Utils.InvokeObject<IDefault_Retry>(_fullPath);
+        return Utils.InvokeObject<IDefault_Retry>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Services Services()
     {
         Utils.WriteFile(_fullPath, "  services:");
-        return Utils.InvokeObject<IDefault_Services>(_fullPath);
+        return Utils.InvokeObject<IDefault_Services>(_fullPath, _serviceLocator);
     }
 
     public IDefault_ServicesShortSyntax Services(string[] commands)
@@ -77,7 +77,7 @@ public class Default : GitLabYaml, IDefault
         {
             Utils.WriteFile(_fullPath, $"    - {command}");
         }
-        return Utils.InvokeObject<IDefault_ServicesShortSyntax>(_fullPath);
+        return Utils.InvokeObject<IDefault_ServicesShortSyntax>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Tags Tags(string[] tags)
@@ -87,12 +87,12 @@ public class Default : GitLabYaml, IDefault
         {
             Utils.WriteFile(_fullPath, $"    - {tag}");
         }
-        return Utils.InvokeObject<IDefault_Tags>(_fullPath);
+        return Utils.InvokeObject<IDefault_Tags>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Timeouts Timeouts(string time)
     {
         Utils.WriteFile(_fullPath, $"  timeouts: {time}");
-        return Utils.InvokeObject<IDefault_Timeouts>(_fullPath);
+        return Utils.InvokeObject<IDefault_Timeouts>(_fullPath, _serviceLocator);
     }
 }

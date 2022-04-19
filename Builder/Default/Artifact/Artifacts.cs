@@ -1,3 +1,4 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact.RepostTypes;
@@ -6,31 +7,32 @@ namespace YamlBuilder.Builder.Default.Artifact;
 
 public class Artifacts : Default, IDefault_Artifacts
 {
-    public Artifacts(string path) : base(path){}
+    public Artifacts(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
     public IDefault_Artifacts_Exclude Exclude(string file)
     {
         Utils.WriteFile(_fullPath, $"    exclude:");
         Utils.WriteFile(_fullPath, $"      - {file}");
-        return Utils.InvokeObject<IDefault_Artifacts_Exclude>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Exclude>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_ExpireIn ExpireIn(string date)
     {
         Utils.WriteFile(_fullPath, $"    expire_in: {date}");
-        return Utils.InvokeObject<IDefault_Artifacts_ExpireIn>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_ExpireIn>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_ExposeAs ExposeAs(string name)
     {
         Utils.WriteFile(_fullPath, $"    expose_as: {name}");
-        return Utils.InvokeObject<IDefault_Artifacts_ExposeAs>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_ExposeAs>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_Name Name(string name)
     {
         Utils.WriteFile(_fullPath, $"    name: {name}");
-        return Utils.InvokeObject<IDefault_Artifacts_Name>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Name>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_Paths Paths(string[] paths)
@@ -40,30 +42,30 @@ public class Artifacts : Default, IDefault_Artifacts
         {
             Utils.WriteFile(_fullPath, $"      - {path}");
         }
-        return Utils.InvokeObject<IDefault_Artifacts_Paths>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Paths>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_Public Public(bool publ)
     {
         Utils.WriteFile(_fullPath, $"    public: {(publ ? "true" : "false")}");
-        return Utils.InvokeObject<IDefault_Artifacts_Public>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Public>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_Report Report()
     {
         Utils.WriteFile(_fullPath, $"    reports:");
-        return Utils.InvokeObject<IDefault_Artifacts_Report>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Report>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_Untracked Untracked(bool untracked)
     {
         Utils.WriteFile(_fullPath, $"    untracked: {(untracked ? "true" : "false")}");
-        return Utils.InvokeObject<IDefault_Artifacts_Untracked>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_Untracked>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Artifacts_When When(JobGlobal when)
     {
         Utils.WriteFile(_fullPath, $"    when: {when}");
-        return Utils.InvokeObject<IDefault_Artifacts_When>(_fullPath);
+        return Utils.InvokeObject<IDefault_Artifacts_When>(_fullPath, _serviceLocator);
     }
 }

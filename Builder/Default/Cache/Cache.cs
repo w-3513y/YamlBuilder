@@ -1,3 +1,4 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 
@@ -5,12 +6,13 @@ namespace YamlBuilder.Builder.Default.Cache;
 
 public class Cache : Default, IDefault_Cache
 {
-    public Cache(string path) : base(path){}
+    public Cache(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
     public IDefault_Cache_Key Key(string name)
     {
         Utils.WriteFile(_fullPath, $"    key: {name}");
-        return Utils.InvokeObject<IDefault_Cache_Key>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Key>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Cache_Paths Paths(string[] directories)
@@ -20,24 +22,24 @@ public class Cache : Default, IDefault_Cache
         {
             Utils.WriteFile(_fullPath, $"      - {directory}");
         }
-        return Utils.InvokeObject<IDefault_Cache_Paths>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Paths>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Cache_Policy Policy(GitCommand command)
     {
         Utils.WriteFile(_fullPath, $"    policy: {command}");
-        return Utils.InvokeObject<IDefault_Cache_Policy>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Policy>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Cache_Untracked Untracked(bool untracked)
     {
         Utils.WriteFile(_fullPath, $"    untracked: {(untracked ? "true" : "false")}");
-        return Utils.InvokeObject<IDefault_Cache_Untracked>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Untracked>(_fullPath, _serviceLocator);
     }
 
     public IDefault_Cache_When When(JobGlobal when)
     {
         Utils.WriteFile(_fullPath, $"    when: {when}");
-        return Utils.InvokeObject<IDefault_Cache_When>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_When>(_fullPath, _serviceLocator);
     }
 }

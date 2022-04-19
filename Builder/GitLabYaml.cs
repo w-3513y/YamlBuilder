@@ -1,3 +1,4 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Interfaces.GitLab;
 using YamlBuilder.Interfaces.GlobalKeywords;
 
@@ -7,29 +8,30 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 {
 
     #region class methods
-    public GitLabYaml(string filePath) : base(filePath) {}
+    public GitLabYaml(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
-    public static IGitLabYaml Builder(string filePath) 
-        => new GitLabYaml(filePath);
+    public static IGitLabYaml Builder(string filePath, IServiceLocator serviceLocator) 
+        => new GitLabYaml(filePath, serviceLocator);
 
     #endregion
 
     public IDefault Default()
     {
         Utils.WriteFile(_fullPath, "default:");
-        return Utils.InvokeObject<IDefault>(_fullPath);
+        return Utils.InvokeObject<IDefault>(_fullPath, _serviceLocator);
     }
 
     public IIncludeShortSyntax Include(string? shorterSyntax)
     {
         Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
-        return Utils.InvokeObject<IIncludeShortSyntax>(_fullPath);
+        return Utils.InvokeObject<IIncludeShortSyntax>(_fullPath, _serviceLocator);
     }
 
     public IInclude Include()
     {
         Utils.WriteFile(_fullPath, $"include:");
-        return Utils.InvokeObject<IInclude>(_fullPath);
+        return Utils.InvokeObject<IInclude>(_fullPath, _serviceLocator);
     }
 
     public IJobs Job(string jobName)
@@ -45,7 +47,7 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
         {
             Utils.WriteFile(_fullPath, $"  - {stage}");
         }
-        return Utils.InvokeObject<IStages>(_fullPath);
+        return Utils.InvokeObject<IStages>(_fullPath, _serviceLocator);
     }
 
     public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues)
@@ -58,13 +60,13 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
                 Utils.WriteFile(_fullPath, $"  {values.Key}: {values.Value}");
             }
         }
-        return Utils.InvokeObject<IVariablesShortSyntax>(_fullPath);
+        return Utils.InvokeObject<IVariablesShortSyntax>(_fullPath, _serviceLocator);
     }
 
     public IVariables Variables()
     {
         Utils.WriteFile(_fullPath, "variables:");
-        return Utils.InvokeObject<IVariables>(_fullPath);
+        return Utils.InvokeObject<IVariables>(_fullPath, _serviceLocator);
     }
 
     public IWorkFlow WorkFlow()

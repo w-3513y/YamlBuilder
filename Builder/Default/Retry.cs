@@ -1,8 +1,10 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Interfaces.JobsKeywords.Default;
 
 namespace YamlBuilder.Builder.Default;
 
 public class Retry : Default, IDefault_Retry
 {
-    public Retry(string path) : base(path){}
+    public Retry(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }

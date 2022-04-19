@@ -1,10 +1,12 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 
 namespace YamlBuilder.Builder.Default.Cache;
 
 public class Key : Cache, IDefault_Cache_Key
 {
-    public Key(string path) : base(path){}
+    public Key(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
     public IDefault_Cache_Files Files(string[] files)
     {
@@ -13,40 +15,46 @@ public class Key : Cache, IDefault_Cache_Key
         {
             Utils.WriteFile(_fullPath, $"        - {file}");
         }
-        return Utils.InvokeObject<IDefault_Cache_Files>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Files>(_fullPath, _serviceLocator);
     }
 }
 
 public class Files : Cache, IDefault_Cache_Files
 {
-    public Files(string path) : base(path){}
+    public Files(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 
     public IDefault_Cache_Prefix Prefix(string name)
     {
         Utils.WriteFile(_fullPath, $"      prefix: {name}");
-        return Utils.InvokeObject<IDefault_Cache_Prefix>(_fullPath);
+        return Utils.InvokeObject<IDefault_Cache_Prefix>(_fullPath, _serviceLocator);
     }
 }
 
 public class Prefix : Cache, IDefault_Cache_Prefix
 {
-    public Prefix(string path) : base(path){}
+    public Prefix(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }
 
 public class Paths : Cache, IDefault_Cache_Paths
 {
-    public Paths(string path) : base(path){}
+    public Paths(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }
 
 public class Policy : Cache, IDefault_Cache_Policy
 {
-    public Policy(string path) : base(path){}
+    public Policy(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }
 public class Untracked : Cache, IDefault_Cache_Untracked 
 {
-    public Untracked(string path) : base(path){}
+    public Untracked(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }
 public class When : Cache, IDefault_Cache_When
 {
-    public When(string path) : base(path){}
+    public When(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }

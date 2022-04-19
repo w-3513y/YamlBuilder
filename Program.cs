@@ -1,15 +1,11 @@
-using YamlBuilder.Builder;
-
-var builder = WebApplication.CreateBuilder(args);
-
-var app = builder.Build();
-
-app.MapGet("/", () => "Hello World!");
-
 var fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location + "gitlab.yml";
 
-GitLabYaml
-    .Builder(filePath: fullPath) 
+YamlBuilder.Configuration.IServiceLocator servicelocator = new YamlBuilder.Configuration.ServiceLocator(fullPath);
+
+YamlBuilder
+.Builder
+.GitLabYaml
+    .Builder(fullPath, servicelocator) 
     .Default()
         .Image()
             .Name("ruby:3.0")
@@ -32,5 +28,3 @@ GitLabYaml
         .Local("./WORKDIR")
     .Stages(new string[] {"build", "test", "deploy"})
     .Variables(new Dictionary<string, string>(){{"JOB_NAME", "TEST"}, {"ALIAS", "NEW_NAME"}});
-
-app.Run();

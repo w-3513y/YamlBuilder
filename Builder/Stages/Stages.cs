@@ -4,5 +4,6 @@ namespace YamlBuilder.Builder.Stages;
 
 public class Stages : GitLabYaml, IStages
 {
-     public Stages(string path) : base(path) {}
+     public Stages(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }

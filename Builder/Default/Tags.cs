@@ -1,8 +1,10 @@
+using YamlBuilder.Configuration;
 using YamlBuilder.Interfaces.JobsKeywords.Default;
 
 namespace YamlBuilder.Builder.Default;
 
 public class Tags : Default, IDefault_Tags
 {
-    public Tags(string path) : base(path){}
+    public Tags(string fullPath, IServiceLocator serviceLocator) 
+        : base(fullPath, serviceLocator) {}
 }

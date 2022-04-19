@@ -5,9 +5,8 @@ namespace YamlBuilder.Builder;
 public static class Utils
 {
 
-    public static T InvokeObject<T>(string path)
+    public static T InvokeObject<T>(string path, IServiceLocator locator)
     {
-        IServiceLocator locator = new ServiceLocator(path);
         T _object = locator.GetService<T>();
         return _object;
     }
