@@ -14,6 +14,6 @@ public interface IDefault_Artifacts:
   IDefault_Artifacts_When_Navigation_lvl_2
 {}
 
-public interface IIDefault_Artifacts_Artifacts_Navigation_lvl_1{
+public interface IDefault_Artifacts_Navigation_lvl_1{
     public IDefault_Artifacts Artifacts();   
 }

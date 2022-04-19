@@ -12,7 +12,7 @@ public interface IDefault_Image_Name:
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0,
     IDefault_AfterScript_Navigation_lvl_1,
-    IIDefault_Artifacts_Artifacts_Navigation_lvl_1,
+    IDefault_Artifacts_Navigation_lvl_1,
     IDefault_BeforeScript_Navigation_lvl_1,
     IDefault_Cache_Navigation_lvl_1,
     IDefault_Interruptible_Navigation_lvl_1,

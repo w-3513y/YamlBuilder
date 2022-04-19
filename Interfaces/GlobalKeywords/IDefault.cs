@@ -9,7 +9,7 @@ namespace YamlBuilder.Interfaces.GlobalKeywords;
 
 public interface IDefault:
     IDefault_AfterScript_Navigation_lvl_1,
-    IIDefault_Artifacts_Artifacts_Navigation_lvl_1,
+    IDefault_Artifacts_Navigation_lvl_1,
     IDefault_BeforeScript_Navigation_lvl_1,
     IDefault_Cache_Navigation_lvl_1,
     IImageNavigation_lvl_1,

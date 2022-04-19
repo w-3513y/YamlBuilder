@@ -22,9 +22,9 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
         return Utils.InvokeObject<IDefault>(_fullPath);
     }
 
-    public IIncludeShortSintax Include(string? shorterSintax)
+    public IIncludeShortSyntax Include(string? shorterSyntax)
     {
-        Utils.WriteFile(_fullPath, $"include: {shorterSintax}");
+        Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
         throw new NotImplementedException();
     }
 

@@ -1,4 +1,3 @@
-using YamlBuilder.Enums;
 using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
@@ -35,7 +34,8 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Cache Cache()
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, "  cache:");
+        return Utils.InvokeObject<IDefault_Cache>(_fullPath);
     }
 
     public IDefault_Image Image()
@@ -44,30 +44,41 @@ public class Default : GitLabYaml, IDefault
         return Utils.InvokeObject<IDefault_Image>(_fullPath);
     }
 
-    public IDefault_ImageShortSintax Image(string image)
+    public IDefault_ImageShortSyntax Image(string image)
     {
         Utils.WriteFile(_fullPath, $"  image: {image}");
-        return Utils.InvokeObject<IDefault_ImageShortSintax>(_fullPath);
+        return Utils.InvokeObject<IDefault_ImageShortSyntax>(_fullPath);
     }
 
     public IDefault_Interruptible Interruptible(bool interruptible)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"  interruptible: {interruptible}");
+        return Utils.InvokeObject<IDefault_Interruptible>(_fullPath);
     }
 
-    public IDefault_Retry Retry(Retry retry)
+    public IDefault_Retry Retry(Enums.Retry retry)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, $"  retry: {retry}");
+        return Utils.InvokeObject<IDefault_Retry>(_fullPath);
     }
 
     public IDefault_Services Services()
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, "  services:");
+        return Utils.InvokeObject<IDefault_Services>(_fullPath);
     }
 
     public IDefault_ServicesShortSyntax Services(string[] commands)
     {
-        throw new NotImplementedException();
+        Utils.WriteFile(_fullPath, "  services:");
+        if (commands is not null)
+        {
+            foreach(var command in commands)
+            {
+                Utils.WriteFile(_fullPath, $"    - {command}");
+            }
+        }
+        return Utils.InvokeObject<IDefault_ServicesShortSyntax>(_fullPath);
     }
 
     public IDefault_Tags Tags(string[] tags)

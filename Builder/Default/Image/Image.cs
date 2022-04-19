@@ -2,6 +2,13 @@ using YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
 namespace YamlBuilder.Builder.Default.Image;
 
+public class ImageShortSyntax : Default, IDefault_ImageShortSyntax
+{
+     public ImageShortSyntax(string path)
+        : base(path)
+        {}
+}
+
 public class Image : Default, IDefault_Image
 {
 

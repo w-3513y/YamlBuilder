@@ -20,7 +20,7 @@ public interface IJobs_Image:
     IJobs_Image_EntryPoint_Navigation_lvl_2
 {}
 
-public interface IJobs_ImageShortSintax:
+public interface IJobs_ImageShortSyntax:
     IJobs_Navigation_lvl_0,
     IJobs_Services_Navigation_lvl_1,
     IJobs_Environment_Navigation_lvl_1,
@@ -53,6 +53,6 @@ public interface IJobs_ImageShortSintax:
 public interface IJobs_Image_Navigation_lvl_1{
 
     public IJobs_Image Image();
-    public IJobs_ImageShortSintax Image(string image);
+    public IJobs_ImageShortSyntax Image(string image);
     
 }
