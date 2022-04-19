@@ -6,8 +6,10 @@ var app = builder.Build();
 
 app.MapGet("/", () => "Hello World!");
 
+var fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location + "gitlab.yml";
+
 GitLabYaml
-    .Builder(filename: "gitlab") 
+    .Builder(filePath: fullPath) 
     .Default()
         .Image()
             .Name("ruby:3.0")

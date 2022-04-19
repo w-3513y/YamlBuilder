@@ -7,12 +7,12 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 {
 
     #region class methods
-    public GitLabYaml(string filename)
-        : base(System.Reflection.Assembly.GetExecutingAssembly().Location + filename + ".yml")
+    public GitLabYaml(string filePath)
+        : base(filePath)
         {}
 
-    public static IGitLabYaml Builder(string filename) 
-        => new GitLabYaml(filename);
+    public static IGitLabYaml Builder(string filePath) 
+        => new GitLabYaml(filePath);
 
     #endregion
 
