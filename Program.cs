@@ -7,13 +7,13 @@ var fullPath = System.Reflection.Assembly.GetExecutingAssembly().Location + "git
 IServiceLocator servicelocator = new ServiceLocator(fullPath);
 
 GitLabYaml
-    .Builder(fullPath, servicelocator) 
+    .Builder(fullPath, servicelocator)
     .Default()
         .Image()
             .Name("mcr.microsoft.com/dotnet/sdk:latest")
             .Entrypoint("/bin/bash")
         .BeforeScript("rspec --format RspecJunitFormatter --out rspec.xml")
-        .AfterScript("echo \"Execute this command before any 'script:' commands.\"")
+        .AfterScript("echo \"Execute this command after any 'script:' commands.\"")
         .Artifacts()
             .Public(false)
             .Untracked(true)
@@ -37,7 +37,7 @@ GitLabYaml
             .Policy(GitCommand.push)
             .When(JobGlobal.on_failure)
         .Interruptible(true)
-        .Retry(Retry.Two) //copy retry from job, default retry is incomplete
+        .Retry(Retry.Two)
         .Services()
             .Name("my-postgres:11.7") //service that will be run into docker
             .Alias("db-postgres")

@@ -16,7 +16,8 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_AfterScript AfterScript(string commands)
     {
-        Utils.WriteFile(_fullPath, $"  after_script: {commands}");
+        Utils.WriteFile(_fullPath, $"  after_script:");
+        Utils.WriteFile(_fullPath, $"    - {commands}");
         return _serviceLocator.GetService<IDefault_AfterScript>();
     }
 
