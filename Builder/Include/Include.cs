@@ -8,6 +8,11 @@ public class IncludeShortSyntax : GitLabYaml, IIncludeShortSyntax
 {
      public IncludeShortSyntax(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
+
+    public void Build(string shorterSyntax)
+    {
+        Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
+    }
 }
 
 public class Include : GitLabYaml, IInclude
@@ -15,6 +20,11 @@ public class Include : GitLabYaml, IInclude
 
     public Include(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
+
+    public void Build()
+    {
+        Utils.WriteFile(_fullPath, $"include:");
+    }
 
     public IInclude_Local Local(string file)
     {

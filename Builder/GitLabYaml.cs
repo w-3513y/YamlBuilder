@@ -18,19 +18,19 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 
     public IDefault Default()
     {
-        Utils.WriteFile(_fullPath, "default:");
+        _serviceLocator.GetService<IDefault>().Build();
         return _serviceLocator.GetService<IDefault>();
     }
 
-    public IIncludeShortSyntax Include(string? shorterSyntax)
+    public IIncludeShortSyntax Include(string shorterSyntax)
     {
-        Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
+        _serviceLocator.GetService<IIncludeShortSyntax>().Build(shorterSyntax);
         return _serviceLocator.GetService<IIncludeShortSyntax>();
     }
 
     public IInclude Include()
     {
-        Utils.WriteFile(_fullPath, $"include:");
+        _serviceLocator.GetService<IInclude>().Build();
         return _serviceLocator.GetService<IInclude>();
     }
 
@@ -42,36 +42,25 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
 
     public IStages Stages(string[] stages)
     {
-        Utils.WriteFile(_fullPath, $"stages:");
-        foreach (var stage in stages)
-        {
-            Utils.WriteFile(_fullPath, $"  - {stage}");
-        }
+        _serviceLocator.GetService<IStages>().Build(stages);
         return _serviceLocator.GetService<IStages>();
     }
 
     public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues)
     {
-        Utils.WriteFile(_fullPath, "variables:");
-        if (keyValues is not null)
-        {
-            foreach(var values in keyValues)
-            {
-                Utils.WriteFile(_fullPath, $"  {values.Key}: {values.Value}");
-            }
-        }
+        _serviceLocator.GetService<IVariablesShortSyntax>().Build(keyValues);
         return _serviceLocator.GetService<IVariablesShortSyntax>();
     }
 
     public IVariables Variables()
     {
-        Utils.WriteFile(_fullPath, "variables:");
+        _serviceLocator.GetService<IVariables>().Build();
         return _serviceLocator.GetService<IVariables>();
     }
 
     public IWorkFlow WorkFlow()
     {
-        Utils.WriteFile(_fullPath, "workflow:");
-        throw new NotImplementedException();
+        _serviceLocator.GetService<IWorkFlow>().Build();
+        return _serviceLocator.GetService<IWorkFlow>();
     }
 }

@@ -14,6 +14,11 @@ public class Default : GitLabYaml, IDefault
     public Default(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
 
+    public void Build()
+    {
+        Utils.WriteFile(_fullPath, "Default:");
+    }
+
     public IDefault_AfterScript AfterScript(string commands)
     {
         Utils.WriteFile(_fullPath, $"  after_script:");

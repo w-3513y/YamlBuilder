@@ -18,7 +18,9 @@ public interface IDefault:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
- {}
+ {
+     public void Build();
+ }
 
 public interface IDefaultNavigation_lvl_0{
     public IDefault Default();
