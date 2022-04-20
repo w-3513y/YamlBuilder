@@ -9,10 +9,7 @@ public class WorkFlow : GitLabYaml, IWorkFlow
      public WorkFlow(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
 
-    public void Build()
-    {
-        Utils.WriteFile(_fullPath, "workflow:");
-    }
+    public void Build() => Utils.WriteFile(_fullPath, "workflow:");
 
     public IWorkFlow_Rules Rules(string condition)
     {

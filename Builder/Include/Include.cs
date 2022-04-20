@@ -28,28 +28,25 @@ public class Include : GitLabYaml, IInclude
 
     public IInclude_Local Local(string file)
     {
-        Utils.WriteFile(_fullPath, $"  - local: {file}");
+        _serviceLocator.GetService<IInclude_Local>().Build(file);
         return _serviceLocator.GetService<IInclude_Local>();
     }
 
     public IInclude_Project Project(string project)
     {
-        Utils.WriteFile(_fullPath, $"  - project: {project}");
+        _serviceLocator.GetService<IInclude_Project>().Build(project);
         return _serviceLocator.GetService<IInclude_Project>();
     }
 
     public IInclude_Remote Remote(string url)
     {
-        Utils.WriteFile(_fullPath, $"  - remote: {url}");
+        _serviceLocator.GetService<IInclude_Remote>().Build(url);
         return _serviceLocator.GetService<IInclude_Remote>();
     }
 
     public IInclude_Template Template(string[] templates)
     {
-        foreach(var template in templates)
-        {
-            Utils.WriteFile(_fullPath, $"  - template: {template}");
-        }
+        _serviceLocator.GetService<IInclude_Template>().Build(templates);
         return _serviceLocator.GetService<IInclude_Template>();
     }
 }

@@ -9,6 +9,9 @@ public class Cache : Default, IDefault_Cache
     public Cache(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
 
+    public new void Build()
+        => Utils.WriteFile(_fullPath, "  cache:");
+
     public IDefault_Cache_Key Key(string name)
     {
         _serviceLocator.GetService<IDefault_Cache_Key>().Build(name);
@@ -29,7 +32,7 @@ public class Cache : Default, IDefault_Cache
 
     public IDefault_Cache_Untracked Untracked(bool untracked)
     {
-        
+        _serviceLocator.GetService<IDefault_Cache_Untracked>().Build(untracked);
         return _serviceLocator.GetService<IDefault_Cache_Untracked>();
     }
 

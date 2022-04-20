@@ -18,8 +18,7 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_AfterScript AfterScript(string commands)
     {
-        Utils.WriteFile(_fullPath, $"  after_script:");
-        Utils.WriteFile(_fullPath, $"    - {commands}");
+        _serviceLocator.GetService<IDefault_AfterScript>().Build(commands);
         return _serviceLocator.GetService<IDefault_AfterScript>();
     }
 
@@ -31,15 +30,13 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_BeforeScript BeforeScript(string commands)
     {
-        Utils.WriteFile(_fullPath, $"  before_script:");
-        Utils.WriteFile(_fullPath, $"    - {commands}");
-
+        _serviceLocator.GetService<IDefault_BeforeScript>().Build(commands);
         return _serviceLocator.GetService<IDefault_BeforeScript>();
     }
 
     public IDefault_Cache Cache()
     {
-        Utils.WriteFile(_fullPath, "  cache:");
+        _serviceLocator.GetService<IDefault_Cache>().Build();
         return _serviceLocator.GetService<IDefault_Cache>();
     }
 
@@ -57,13 +54,13 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Interruptible Interruptible(bool interruptible)
     {
-        Utils.WriteFile(_fullPath, $"  interruptible: {interruptible}");
+        _serviceLocator.GetService<IDefault_Interruptible>().Build(interruptible);
         return _serviceLocator.GetService<IDefault_Interruptible>();
     }
 
     public IDefault_Retry Retry(Enums.Retry retry)
     {
-        Utils.WriteFile(_fullPath, $"  retry: {retry}");
+        _serviceLocator.GetService<IDefault_Retry>().Build(retry);
         return _serviceLocator.GetService<IDefault_Retry>();
     }
 
@@ -81,17 +78,13 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Tags Tags(string[] tags)
     {
-        Utils.WriteFile(_fullPath, "  tags:");
-        foreach(var tag in tags)
-        {
-            Utils.WriteFile(_fullPath, $"    - {tag}");
-        }
+        _serviceLocator.GetService<IDefault_Tags>().Build(tags);
         return _serviceLocator.GetService<IDefault_Tags>();
     }
 
     public IDefault_Timeouts Timeouts(string time)
     {
-        Utils.WriteFile(_fullPath, $"  timeouts: {time}");
+        _serviceLocator.GetService<IDefault_Timeouts>().Build(time);
         return _serviceLocator.GetService<IDefault_Timeouts>();
     }
 }
