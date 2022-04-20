@@ -24,7 +24,7 @@ public class CoverageReport : Report, IDefault_Artifacts_Report_CoverageReport
     public IDefault_Artifacts_Report_CoverageFormat CoverageFormat(string format)
     {
         Utils.WriteFile(_fullPath, $"        coverage_format: {format}");
-        return Utils.InvokeObject<IDefault_Artifacts_Report_CoverageFormat>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Artifacts_Report_CoverageFormat>();
     }
 }
 
@@ -36,7 +36,7 @@ public class CoverageFormat: CoverageReport, IDefault_Artifacts_Report_CoverageF
     public IDefault_Artifacts_Report_Path Path(string path)
     {
         Utils.WriteFile(_fullPath, $"        path: {path}");
-        return Utils.InvokeObject<IDefault_Artifacts_Report_Path>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Artifacts_Report_Path>();
     }
 }
 

@@ -17,6 +17,6 @@ public class Services : Default, IDefault_Services
     public IDefault_Services_Name Name(string serviceName)
     {
         Utils.WriteFile(_fullPath, $"    - name: {serviceName}");
-        return Utils.InvokeObject<IDefault_Services_Name>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Services_Name>();
     }
 }

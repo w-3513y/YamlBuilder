@@ -19,19 +19,19 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
     public IDefault Default()
     {
         Utils.WriteFile(_fullPath, "default:");
-        return Utils.InvokeObject<IDefault>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault>();
     }
 
     public IIncludeShortSyntax Include(string? shorterSyntax)
     {
         Utils.WriteFile(_fullPath, $"include: {shorterSyntax}");
-        return Utils.InvokeObject<IIncludeShortSyntax>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IIncludeShortSyntax>();
     }
 
     public IInclude Include()
     {
         Utils.WriteFile(_fullPath, $"include:");
-        return Utils.InvokeObject<IInclude>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude>();
     }
 
     public IJobs Job(string jobName)
@@ -47,7 +47,7 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
         {
             Utils.WriteFile(_fullPath, $"  - {stage}");
         }
-        return Utils.InvokeObject<IStages>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IStages>();
     }
 
     public IVariablesShortSyntax Variables(Dictionary<string, string> keyValues)
@@ -60,13 +60,13 @@ public class GitLabYaml : BaseBuilder, IGitLabYaml
                 Utils.WriteFile(_fullPath, $"  {values.Key}: {values.Value}");
             }
         }
-        return Utils.InvokeObject<IVariablesShortSyntax>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IVariablesShortSyntax>();
     }
 
     public IVariables Variables()
     {
         Utils.WriteFile(_fullPath, "variables:");
-        return Utils.InvokeObject<IVariables>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IVariables>();
     }
 
     public IWorkFlow WorkFlow()

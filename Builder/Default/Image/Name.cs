@@ -1,5 +1,4 @@
 using YamlBuilder.Configuration;
-using YamlBuilder.Interfaces.GlobalKeywords;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 
 namespace YamlBuilder.Builder.Default.Image;

@@ -18,12 +18,12 @@ public class Image : Default, IDefault_Image
     public IDefault_Image_EntryPoint Entrypoint(string entrypoint)
     {
         Utils.WriteFile(_fullPath, $"    entrypoint: [{entrypoint}]");
-        return Utils.InvokeObject<IDefault_Image_EntryPoint>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Image_EntryPoint>();
     }
 
     public IDefault_Image_Name Name(string name)
     {
         Utils.WriteFile(_fullPath, $"    name: {name}");
-        return Utils.InvokeObject<IDefault_Image_Name>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Image_Name>();
     }
 }

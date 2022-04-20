@@ -11,7 +11,7 @@ public class Key : Variables, IVariables_Key
     public IVariables_Value Value(string value)
     {
         Utils.WriteFile(_fullPath, $"    value:  {value}");
-        return Utils.InvokeObject<IVariables_Value>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IVariables_Value>();
     }
 }
 
@@ -23,7 +23,7 @@ public class Value : Key, IVariables_Value
     public IVariables_Description Description(string description)
     {
         Utils.WriteFile(_fullPath, $"    description:  {description}");
-        return Utils.InvokeObject<IVariables_Description>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IVariables_Description>();
     }
 }
 

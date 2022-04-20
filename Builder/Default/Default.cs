@@ -17,13 +17,13 @@ public class Default : GitLabYaml, IDefault
     public IDefault_AfterScript AfterScript(string commands)
     {
         Utils.WriteFile(_fullPath, $"  after_script: {commands}");
-        return Utils.InvokeObject<IDefault_AfterScript>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_AfterScript>();
     }
 
     public IDefault_Artifacts Artifacts()
     {
         Utils.WriteFile(_fullPath, "  artifacts:");
-        return Utils.InvokeObject<IDefault_Artifacts>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Artifacts>();
     }
 
     public IDefault_BeforeScript BeforeScript(string commands)
@@ -31,43 +31,43 @@ public class Default : GitLabYaml, IDefault
         Utils.WriteFile(_fullPath, $"  before_script:");
         Utils.WriteFile(_fullPath, $"    - {commands}");
 
-        return Utils.InvokeObject<IDefault_BeforeScript>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_BeforeScript>();
     }
 
     public IDefault_Cache Cache()
     {
         Utils.WriteFile(_fullPath, "  cache:");
-        return Utils.InvokeObject<IDefault_Cache>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Cache>();
     }
 
     public IDefault_Image Image()
     {
         Utils.WriteFile(_fullPath, "  image:");
-        return Utils.InvokeObject<IDefault_Image>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Image>();
     }
 
     public IDefault_ImageShortSyntax Image(string image)
     {
         Utils.WriteFile(_fullPath, $"  image: {image}");
-        return Utils.InvokeObject<IDefault_ImageShortSyntax>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_ImageShortSyntax>();
     }
 
     public IDefault_Interruptible Interruptible(bool interruptible)
     {
         Utils.WriteFile(_fullPath, $"  interruptible: {interruptible}");
-        return Utils.InvokeObject<IDefault_Interruptible>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Interruptible>();
     }
 
     public IDefault_Retry Retry(Enums.Retry retry)
     {
         Utils.WriteFile(_fullPath, $"  retry: {retry}");
-        return Utils.InvokeObject<IDefault_Retry>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Retry>();
     }
 
     public IDefault_Services Services()
     {
         Utils.WriteFile(_fullPath, "  services:");
-        return Utils.InvokeObject<IDefault_Services>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Services>();
     }
 
     public IDefault_ServicesShortSyntax Services(string[] commands)
@@ -77,7 +77,7 @@ public class Default : GitLabYaml, IDefault
         {
             Utils.WriteFile(_fullPath, $"    - {command}");
         }
-        return Utils.InvokeObject<IDefault_ServicesShortSyntax>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_ServicesShortSyntax>();
     }
 
     public IDefault_Tags Tags(string[] tags)
@@ -87,12 +87,12 @@ public class Default : GitLabYaml, IDefault
         {
             Utils.WriteFile(_fullPath, $"    - {tag}");
         }
-        return Utils.InvokeObject<IDefault_Tags>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Tags>();
     }
 
     public IDefault_Timeouts Timeouts(string time)
     {
         Utils.WriteFile(_fullPath, $"  timeouts: {time}");
-        return Utils.InvokeObject<IDefault_Timeouts>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Timeouts>();
     }
 }

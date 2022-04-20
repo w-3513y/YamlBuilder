@@ -18,6 +18,6 @@ public class Variables : GitLabYaml, IVariables
     public IVariables_Key Key(string key)
     {
         Utils.WriteFile(_fullPath, $"  {key.ToUpper()}:");
-        return Utils.InvokeObject<IVariables_Key>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IVariables_Key>();
     }
 }

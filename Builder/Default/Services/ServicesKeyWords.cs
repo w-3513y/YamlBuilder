@@ -12,13 +12,13 @@ public class Name : Services, IDefault_Services_Name
     public IDefault_Services_Alias Alias(string alias)
     {
         Utils.WriteFile(_fullPath, $"    alias: {alias}");
-        return Utils.InvokeObject<IDefault_Services_Alias>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Services_Alias>();
     }
 
     public IDefault_Services_EntryPoint Entrypoint(string entrypoint)
     {
         Utils.WriteFile(_fullPath, $"    entrypoint: [{entrypoint}]");
-        return Utils.InvokeObject<IDefault_Services_EntryPoint>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Services_EntryPoint>();
     }
 }
 
@@ -36,7 +36,7 @@ public class Entrypoint : Alias, IDefault_Services_EntryPoint
     public IDefault_Services_Command Command(string command)
     {
         Utils.WriteFile(_fullPath, $"    command: [{command}]");
-        return Utils.InvokeObject<IDefault_Services_Command>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Services_Command>();
     }
 }
 

@@ -15,7 +15,7 @@ public class Key : Cache, IDefault_Cache_Key
         {
             Utils.WriteFile(_fullPath, $"        - {file}");
         }
-        return Utils.InvokeObject<IDefault_Cache_Files>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Cache_Files>();
     }
 }
 
@@ -27,7 +27,7 @@ public class Files : Cache, IDefault_Cache_Files
     public IDefault_Cache_Prefix Prefix(string name)
     {
         Utils.WriteFile(_fullPath, $"      prefix: {name}");
-        return Utils.InvokeObject<IDefault_Cache_Prefix>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IDefault_Cache_Prefix>();
     }
 }
 

@@ -20,13 +20,13 @@ public class Project : Include, IInclude_Project
         {
             Utils.WriteFile(_fullPath, $"  file: {file}");
         }
-        return Utils.InvokeObject<IInclude_File>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_File>();
     }
 
     public IInclude_Ref Ref(string branch)
     {
         Utils.WriteFile(_fullPath, $"  ref: {branch}");
-        return Utils.InvokeObject<IInclude_Ref>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_Ref>();
     }
 }
 

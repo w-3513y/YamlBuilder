@@ -19,19 +19,19 @@ public class Include : GitLabYaml, IInclude
     public IInclude_Local Local(string file)
     {
         Utils.WriteFile(_fullPath, $"  - local: {file}");
-        return Utils.InvokeObject<IInclude_Local>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_Local>();
     }
 
     public IInclude_Project Project(string project)
     {
         Utils.WriteFile(_fullPath, $"  - project: {project}");
-        return Utils.InvokeObject<IInclude_Project>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_Project>();
     }
 
     public IInclude_Remote Remote(string url)
     {
         Utils.WriteFile(_fullPath, $"  - remote: {url}");
-        return Utils.InvokeObject<IInclude_Remote>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_Remote>();
     }
 
     public IInclude_Template Template(string[] templates)
@@ -40,6 +40,6 @@ public class Include : GitLabYaml, IInclude
         {
             Utils.WriteFile(_fullPath, $"  - template: {template}");
         }
-        return Utils.InvokeObject<IInclude_Template>(_fullPath, _serviceLocator);
+        return _serviceLocator.GetService<IInclude_Template>();
     }
 }
