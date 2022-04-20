@@ -11,7 +11,6 @@ public interface IDefault_Artifacts_When:
     IVariables_Navigation_lvl_0,
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0,
-    IDefault_BeforeScript_Navigation_lvl_1,
     IDefault_Cache_Navigation_lvl_1,
     IDefault_Interruptible_Navigation_lvl_1,
     IDefault_Retry_Navigation_lvl_1,

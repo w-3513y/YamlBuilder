@@ -1,4 +1,5 @@
 using YamlBuilder.Interfaces.GlobalKeywords;
+using YamlBuilder.Interfaces.JobsKeywords.Default.Artifact;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Cache;
 using YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
@@ -10,6 +11,8 @@ public interface IDefault_BeforeScript:
     IVariables_Navigation_lvl_0,
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0,
+    IDefault_AfterScript_Navigation_lvl_1,
+    IDefault_Artifacts_Navigation_lvl_1,
     IDefault_Cache_Navigation_lvl_1,
     IDefault_Interruptible_Navigation_lvl_1,
     IDefault_Retry_Navigation_lvl_1,

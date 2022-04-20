@@ -56,6 +56,7 @@ class ServiceLocator : IServiceLocator
                 this.services.Add(typeof(IDefault_Cache_Prefix), new Builder.Default.Cache.Prefix(path, this));
                 this.services.Add(typeof(IDefault_Cache_Untracked), new Builder.Default.Cache.Untracked(path, this));
                 this.services.Add(typeof(IDefault_Cache_When), new Builder.Default.Cache.When(path, this));
+            this.services.Add(typeof(IDefault_Interruptible), new Builder.Default.Interruptible(path, this));
             this.services.Add(typeof(IDefault_Retry), new Builder.Default.Retry(path, this));
             this.services.Add(typeof(IDefault_ServicesShortSyntax), new Builder.Default.Services.ServicesShortSyntax(path, this));
             this.services.Add(typeof(IDefault_Services), new Builder.Default.Services.Services(path, this));
