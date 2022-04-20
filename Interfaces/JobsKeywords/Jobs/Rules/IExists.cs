@@ -30,7 +30,9 @@ public interface IJobs_Rules_Exists:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_Rules_When_Navigation_lvl_3
-{}
+{
+    public void Build(string condition);
+}
 
 public interface IJobs_Rules_Exists_Navigation_lvl_2{
     public IJobs_Rules_Exists Exists(string condition);

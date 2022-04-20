@@ -9,8 +9,10 @@ public interface IJobs_TimeOut:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string timeOut);
+}
 
 public interface IJobs_TimeOut_Navigation_lvl_1{
-    public IJobs_TimeOut TimeOut(string timeout);
+    public IJobs_TimeOut TimeOut(string timeOut);
 }

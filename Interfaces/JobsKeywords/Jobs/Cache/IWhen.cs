@@ -22,8 +22,10 @@ public interface IJobs_Cache_When:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(Enums.Job when);
+}
 
 public interface IJobs_Cache_When_Navigation_lvl_2{
-    public IJobs_Cache_When When(Enums.JobGlobal when);   
+    public IJobs_Cache_When When(Enums.Job when);   
 }

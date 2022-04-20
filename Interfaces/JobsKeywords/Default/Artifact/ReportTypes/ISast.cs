@@ -20,7 +20,9 @@ public interface IDefault_Artifacts_Report_Sast:
     IDefault_Artifacts_Report_Navigation_lvl_2,
     IDefault_Artifacts_Report_SecretDetection_Navigation_lvl_3,
     IDefault_Artifacts_Report_Terraform_Navigation_lvl_3
-{}
+{
+    public void Build(string report);
+}
 
 public interface IDefault_Artifacts_Report_Sast_Navigation_lvl_3{
     public IDefault_Artifacts_Report_Sast Sast(string report);

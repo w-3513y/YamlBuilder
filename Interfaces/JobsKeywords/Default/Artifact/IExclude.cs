@@ -19,7 +19,9 @@ public interface IDefault_Artifacts_Exclude:
     IDefault_TimeOut_Navigation_lvl_1,
     IDefault_Artifacts_ExpireIn_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string file);
+}
 
 public interface IDefault_Artifacts_Exclude_Navigation_lvl_2{
     public IDefault_Artifacts_Exclude Exclude(string file);

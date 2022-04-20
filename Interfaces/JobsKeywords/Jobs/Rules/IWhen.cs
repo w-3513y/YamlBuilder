@@ -32,7 +32,9 @@ public interface IJobs_Rules_When:
     IJobs_Rules_Ifs_Navigation_lvl_2,
     IJobs_Rules_When_Navigation_lvl_3,
     IJobs_Rules_AllowFailure_Navigation_lvl_3
-{}
+{
+    public void Build(Enums.When when);
+}
 
 public interface IJobs_Rules_When_Navigation_lvl_3{
     public IJobs_Rules_When When(Enums.When when);

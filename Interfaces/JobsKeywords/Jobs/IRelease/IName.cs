@@ -14,7 +14,9 @@ public interface IJobs_Release_Name:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string name);
+}
 
 public interface IJobs_Release_NameNavigation_lvl_2{
     public IJobs_Release_Name Name(string name);

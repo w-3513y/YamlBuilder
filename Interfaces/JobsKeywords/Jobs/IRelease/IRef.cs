@@ -14,7 +14,9 @@ public interface IJobs_Release_Ref:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string reference);
+}
 
 public interface IJobs_Release_Ref_Navigation_lvl_2{
     public IJobs_Release_Ref Ref(string reference);

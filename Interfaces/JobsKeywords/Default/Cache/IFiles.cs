@@ -19,7 +19,9 @@ public interface IDefault_Cache_Files:
     IDefault_Cache_Policy_Navigation_lvl_2,
     IDefault_Cache_Untracked_Navigation_lvl_2,
     IDefault_Cache_Prefix_Navigation_lvl_4
-{}
+{
+    public void Build(string[] files);
+}
 
 public interface IDefault_Cache_Files_Navigation_lvl_3{
     public IDefault_Cache_Files Files(string[] files);   

@@ -32,7 +32,9 @@ public interface IJobs_Artifacts_Untracked:
     IJobs_Artifacts_ExposeAs_Navigation_lvl_2,
     IJobs_Artifacts_Report_Navigation_lvl_2,
     Artifact.IJobs_Artifacts_When_Navigation_lvl_2
-{}
+{
+    public void Build(bool untracked);
+}
 
 
 public interface IJobs_Artifacts_Untracked_Navigation_lvl_2{

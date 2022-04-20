@@ -14,7 +14,9 @@ public interface IDefault_Cache_When:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(Enums.JobGlobal when);
+}
 
 public interface IDefault_Cache_When_Navigation_lvl_2{
     public IDefault_Cache_When When(Enums.JobGlobal when);   

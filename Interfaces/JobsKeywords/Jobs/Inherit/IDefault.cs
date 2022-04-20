@@ -36,9 +36,12 @@ public interface IJobs_Inherit_Default:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] commands);
+    public void Build(bool deflt);
+}
 
 public interface IJobs_Inherit_Default_Navigation_lvl_2{
     public IJobs_Inherit_Default Default(string[] commands);
-    public IJobs_Inherit_Default Default(bool yes);
+    public IJobs_Inherit_Default Default(bool deftl);
 }

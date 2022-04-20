@@ -18,7 +18,9 @@ public interface IDefault_AfterScript:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(string commands);
+}
 
 public interface IDefault_AfterScript_Navigation_lvl_1{
     public IDefault_AfterScript AfterScript(string commands);

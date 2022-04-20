@@ -21,7 +21,9 @@ public interface IJobs_Secrets_Vault:
     IJobs_When_Navigation_lvl_1,
     IJobs_Secrets_File_Navigation_lvl_4,
     IJobs_Secrets_Secret_Navigation_lvl_2
-{}
+{
+    public void Build(string vault);
+}
 
 public interface IJobs_Secrets_Vault_Navigation_lvl_3{
     public IJobs_Secrets_Vault Vault(string vault);

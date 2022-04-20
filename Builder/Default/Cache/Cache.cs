@@ -11,35 +11,31 @@ public class Cache : Default, IDefault_Cache
 
     public IDefault_Cache_Key Key(string name)
     {
-        Utils.WriteFile(_fullPath, $"    key: {name}");
+        _serviceLocator.GetService<IDefault_Cache_Key>().Build(name);
         return _serviceLocator.GetService<IDefault_Cache_Key>();
     }
 
     public IDefault_Cache_Paths Paths(string[] directories)
     {
-        Utils.WriteFile(_fullPath, $"    paths:");
-        foreach(var directory in directories)
-        {
-            Utils.WriteFile(_fullPath, $"      - {directory}");
-        }
+        _serviceLocator.GetService<IDefault_Cache_Paths>().Build(directories);
         return _serviceLocator.GetService<IDefault_Cache_Paths>();
     }
 
     public IDefault_Cache_Policy Policy(GitCommand command)
     {
-        Utils.WriteFile(_fullPath, $"    policy: {command}");
+        _serviceLocator.GetService<IDefault_Cache_Policy>().Build(command);
         return _serviceLocator.GetService<IDefault_Cache_Policy>();
     }
 
     public IDefault_Cache_Untracked Untracked(bool untracked)
     {
-        Utils.WriteFile(_fullPath, $"    untracked: {(untracked ? "true" : "false")}");
+        
         return _serviceLocator.GetService<IDefault_Cache_Untracked>();
     }
 
     public IDefault_Cache_When When(JobGlobal when)
     {
-        Utils.WriteFile(_fullPath, $"    when: {when}");
+        _serviceLocator.GetService<IDefault_Cache_When>().Build(when);
         return _serviceLocator.GetService<IDefault_Cache_When>();
     }
 }

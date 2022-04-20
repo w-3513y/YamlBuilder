@@ -23,7 +23,9 @@ public interface IDefault_Artifacts_When:
     IDefault_Artifacts_Exclude_Navigation_lvl_2,
     IDefault_Artifacts_ExposeAs_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(Enums.JobGlobal when);
+}
 
 public interface IDefault_Artifacts_When_Navigation_lvl_2{
     public IDefault_Artifacts_When When(Enums.JobGlobal when);

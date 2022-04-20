@@ -29,7 +29,9 @@ public interface IJobs_Tags:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] tags);
+}
 
 public interface IJobs_Tags_Navigation_lvl_1{
     public IJobs_Tags Tags(string[] tags);

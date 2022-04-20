@@ -36,9 +36,12 @@ public interface IJobs_Inherit_Variables:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] variables);
+    public void Build(bool deflt);
+}
 
 public interface IJobs_Inherit_Variables_Navigation_lvl_2{
     public IJobs_Inherit_Variables Variables(string[] variables);
-    public IJobs_Inherit_Variables Variables(bool yes);
+    public IJobs_Inherit_Variables Variables(bool deflt);
 }

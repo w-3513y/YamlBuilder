@@ -31,8 +31,10 @@ public interface IJobs_Rules_AllowFailure:
     IJobs_Pages_Navigation_lvl_1,
     IJobs_Rules_When_Navigation_lvl_3,
     IJobs_Rules_Ifs_Navigation_lvl_2
-{}
+{
+    public void Build(bool allowfailure);
+}
 
 public interface IJobs_Rules_AllowFailure_Navigation_lvl_3{
-    public IJobs_Rules_AllowFailure AllowFailure(bool yes);
+    public IJobs_Rules_AllowFailure AllowFailure(bool allowfailure);
 }

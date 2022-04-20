@@ -8,7 +8,9 @@ public interface IInclude_File:
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0,
     IInclude_Project_Navigation_lvl_1
-{}
+{
+    public void Build(string[] files);
+}
 
 public interface IInclude_File_Navigation_lvl_2{
     public IInclude_File File(string[] files);   

@@ -10,7 +10,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Retry;
 
 public interface IJobs_Retry:
     IJobs_Retry_Max_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
 
 public interface IJobs_RetryShortSyntax:
     IJobs_Navigation_lvl_0,
@@ -30,7 +32,9 @@ public interface IJobs_RetryShortSyntax:
     IJobs_TimeOut_Navigation_lvl_1,
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1
-{}
+{
+    public void Build(Enums.Retry retries);
+}
 
 public interface IJobs_Retry_Navigation_lvl_1{
     public IJobs_Retry Retry();

@@ -23,7 +23,9 @@ public interface IDefault_Artifacts_Report_Path:
     IDefault_Artifacts_Report_Sast_Navigation_lvl_3,
     IDefault_Artifacts_Report_SecretDetection_Navigation_lvl_3,
     IDefault_Artifacts_Report_Terraform_Navigation_lvl_3
-{}
+{
+    public void Build(string path);
+}
 
 public interface IDefault_Artifacts_Report_Path_Navigation_lvl_5{
     public IDefault_Artifacts_Report_Path Path(string path);

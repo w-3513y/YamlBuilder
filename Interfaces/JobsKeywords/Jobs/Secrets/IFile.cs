@@ -20,8 +20,10 @@ public interface IJobs_Secrets_File:
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1,
     IJobs_Secrets_Secret_Navigation_lvl_2
-{}
+{
+    public void Build(bool intoFile);
+}
 
 public interface IJobs_Secrets_File_Navigation_lvl_4{
-    public IJobs_Secrets_File File(bool yes);
+    public IJobs_Secrets_File File(bool intoFile);
 }

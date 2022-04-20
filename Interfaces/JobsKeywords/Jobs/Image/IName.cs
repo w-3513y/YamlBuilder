@@ -44,7 +44,9 @@ public interface IJobs_Image_Name:
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1,
     IJobs_Image_EntryPoint_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IJobs_Image_Name_Navigation_lvl_2{
     public IJobs_Image_Name Name(string name);   

@@ -20,7 +20,9 @@ public interface IDefault_Artifacts_Paths:
     IDefault_Artifacts_ExpireIn_Navigation_lvl_2,
     IDefault_Artifacts_Exclude_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string[] paths);
+}
 
 public interface IDefault_Artifacts_Paths_Navigation_lvl_2{
 

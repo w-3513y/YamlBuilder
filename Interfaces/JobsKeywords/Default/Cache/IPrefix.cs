@@ -18,7 +18,9 @@ public interface IDefault_Cache_Prefix:
     IDefault_Cache_When_Navigation_lvl_2,
     IDefault_Cache_Policy_Navigation_lvl_2,
     IDefault_Cache_Untracked_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IDefault_Cache_Prefix_Navigation_lvl_4{
     public IDefault_Cache_Prefix Prefix(string name);   

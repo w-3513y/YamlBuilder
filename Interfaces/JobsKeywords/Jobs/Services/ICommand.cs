@@ -43,7 +43,9 @@ public interface IJobs_Services_Command:
     IJobs_When_Navigation_lvl_1,
     IJobs_Services_NameNavigation_lvl_2
 
-{}
+{
+    public void Build(string command);
+}
 
 public interface IJobs_Services_Command_Navigation_lvl_4{
     public IJobs_Services_Command Command(string command);

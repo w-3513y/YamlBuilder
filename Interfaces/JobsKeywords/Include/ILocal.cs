@@ -7,7 +7,9 @@ public interface IInclude_Local:
     IVariables_Navigation_lvl_0,
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0
-{}
+{
+    public void Build(string file);
+}
 
 public interface IInclude_Local_Navigation_lvl_1{
     public IInclude_Local Local(string file);   

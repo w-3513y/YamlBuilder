@@ -31,8 +31,10 @@ public interface IJobs_Artifacts_When:
     IJobs_Artifacts_Exclude_Navigation_lvl_2,
     IJobs_Artifacts_ExposeAs_Navigation_lvl_2,
     IJobs_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(Enums.Job when);
+}
 
 public interface IJobs_Artifacts_When_Navigation_lvl_2{
-    public IJobs_Artifacts_When When(Enums.JobGlobal when);
+    public IJobs_Artifacts_When When(Enums.Job when);
 }

@@ -26,8 +26,10 @@ public interface IJobs_AllowFailure:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(bool allowFailure);
+}
 
 public interface IJobs_AllowFailure_Navigation_lvl_1{
-    public IJobs_AllowFailure AllowFailure(bool allow);
+    public IJobs_AllowFailure AllowFailure(bool allowFailure);
 }

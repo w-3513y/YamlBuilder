@@ -35,7 +35,9 @@ public interface IJobs_Need_Job:
     IJobs_When_Navigation_lvl_1,
     IJobs_Need_Artifact_Navigation_lvl_3,
     IJobs_Need_Job_Navigation_lvl_2
-{}
+{
+    public void Build(string job);
+}
 
 public interface IJobs_Need_Job_Navigation_lvl_2{
     public IJobs_Need_Job Job(string job);

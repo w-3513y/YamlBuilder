@@ -21,7 +21,9 @@ public interface IDefault_Image_Name:
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1,
     IDefault_Image_EntryPoint_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IDefault_Image_Name_Navigation_lvl_2{
     public IDefault_Image_Name Name(string name);

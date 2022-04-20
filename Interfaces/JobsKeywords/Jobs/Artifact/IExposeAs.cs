@@ -30,7 +30,9 @@ public interface IJobs_Artifacts_ExposeAs:
     IJobs_Artifacts_Exclude_Navigation_lvl_2,
     IJobs_Artifacts_ExposeAs_Navigation_lvl_2,
     IJobs_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IJobs_Artifacts_ExposeAs_Navigation_lvl_2{
     public IJobs_Artifacts_ExposeAs ExposeAs(string name);

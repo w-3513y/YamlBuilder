@@ -16,7 +16,9 @@ public interface IDefault_Artifacts_ExpireIn:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(string date);
+}
 
 public interface IDefault_Artifacts_ExpireIn_Navigation_lvl_2{
     public IDefault_Artifacts_ExpireIn ExpireIn(string date);

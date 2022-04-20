@@ -28,7 +28,9 @@ public interface IJobs_Artifacts_Paths:
     IJobs_Artifacts_ExpireIn_Navigation_lvl_2,
     IJobs_Artifacts_Exclude_Navigation_lvl_2,
     IJobs_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string[] paths);
+}
 
 public interface IJobs_Artifacts_Paths_Navigation_lvl_2{
 

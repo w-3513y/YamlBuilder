@@ -13,7 +13,9 @@ public interface IJobs_ResourceGroup:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string resource);
+}
 
 public interface IJobs_ResourceGroup_Navigation_lvl_1{
     public IJobs_ResourceGroup ResourceGroup(string resource);

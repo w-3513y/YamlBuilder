@@ -19,7 +19,9 @@ public interface IDefault_Cache_Key:
     IDefault_Cache_Policy_Navigation_lvl_2,
     IDefault_Cache_Untracked_Navigation_lvl_2,
     IDefault_Cache_Files_Navigation_lvl_3
-{}
+{
+    public void Build(string name);
+}
 
 public interface IDefault_Cache_Key_Navigation_lvl_2{
     public IDefault_Cache_Key Key(string name);

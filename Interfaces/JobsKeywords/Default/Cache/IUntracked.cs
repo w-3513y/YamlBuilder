@@ -18,8 +18,10 @@ public interface IDefault_Cache_Untracked:
     IDefault_Cache_When_Navigation_lvl_2,
     IDefault_Cache_Policy_Navigation_lvl_2,
     IDefault_Cache_Key_Navigation_lvl_2
-{}
+{
+    public void Build(bool untracked);
+}
 
 public interface IDefault_Cache_Untracked_Navigation_lvl_2{
-    public IDefault_Cache_Untracked Untracked(bool publc);   
+    public IDefault_Cache_Untracked Untracked(bool untracked);   
 }

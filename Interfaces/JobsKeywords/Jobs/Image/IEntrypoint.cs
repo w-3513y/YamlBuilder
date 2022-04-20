@@ -43,7 +43,9 @@ public interface IJobs_Image_EntryPoint:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build();
+}
 
 public interface IJobs_Image_EntryPoint_Navigation_lvl_2{
     public IJobs_Image_EntryPoint Entrypoint();   

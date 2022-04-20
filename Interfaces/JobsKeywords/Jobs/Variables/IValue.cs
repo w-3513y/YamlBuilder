@@ -34,7 +34,9 @@ public interface IJobs_Variables_Value:
     IJobs_When_Navigation_lvl_1,
     IJobs_Variables_Description_Navigation_lvl_4,
     IJobs_Variables_Key_Navigation_lvl_2
- {}
+ {
+     public void Build(string value);
+ }
 
 public interface IJobs_Variables_Value_Navigation_lvl_3{
     public IJobs_Variables_Value Value(string value);

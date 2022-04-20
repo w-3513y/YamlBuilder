@@ -19,7 +19,9 @@ public interface IDefault_BeforeScript:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(string commands);
+}
 
 public interface IDefault_BeforeScript_Navigation_lvl_1{
     public IDefault_BeforeScript BeforeScript(string commands);

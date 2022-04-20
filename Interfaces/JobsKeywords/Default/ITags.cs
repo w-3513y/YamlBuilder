@@ -9,7 +9,9 @@ public interface IDefault_Tags:
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0,
     IDefault_TimeOut_Navigation_lvl_1
- {}
+ {
+     public void Build(string[] tags);
+ }
 
 public interface IDefault_Tags_Navigation_lvl_1{
     public IDefault_Tags Tags(string[] tags);

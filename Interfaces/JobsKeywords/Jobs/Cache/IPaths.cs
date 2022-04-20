@@ -24,7 +24,9 @@ public interface IJobs_Cache_Paths:
     IJobs_When_Navigation_lvl_1,
     IJobs_Cache_When_Navigation_lvl_2,
     IJobs_Cache_Policy_Navigation_lvl_2
-{}
+{
+    public void Build(string[] directories);
+}
 
 public interface IJobs_Cache_Paths_Navigation_lvl_2{
     public IJobs_Cache_Paths Paths(string[] directories);   

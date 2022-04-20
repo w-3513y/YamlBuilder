@@ -42,8 +42,10 @@ public interface IJobs_Services_Alias:
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1,
     IJobs_Services_EntryPoint_Navigation_lvl_3,
-    IJobs_Services_NameAfterAlias_Navigation_lvl_2
-{}
+    IJobs_Services_NameNavigation_lvl_2
+{
+    public void Build(string alias);
+}
 
 public interface IJobs_Services_Alias_Navigation_lvl_3{
     public IJobs_Services_Alias Alias(string alias);   

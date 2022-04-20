@@ -22,7 +22,9 @@ public interface IDefault_Artifacts_Name:
     IDefault_Artifacts_Exclude_Navigation_lvl_2,
     IDefault_Artifacts_ExposeAs_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IDefault_Artifacts_Name_Navigation_lvl_2{
 

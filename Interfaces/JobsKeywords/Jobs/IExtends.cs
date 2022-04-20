@@ -37,7 +37,9 @@ public interface IJobs_Extends:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string job);
+}
 
 public interface IJobs_Extends_Navigation_lvl_1{
     public IJobs_Extends Extends(string job);

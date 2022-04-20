@@ -19,7 +19,9 @@ public interface IDefault_Cache_Policy:
     IDefault_Cache_When_Navigation_lvl_2,
     IDefault_Cache_Untracked_Navigation_lvl_2,
     IDefault_Cache_Key_Navigation_lvl_2
-{}
+{
+    public void Build(GitCommand command);
+}
 
 
 public interface IDefault_Cache_Policy_Navigation_lvl_2{

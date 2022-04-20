@@ -37,7 +37,9 @@ public interface IJobs_NeedsShortSyntax:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] dependencies);
+}
 
 public interface IJobs_Needs_Navigation_lvl_1{
     public IJobs_Needs Needs();

@@ -18,7 +18,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Image;
 public interface IJobs_Image:
     IJobs_Image_Name_Navigation_lvl_2,
     IJobs_Image_EntryPoint_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
 
 public interface IJobs_ImageShortSyntax:
     IJobs_Navigation_lvl_0,
@@ -48,7 +50,9 @@ public interface IJobs_ImageShortSyntax:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string image);
+}
 
 public interface IJobs_Image_Navigation_lvl_1{
 

@@ -15,7 +15,10 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.IEnvironment;
 
 public interface IJobs_Environment:
     IJobs_Environment_Name_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
+
 public interface IJobs_EnvironmentShortSyntax:
     IJobs_Navigation_lvl_0,
     IJobs_Extends_Navigation_lvl_1,
@@ -42,7 +45,9 @@ public interface IJobs_EnvironmentShortSyntax:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string environment);
+}
 
 public interface IJobs_Environment_Navigation_lvl_1{
     public IJobs_Environment Environment();

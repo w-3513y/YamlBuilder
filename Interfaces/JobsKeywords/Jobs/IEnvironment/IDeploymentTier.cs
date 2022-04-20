@@ -39,7 +39,9 @@ public interface IJobs_Environment_DeploymentTier:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(Enums.Stages stage);
+}
 
 public interface IJobs_Environment_DeploymentTier_Navigation_lvl_3{
     public IJobs_Environment_DeploymentTier DeploymentTier(Enums.Stages stage);   

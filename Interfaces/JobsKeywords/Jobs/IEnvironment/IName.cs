@@ -44,7 +44,9 @@ public interface IJobs_Environment_Name:
     IJobs_Environment_AutoStopIn_Navigation_lvl_3,
     IJobs_Environment_Kubernetes_Navigation_lvl_3,
     IJobs_Environment_DeploymentTier_Navigation_lvl_3
-{}
+{
+    public void Build(string name);
+}
 
 public interface IJobs_Environment_Name_Navigation_lvl_2{
     public IJobs_Environment_Name Name(string name);   

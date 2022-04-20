@@ -39,7 +39,9 @@ public interface IJobs_Environment_URL:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string url);
+}
 
 public interface IJobs_Environment_URL_Navigation_lvl_3{
     public IJobs_Environment_URL URL(string url);   

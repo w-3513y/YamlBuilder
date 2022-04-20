@@ -27,7 +27,9 @@ public interface IJobs_Artifacts_Exclude:
     IJobs_When_Navigation_lvl_1,
     IJobs_Artifacts_ExpireIn_Navigation_lvl_2,
     IJobs_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string file);
+}
 
 public interface IJobs_Artifacts_Exclude_Navigation_lvl_2{
     public IJobs_Artifacts_Exclude Exclude(string file);

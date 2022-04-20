@@ -39,7 +39,9 @@ public interface IJobs_Environment_NameSpace:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string environment);
+}
 
 public interface IJobs_Environment_NameSpace_Navigation_lvl_4{
     public IJobs_Environment_NameSpace NameSpace(string environment);   

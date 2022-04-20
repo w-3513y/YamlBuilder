@@ -12,7 +12,9 @@ public interface IJobs_Artifacts:
   IJobs_Artifacts_Report_Navigation_lvl_2,
   IJobs_Artifacts_Untracked_Navigation_lvl_2,
   IJobs_Artifacts_When_Navigation_lvl_2
-{}
+{
+  public void Build();
+}
 
 public interface IJobs_Artifacts_Navigation_lvl_1{
     public IJobs_Artifacts Artifacts();   

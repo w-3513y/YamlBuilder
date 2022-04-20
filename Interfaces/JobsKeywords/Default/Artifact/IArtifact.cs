@@ -12,7 +12,9 @@ public interface IDefault_Artifacts:
   IDefault_Artifacts_Report_Navigation_lvl_2,
   IDefault_Artifacts_Untracked_Navigation_lvl_2,
   IDefault_Artifacts_When_Navigation_lvl_2
-{}
+{
+  public void Build();
+}
 
 public interface IDefault_Artifacts_Navigation_lvl_1{
     public IDefault_Artifacts Artifacts();   

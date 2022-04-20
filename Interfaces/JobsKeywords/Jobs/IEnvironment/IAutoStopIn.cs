@@ -39,7 +39,9 @@ public interface IJobs_Environment_AutoStopIn:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string days);
+}
 
 public interface IJobs_Environment_AutoStopIn_Navigation_lvl_3{
     public IJobs_Environment_AutoStopIn AutoStopIn(string days);   

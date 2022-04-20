@@ -24,7 +24,9 @@ public interface IDefault_Artifacts_Untracked:
     IDefault_Artifacts_ExposeAs_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2,
     IDefault_Artifacts_When_Navigation_lvl_2
-{}
+{
+    public void Build(bool untracked);
+}
 
 
 public interface IDefault_Artifacts_Untracked_Navigation_lvl_2{

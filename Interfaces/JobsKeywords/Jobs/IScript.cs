@@ -11,7 +11,9 @@ public interface IJobs_Script:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] commands);
+}
 
 public interface IJobs_Script_Navigation_lvl_1{
     public IJobs_Script Script(string[] commands);

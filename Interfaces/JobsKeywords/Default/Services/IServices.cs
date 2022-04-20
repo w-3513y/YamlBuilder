@@ -4,7 +4,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default.Services;
 
 public interface IDefault_Services:
     IDefault_Services_Name_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
 
 public interface IDefault_ServicesShortSyntax:
     IInclude_Navigation_lvl_0, 
@@ -14,7 +16,9 @@ public interface IDefault_ServicesShortSyntax:
     IJobs_Navigation_lvl_0,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(string[] commands);
+}
 
 
 public interface IDefault_Services_Navigation_lvl_1{

@@ -18,7 +18,9 @@ public interface IDefault_Artifacts_Report_Terraform:
     IDefault_TimeOut_Navigation_lvl_1,
     IDefault_Artifacts_ExpireIn_Navigation_lvl_2,
     IDefault_Artifacts_Report_Navigation_lvl_2
-{}
+{
+    public void Build(string report);
+}
 
 public interface IDefault_Artifacts_Report_Terraform_Navigation_lvl_3{
     public IDefault_Artifacts_Report_Terraform Terraform(string report);

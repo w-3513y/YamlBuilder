@@ -18,7 +18,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Jobs.Except;
 
 public interface IJobs_Except:
     IJobs_Except_Ref_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
 
 public interface IJobs_ExceptShortSyntax:
     IJobs_Navigation_lvl_0,
@@ -49,7 +51,9 @@ public interface IJobs_ExceptShortSyntax:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] exceptions);
+}
 
 public interface IJobs_Except_Navigation_lvl_1{
     public IJobs_Except Except();

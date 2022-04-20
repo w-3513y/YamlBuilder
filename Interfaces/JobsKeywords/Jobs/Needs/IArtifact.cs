@@ -34,8 +34,10 @@ public interface IJobs_Need_Artifact:
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1,
     IJobs_Need_Job_Navigation_lvl_2
-{}
+{
+    public void Build(bool needsArtifacts);
+}
 
 public interface IJobs_Need_Artifact_Navigation_lvl_3{
-    public IJobs_Need_Artifact Artifact(bool yes);
+    public IJobs_Need_Artifact Artifact(bool needsArtifacts);
 }

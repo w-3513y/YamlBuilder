@@ -9,7 +9,9 @@ public interface IJobs_Artifact_Report:
     IJobs_Artifact_Report_Sast_Navigation_lvl_3,
     IJobs_Artifact_Report_SecretSedention_Navigation_lvl_3,
     IJobs_Artifact_Report_Terraform_Navigation_lvl_3
-{}
+{
+    public void Build(string report);
+}
 
 public interface IJobs_Artifacts_Report_Navigation_lvl_2{
     public IJobs_Artifact_Report Report();    

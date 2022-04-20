@@ -27,7 +27,9 @@ public interface IJobs_Retry_When:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] options);
+}
 
 public interface IJobs_Retry_When_Navigation_lvl_3{
     public IJobs_Retry_When IWhen(string[] options);

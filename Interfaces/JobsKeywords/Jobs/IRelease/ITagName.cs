@@ -16,7 +16,9 @@ public interface IJobs_Release_TagName:
     IJobs_When_Navigation_lvl_1,
     IJobs_Release_Milestones_Navigation_lvl_2,
     IJobs_Release_Description_Navigation_lvl_3
-{}
+{
+    public void Build(string tagName);
+}
 
 public interface IJobs_Release_TagName_Navigation_lvl_2{
     public IJobs_Release_TagName TagName(string tagName);

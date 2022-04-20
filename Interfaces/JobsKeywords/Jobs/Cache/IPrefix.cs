@@ -26,7 +26,9 @@ public interface IJobs_Cache_Prefix:
     IJobs_Cache_When_Navigation_lvl_2,
     IJobs_Cache_Policy_Navigation_lvl_2,
     IJobs_Cache_Untracked_Navigation_lvl_2
-{}
+{
+    public void Build(string name);
+}
 
 public interface IJobs_Cache_Prefix_Navigation{
     public IJobs_Cache_Prefix Prefix(string name);   

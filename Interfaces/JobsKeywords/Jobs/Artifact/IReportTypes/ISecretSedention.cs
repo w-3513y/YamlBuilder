@@ -6,7 +6,9 @@ public interface IJobs_Artifact_Report_SecretSedention:
     IJobs_Navigation_lvl_0,
     IJobs_Artifacts_ExpireIn_Navigation_lvl_2,
     IJobs_Artifact_Report_Terraform_Navigation_lvl_3
-{}
+{
+    public void Build(string report);
+}
 
 public interface IJobs_Artifact_Report_SecretSedention_Navigation_lvl_3{
     public IJobs_Artifact_Report_SecretSedention SecretSedention(string report);

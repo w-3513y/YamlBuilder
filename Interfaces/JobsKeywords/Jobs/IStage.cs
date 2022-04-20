@@ -48,7 +48,9 @@ public interface IJobs_Stage:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string stage);
+}
 
 public interface IJobs_Stage_Navigation_lvl_1{
     public IJobs_Stage Stage(string stage);

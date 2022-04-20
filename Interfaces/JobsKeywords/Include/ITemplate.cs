@@ -7,7 +7,9 @@ public interface IInclude_Template:
     IVariables_Navigation_lvl_0,
     IWorkFlow_Navigation_lvl_0,
     IJobs_Navigation_lvl_0
-{}
+{
+    public void Build(string[] templates);
+}
 
 public interface IInclude_Template_Navigation_lvl_1{
     public IInclude_Template Template(string[] templates);   

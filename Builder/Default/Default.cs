@@ -14,10 +14,7 @@ public class Default : GitLabYaml, IDefault
     public Default(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
 
-    public void Build()
-    {
-        Utils.WriteFile(_fullPath, "Default:");
-    }
+    public void Build() => Utils.WriteFile(_fullPath, "default:");
 
     public IDefault_AfterScript AfterScript(string commands)
     {
@@ -28,7 +25,7 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Artifacts Artifacts()
     {
-        Utils.WriteFile(_fullPath, "  artifacts:");
+        _serviceLocator.GetService<IDefault_Artifacts>().Build();
         return _serviceLocator.GetService<IDefault_Artifacts>();
     }
 
@@ -48,13 +45,13 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Image Image()
     {
-        Utils.WriteFile(_fullPath, "  image:");
+        _serviceLocator.GetService<IDefault_Image>().Build();
         return _serviceLocator.GetService<IDefault_Image>();
     }
 
     public IDefault_ImageShortSyntax Image(string image)
     {
-        Utils.WriteFile(_fullPath, $"  image: {image}");
+        _serviceLocator.GetService<IDefault_ImageShortSyntax>().Build(image);
         return _serviceLocator.GetService<IDefault_ImageShortSyntax>();
     }
 
@@ -72,17 +69,13 @@ public class Default : GitLabYaml, IDefault
 
     public IDefault_Services Services()
     {
-        Utils.WriteFile(_fullPath, "  services:");
+        _serviceLocator.GetService<IDefault_Services>().Build();
         return _serviceLocator.GetService<IDefault_Services>();
     }
 
     public IDefault_ServicesShortSyntax Services(string[] commands)
     {
-        Utils.WriteFile(_fullPath, "  services:");
-        foreach(var command in commands)
-        {
-            Utils.WriteFile(_fullPath, $"    - {command}");
-        }
+        _serviceLocator.GetService<IDefault_ServicesShortSyntax>().Build(commands);
         return _serviceLocator.GetService<IDefault_ServicesShortSyntax>();
     }
 

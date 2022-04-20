@@ -47,12 +47,10 @@ public interface IJobs_Services_Name:
 
 public interface IJobs_Services_NameAfterAlias:
     IJobs_Services_Alias_Navigation_lvl_3
-{}
+{
+    public void Build(string serviceName);
+}
 
 public interface IJobs_Services_NameNavigation_lvl_2{
     public IJobs_Services_Name Name(string serviceName);   
-}
-
-public interface IJobs_Services_NameAfterAlias_Navigation_lvl_2{
-    public IJobs_Services_NameAfterAlias Name(string serviceName);   
 }

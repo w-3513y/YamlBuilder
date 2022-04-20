@@ -45,7 +45,9 @@ public interface IJobs_Ref:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] branch);
+}
 
 public interface IJobs_Except_Ref_Navigation_lvl_2{
     public IJobs_Ref Ref(string[] branch);

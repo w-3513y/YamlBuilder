@@ -9,9 +9,12 @@ public class Name : Services, IDefault_Services_Name
     public Name(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
 
+    public void Build(string serviceName)
+        => Utils.WriteFile(_fullPath, $"    - name: {serviceName}");
+
     public IDefault_Services_Alias Alias(string alias)
     {
-        Utils.WriteFile(_fullPath, $"    alias: {alias}");
+        _serviceLocator.GetService<IDefault_Services_Alias>().Build(alias);
         return _serviceLocator.GetService<IDefault_Services_Alias>();
     }
 
@@ -26,6 +29,9 @@ public class Alias : Name, IDefault_Services_Alias
 {
     public Alias(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
+
+    public new void Build(string alias)
+        => Utils.WriteFile(_fullPath, $"    alias: {alias}");
 }
 
 public class Entrypoint : Alias, IDefault_Services_EntryPoint
@@ -35,7 +41,7 @@ public class Entrypoint : Alias, IDefault_Services_EntryPoint
 
     public IDefault_Services_Command Command(string command)
     {
-        Utils.WriteFile(_fullPath, $"    command: [{command}]");
+        _serviceLocator.GetService<IDefault_Services_Command>().Build(command);
         return _serviceLocator.GetService<IDefault_Services_Command>();
     }
 }
@@ -44,4 +50,7 @@ public class Command : Services, IDefault_Services_Command
 {
     public Command(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
+
+    public void Build(string command)
+        => Utils.WriteFile(_fullPath, $"    command: [{command}]");
 }

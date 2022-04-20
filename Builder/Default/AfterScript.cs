@@ -7,4 +7,5 @@ public class AfterScript : Default, IDefault_AfterScript
 {
     public AfterScript(string fullPath, IServiceLocator serviceLocator) 
         : base(fullPath, serviceLocator) {}
+
 }

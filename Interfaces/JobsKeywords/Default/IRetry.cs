@@ -13,7 +13,9 @@ public interface IDefault_Retry:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(Retry retry);
+}
 
 
 public interface IDefault_Retry_Navigation_lvl_1{

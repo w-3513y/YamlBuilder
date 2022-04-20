@@ -17,7 +17,9 @@ public interface IJobs_Interruptible:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(bool interruptible);
+}
 
 public interface IJobs_Interruptible_Navigation_lvl_1{
     public IJobs_Interruptible Interruptible(bool interruptible);

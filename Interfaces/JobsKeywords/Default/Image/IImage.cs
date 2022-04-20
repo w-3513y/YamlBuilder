@@ -10,7 +10,9 @@ namespace YamlBuilder.Interfaces.JobsKeywords.Default.Image;
 public interface IDefault_Image:
     IDefault_Image_Name_Navigation_lvl_2,
     IDefault_Image_EntryPoint_Navigation_lvl_2
-{}
+{
+    public void Build();
+}
 
 public interface IDefault_ImageShortSyntax:
     IInclude_Navigation_lvl_0, 
@@ -26,7 +28,9 @@ public interface IDefault_ImageShortSyntax:
     IDefault_Services_Navigation_lvl_1,
     IDefault_Tags_Navigation_lvl_1,
     IDefault_TimeOut_Navigation_lvl_1
-{}
+{
+    public void Build(string image);
+}
 
 public interface IImageNavigation_lvl_1{
     public IDefault_Image Image();

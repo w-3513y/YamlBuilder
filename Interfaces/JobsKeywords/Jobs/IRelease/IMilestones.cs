@@ -14,7 +14,9 @@ public interface IJobs_Release_Milestones:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string milestones);
+}
 
 public interface IJobs_Release_Milestones_Navigation_lvl_2{
     public IJobs_Release_Milestones Milestones(string milestones);

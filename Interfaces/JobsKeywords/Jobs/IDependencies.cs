@@ -18,7 +18,9 @@ public interface IJobs_Dependencies:
     IJobs_Trigger_Navigation_lvl_1,
     IJobs_Pages_Navigation_lvl_1,
     IJobs_When_Navigation_lvl_1
-{}
+{
+    public void Build(string[] dependencies);
+}
 
 public interface IJobs_Dependencies_Navigation_lvl_1{
     public IJobs_Dependencies Dependencies(string[] dependencies);

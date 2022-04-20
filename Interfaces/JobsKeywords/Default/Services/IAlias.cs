@@ -12,7 +12,9 @@ public interface IDefault_Services_Alias:
     IDefault_TimeOut_Navigation_lvl_1,
     IDefault_Services_Name_Navigation_lvl_2,
     IDefault_Services_EntryPoint_Navigation_lvl_3
-{}
+{
+    public void Build(string alias);
+}
 
 public interface IDefault_Services_Alias_Navigation_lvl_3{
     public IDefault_Services_Alias Alias(string alias);   
